@@ -258,7 +258,7 @@ def main():
         # Write the initial part of the problem
 
         f.write("(define (problem " + problem_name + ")\n")
-        f.write("(:domain drone-domain)\n")
+        f.write("(:domain project1_domain)\n")
         f.write("(:objects\n")
 
         ######################################################################
@@ -292,7 +292,24 @@ def main():
 
         f.write("(:init\n")
 
-        # TODO: Initialize all facts here!
+        # --- Initialize drones ---
+        for x in drone:
+            f.write("\t(at-drone " + x + " depot)\n")
+            f.write("\t(free-arm1 " + x + ")\n")
+            f.write("\t(free-arm2 " + x + ")\n")
+        # --- Initialize crates at depot ---
+        for c in crate:
+            f.write("\t(at-crate " + c + " depot)\n")
+
+        # --- Assign contents to crates ---
+        for content_index in range(len(content_types)):
+            for c in crates_with_contents[content_index]:
+                f.write("\t(has-content " + c + " " + content_types[content_index] + ")\n")
+
+        # --- Initialize persons at locations (not depot) ---
+        for p in person:
+            loc = random.choice(location[1:])  # location[0] is "depot"
+            f.write("\t(at-person " + p + " " + loc + ")\n")
 
         f.write(")\n")
 
@@ -304,15 +321,18 @@ def main():
         # All Drones should end up at the depot
         for x in drone:
             f.write("\n")
-            # TODO: Write a goal that the drone x is at the depot
+            # All Drones should end up at the depot
+            for x in drone:
+                f.write("\t(at-drone " + x + " depot)\n")
 
         for x in range(options.persons):
             for y in range(len(content_types)):
                 if need[x][y]:
                     person_name = person[x]
                     content_name = content_types[y]
-                    # TODO: write a goal that the person needs a crate
+                    # DID: write a goal that the person needs a crate
                     # with this specific content
+                    f.write("\t(delivered " + person_name + " " + content_name + ")\n")
 
         f.write("\t))\n")
         f.write(")\n")
