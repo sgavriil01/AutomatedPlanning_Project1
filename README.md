@@ -24,12 +24,10 @@
     ```
 - If downward command inside planutils env fails (bash: downward: command not found):
     ```
-    ```
     $ cd ~/.planutils/packages/downward/
     $ cp downward.sif ~/path/to/project/root/
     $ cd ~/path/to/project/root/
     $ ./downward.sif --show-aliases # this shows all planners available
-    ```
     ```
 - To run specific planner:
     ```
