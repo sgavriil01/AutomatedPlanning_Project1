@@ -14,6 +14,7 @@ from optparse import OptionParser
 import random
 import math
 import sys
+import os
 
 ########################################################################################
 # Hard-coded options
@@ -252,9 +253,17 @@ def main():
     problem_name = "drone_problem_d" + str(options.drones) + "_r" + str(options.carriers) + \
                    "_l" + str(options.locations) + "_p" + str(options.persons) + "_c" + str(options.crates) + \
                    "_g" + str(options.goals) + "_ct" + str(len(content_types))
+    
+    # Create output directory next to this script
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    output_dir = os.path.join(script_dir, "problems")
+    os.makedirs(output_dir, exist_ok=True)
+    
+    # Full path for output file
+    output_file = os.path.join(output_dir, problem_name + ".pddl")
 
     # Open output file
-    with open(problem_name + ".pddl", 'w') as f:
+    with open(output_file, 'w') as f:
         # Write the initial part of the problem
 
         f.write("(define (problem " + problem_name + ")\n")
@@ -263,9 +272,6 @@ def main():
 
         ######################################################################
         # Write objects
-
-        # TODO: Change the type names below (drone, location, ...)
-        # to suit your domain.
 
         for x in drone:
             f.write("\t" + x + " - drone\n")
@@ -320,10 +326,7 @@ def main():
 
         # All Drones should end up at the depot
         for x in drone:
-            f.write("\n")
-            # All Drones should end up at the depot
-            for x in drone:
-                f.write("\t(at-drone " + x + " depot)\n")
+            f.write("\t(at-drone " + x + " depot)\n")
 
         for x in range(options.persons):
             for y in range(len(content_types)):
