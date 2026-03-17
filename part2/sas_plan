@@ -1,0 +1,7 @@
+(load-crate drone1 carrier1 crate1 depot n0 n1)
+(load-crate drone1 carrier1 crate4 depot n1 n2)
+(move-carrier drone1 carrier1 depot loc1)
+(unload-and-deliver drone1 carrier1 crate1 person1 loc1 food n2 n1)
+(unload-and-deliver drone1 carrier1 crate4 person1 loc1 medicine n1 n0)
+(move-carrier drone1 carrier1 loc1 depot)
+; cost = 208 (general cost)

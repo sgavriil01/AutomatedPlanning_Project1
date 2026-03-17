@@ -40,6 +40,7 @@
         (next N1 N2)
         (next N2 N3)
         (next N3 N4)
+        (= (total-cost) 0)
     )
 
     (:goal

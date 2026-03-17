@@ -1,5 +1,5 @@
 (define (domain project1_domain_part2)
-    (:requirements :strips :typing)
+    (:requirements :strips :typing :action-costs)
     (:types
         drone location carrier crate person contents num
     )
@@ -16,6 +16,13 @@
 
         (load ?k - carrier ?n - num)
         (next ?a - num ?b - num)
+        
+        (free-arm1 ?d - drone)
+        (free-arm2 ?d - drone)
+    )
+    (:functions
+        (total-cost)
+        (fly-cost ?from - location ?to - location)
     )
     (:action move-carrier
         :parameters (?d - drone ?k - carrier ?from - location ?to - location)
@@ -28,6 +35,8 @@
             (at-drone ?d ?to)
             (not (at-carrier ?k ?from))
             (at-carrier ?k ?to)
+            ;; <--- ΒΗΜΑ 4: Αύξηση κόστους βάσει απόστασης --->
+            (increase (total-cost) (fly-cost ?from ?to))
         )
     )
     (:action load-crate
@@ -44,6 +53,8 @@
             (in ?c ?k)
             (not (load ?k ?n))
             (load ?k ?n2)
+            ;; <--- ΒΗΜΑ 3: Σταθερό κόστος δράσης (π.χ. 1) --->
+            (increase (total-cost) 1)
         )
     )
     (:action unload-and-deliver
@@ -62,6 +73,8 @@
             (delivered ?p ?t)
             (not (load ?k ?n))
             (load ?k ?n2)
+            ;; <--- ΒΗΜΑ 3: Σταθερό κόστος δράσης (π.χ. 1) --->
+            (increase (total-cost) 1)
         )
     )
 )
