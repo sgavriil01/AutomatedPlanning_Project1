@@ -8,6 +8,10 @@ __pycache__/
 
 # Planner outputs
 *.plan
+*.soln
+
+# Local generated planning instances (legacy folder)
+part1/generated_problems/
 
 # Containers
 *.sif

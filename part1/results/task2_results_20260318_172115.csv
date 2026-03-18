@@ -1,0 +1,9 @@
+Algorithm,Heuristic,Time (s),Plan Length,Status
+GBFS,HMAX,16.55,22,success
+GBFS,HADD,0.12,23,success
+GBFS,HFF,0.15,19,success
+GBFS,LANDMARK,0.11,24,success
+EHC,HMAX,TIMEOUT,N/A,timeout
+EHC,HADD,0.13,22,success
+EHC,HFF,0.13,21,success
+EHC,LANDMARK,0.10,28,success

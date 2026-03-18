@@ -1,4 +1,4 @@
-(define (problem project1_problem1)
+(define (problem project1_problem2)
   (:domain project1_domain)
 
   (:objects

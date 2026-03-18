@@ -1,0 +1,15 @@
+2026-03-16 18:22:29,538 INFO     using search: astar_search
+2026-03-16 18:22:29,538 INFO     using heuristic: LmCutHeuristic
+2026-03-16 18:22:29,538 INFO     Parsing Domain /home/spyrosgavriil/Desktop/Erasmus/Subjects/Automated_Planning/AutomatedPlanning_Project1/part1/domain.pddl
+2026-03-16 18:22:29,539 INFO     Parsing Problem /home/spyrosgavriil/Desktop/Erasmus/Subjects/Automated_Planning/AutomatedPlanning_Project1/part1/generated_problems/drone_problem_d1_r0_l6_p6_c6_g6_ct2.pddl
+2026-03-16 18:22:29,540 INFO     9 Predicates parsed
+2026-03-16 18:22:29,540 INFO     5 Actions parsed
+2026-03-16 18:22:29,540 INFO     22 Objects parsed
+2026-03-16 18:22:29,540 INFO     0 Constants parsed
+2026-03-16 18:22:29,540 INFO     Grounding start: drone_problem_d1_r0_l6_p6_c6_g6_ct2
+2026-03-16 18:22:29,545 INFO     Relevance analysis removed 6 facts
+2026-03-16 18:22:29,545 INFO     Grounding end: drone_problem_d1_r0_l6_p6_c6_g6_ct2
+2026-03-16 18:22:29,545 INFO     75 Variables created
+2026-03-16 18:22:29,545 INFO     198 Operators created
+2026-03-16 18:22:29,546 INFO     Search start: drone_problem_d1_r0_l6_p6_c6_g6_ct2
+2026-03-16 18:22:29,548 INFO     Initial h value: 12.000000
