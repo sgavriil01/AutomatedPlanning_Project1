@@ -1,0 +1,347 @@
+INFO     planner time limit: 60s
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: 59s
+INFO     translator memory limit: None
+INFO     translator command line string: /usr/bin/python3 /workspace/downward/builds/release/bin/translate/translate.py domain.pddl problems/drone_problem_d1_r1_l20_p20_c20_g20_ct2.pddl --sas-file output.sas
+Parsing...
+Parsing: [0.000s CPU, 0.005s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.003s wall-clock]
+Preparing model... [0.010s CPU, 0.001s wall-clock]
+Generated 37 rules.
+Computing model... [0.000s CPU, 0.009s wall-clock]
+2945 relevant atoms
+1357 auxiliary atoms
+4302 final queue length
+8440 total queue pushes
+Completing instantiation... [0.040s CPU, 0.025s wall-clock]
+Instantiating: [0.050s CPU, 0.039s wall-clock]
+Computing fact groups...
+Finding invariants...
+18 initial candidates
+Finding invariants: [0.000s CPU, 0.002s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+40 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.000s CPU, 0.004s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Processing axioms: [0.000s CPU, 0.002s wall-clock]
+Translating task: [0.030s CPU, 0.032s wall-clock]
+0 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+3 propositions removed
+Detecting unreachable propositions: [0.020s CPU, 0.014s wall-clock]
+Reordering and filtering variables...
+43 of 63 variables necessary.
+0 of 23 mutex groups necessary.
+2100 of 2100 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.005s wall-clock]
+Translator variables: 43
+Translator derived variables: 0
+Translator facts: 147
+Translator goal facts: 21
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 2100
+Translator axioms: 0
+Translator task size: 14903
+Translator peak memory: 41928 KB
+Writing output... [0.000s CPU, 0.008s wall-clock]
+Done! [0.110s CPU, 0.111s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: 59s
+INFO     search memory limit: None
+INFO     search command line string: /workspace/downward/builds/release/bin/downward --search 'let(hcea,cea(transform=adapt_costs(plusone)),let(hcg,cg(transform=adapt_costs(one)),let(hgc,goalcount(transform=adapt_costs(plusone)),let(hff,ff(),iterated([ehc(hcea,preferred=[hcea],preferred_usage=prune_by_preferred,cost_type=normal),lazy(alt([single(sum([weight(g(),2),weight(hff,3)])),single(sum([weight(g(),2),weight(hff,3)]),pref_only=true),single(sum([weight(g(),2),weight(hcg,3)])),single(sum([weight(g(),2),weight(hcg,3)]),pref_only=true),single(sum([weight(g(),2),weight(hcea,3)])),single(sum([weight(g(),2),weight(hcea,3)]),pref_only=true),single(sum([weight(g(),2),weight(hgc,3)])),single(sum([weight(g(),2),weight(hgc,3)]),pref_only=true)],boost=200),preferred=[hcea,hgc],reopen_closed=false,cost_type=one),lazy(alt([single(sum([g(),weight(hff,5)])),single(sum([g(),weight(hff,5)]),pref_only=true),single(sum([g(),weight(hcg,5)])),single(sum([g(),weight(hcg,5)]),pref_only=true),single(sum([g(),weight(hcea,5)])),single(sum([g(),weight(hcea,5)]),pref_only=true),single(sum([g(),weight(hgc,5)])),single(sum([g(),weight(hgc,5)]),pref_only=true)],boost=5000),preferred=[hcea,hgc],reopen_closed=true,cost_type=normal),lazy(alt([single(sum([g(),weight(hff,2)])),single(sum([g(),weight(hff,2)]),pref_only=true),single(sum([g(),weight(hcg,2)])),single(sum([g(),weight(hcg,2)]),pref_only=true),single(sum([g(),weight(hcea,2)])),single(sum([g(),weight(hcea,2)]),pref_only=true),single(sum([g(),weight(hgc,2)])),single(sum([g(),weight(hgc,2)]),pref_only=true)],boost=1000),preferred=[hcea,hgc],reopen_closed=true,cost_type=one)],repeat_last=true,continue_on_fail=true)))))' --internal-plan-file sas_plan < output.sas
+[t=0.001071s, 12132 KB] reading input...
+[t=0.006648s, 12860 KB] done reading input!
+[t=0.009810s, 13396 KB] Initializing context-enhanced additive heuristic...
+[t=0.011959s, 13792 KB] Initializing causal graph heuristic...
+[t=0.011959s, 13792 KB] Initializing heuristic cache... building causal graph...done! [t=0.000979s]
+[t=0.012938s, 14532 KB] done!
+[t=0.014958s, 15072 KB] Initializing goal count heuristic...
+[t=0.015872s, 15400 KB] Simplifying 5032 unary operators... done! [3752 unary operators]
+[t=0.017886s, 15532 KB] time to simplify: 0.002014s
+[t=0.017886s, 15532 KB] Initializing additive heuristic...
+[t=0.017886s, 15532 KB] Initializing FF heuristic...
+[t=0.018871s, 15532 KB] Building successor generator...done!
+[t=0.018871s, 15680 KB] peak memory difference for successor generator creation: 148 KB
+[t=0.018871s, 15680 KB] time for successor generation creation: 0.000000s
+[t=0.018871s, 15680 KB] Variables: 43
+[t=0.018871s, 15680 KB] FactPairs: 147
+[t=0.018871s, 15680 KB] Bytes per state: 12
+[t=0.018871s, 15680 KB] Building successor generator...done!
+[t=0.018871s, 15680 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.018871s, 15680 KB] time for successor generation creation: 0.000000s
+[t=0.018871s, 15680 KB] Variables: 43
+[t=0.018871s, 15680 KB] FactPairs: 147
+[t=0.018871s, 15680 KB] Bytes per state: 12
+[t=0.018871s, 15680 KB] Starting search: ehc
+[t=0.018871s, 15680 KB] Conducting enforced hill-climbing search, (real) bound = 2147483647
+[t=0.018871s, 15680 KB] Using preferred operators for pruning
+[t=0.019863s, 15780 KB] Initial heuristic value for cea: 5962
+[t=0.019863s, 15780 KB] New best heuristic value for cea: 5962
+[t=0.020034s, 15912 KB] New best heuristic value for cea: 5906
+[t=0.020034s, 16048 KB] New best heuristic value for cea: 5882
+[t=0.020034s, 16048 KB] New best heuristic value for cea: 4030
+[t=0.020799s, 16048 KB] New best heuristic value for cea: 2716
+[t=0.021791s, 16172 KB] New best heuristic value for cea: 2690
+[t=0.071785s, 16832 KB] New best heuristic value for cea: 2678
+[t=0.144682s, 16832 KB] New best heuristic value for cea: 2676
+[t=0.145680s, 16832 KB] New best heuristic value for cea: 2650
+[t=0.167686s, 16832 KB] New best heuristic value for cea: 2638
+[t=0.197588s, 16832 KB] New best heuristic value for cea: 2636
+[t=0.217589s, 16964 KB] New best heuristic value for cea: 2634
+[t=0.217589s, 16964 KB] New best heuristic value for cea: 2618
+[t=0.233588s, 16964 KB] New best heuristic value for cea: 2604
+[t=0.276588s, 16964 KB] New best heuristic value for cea: 2600
+[t=0.276588s, 16964 KB] New best heuristic value for cea: 2360
+[t=0.285553s, 16964 KB] New best heuristic value for cea: 2262
+[t=0.287574s, 16964 KB] New best heuristic value for cea: 2206
+[t=0.289514s, 16964 KB] New best heuristic value for cea: 2166
+[t=0.293537s, 16964 KB] New best heuristic value for cea: 2014
+[t=0.294535s, 16964 KB] New best heuristic value for cea: 2012
+[t=0.295525s, 16964 KB] New best heuristic value for cea: 1972
+[t=0.295525s, 16964 KB] New best heuristic value for cea: 1833
+[t=0.295525s, 16964 KB] New best heuristic value for cea: 1736
+[t=0.299516s, 16964 KB] New best heuristic value for cea: 1646
+[t=0.300536s, 16964 KB] New best heuristic value for cea: 1644
+[t=0.300536s, 16964 KB] New best heuristic value for cea: 1496
+[t=0.300536s, 16964 KB] New best heuristic value for cea: 1353
+[t=0.302517s, 16964 KB] New best heuristic value for cea: 1076
+[t=0.302517s, 16964 KB] New best heuristic value for cea: 993
+[t=0.303535s, 16964 KB] New best heuristic value for cea: 792
+[t=0.303535s, 16964 KB] New best heuristic value for cea: 737
+[t=0.303535s, 16964 KB] New best heuristic value for cea: 696
+[t=0.303535s, 16964 KB] New best heuristic value for cea: 690
+[t=0.303535s, 16964 KB] New best heuristic value for cea: 682
+[t=0.303535s, 16964 KB] New best heuristic value for cea: 472
+[t=0.304516s, 16964 KB] New best heuristic value for cea: 255
+[t=0.304516s, 16964 KB] New best heuristic value for cea: 253
+[t=0.304516s, 16964 KB] New best heuristic value for cea: 0
+[t=0.304516s, 16964 KB] Solution found!
+[t=0.304516s, 16964 KB] Actual search time: 0.284652s
+load-crate drone1 carrier1 crate20 depot n0 n1 (1)
+load-crate drone1 carrier1 crate9 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc7 (85)
+move-carrier drone1 carrier1 loc7 loc18 (80)
+move-carrier drone1 carrier1 loc18 loc1 (17)
+unload-and-deliver drone1 carrier1 crate9 person2 loc1 food n2 n1 (1)
+move-carrier drone1 carrier1 loc1 depot (123)
+load-crate drone1 carrier1 crate7 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc18 (109)
+unload-and-deliver drone1 carrier1 crate7 person3 loc18 food n2 n1 (1)
+move-carrier drone1 carrier1 loc18 depot (109)
+load-crate drone1 carrier1 crate6 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc18 (109)
+move-carrier drone1 carrier1 loc18 loc1 (17)
+unload-and-deliver drone1 carrier1 crate6 person16 loc1 food n2 n1 (1)
+move-carrier drone1 carrier1 loc1 depot (123)
+load-crate drone1 carrier1 crate5 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc18 (109)
+unload-and-deliver drone1 carrier1 crate5 person20 loc18 food n2 n1 (1)
+move-carrier drone1 carrier1 loc18 depot (109)
+load-crate drone1 carrier1 crate4 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc18 (109)
+unload-and-deliver drone1 carrier1 crate4 person11 loc18 food n2 n1 (1)
+move-carrier drone1 carrier1 loc18 depot (109)
+load-crate drone1 carrier1 crate3 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc18 (109)
+move-carrier drone1 carrier1 loc18 loc20 (13)
+unload-and-deliver drone1 carrier1 crate3 person8 loc20 food n2 n1 (1)
+move-carrier drone1 carrier1 loc20 depot (121)
+load-crate drone1 carrier1 crate8 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc18 (109)
+move-carrier drone1 carrier1 loc18 loc20 (13)
+unload-and-deliver drone1 carrier1 crate20 person8 loc20 medicine n2 n1 (1)
+move-carrier drone1 carrier1 loc20 loc14 (104)
+unload-and-deliver drone1 carrier1 crate8 person17 loc14 food n1 n0 (1)
+move-carrier drone1 carrier1 loc14 depot (188)
+load-crate drone1 carrier1 crate18 depot n0 n1 (1)
+load-crate drone1 carrier1 crate2 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc7 (85)
+move-carrier drone1 carrier1 loc7 loc18 (80)
+move-carrier drone1 carrier1 loc18 loc15 (47)
+unload-and-deliver drone1 carrier1 crate18 person7 loc15 medicine n2 n1 (1)
+move-carrier drone1 carrier1 loc15 depot (107)
+load-crate drone1 carrier1 crate19 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc18 (109)
+unload-and-deliver drone1 carrier1 crate19 person20 loc18 medicine n2 n1 (1)
+move-carrier drone1 carrier1 loc18 depot (109)
+load-crate drone1 carrier1 crate16 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc7 (85)
+move-carrier drone1 carrier1 loc7 loc13 (94)
+unload-and-deliver drone1 carrier1 crate16 person5 loc13 medicine n2 n1 (1)
+move-carrier drone1 carrier1 loc13 depot (177)
+load-crate drone1 carrier1 crate15 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc7 (85)
+unload-and-deliver drone1 carrier1 crate15 person6 loc7 medicine n2 n1 (1)
+move-carrier drone1 carrier1 loc7 depot (85)
+load-crate drone1 carrier1 crate17 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc7 (85)
+move-carrier drone1 carrier1 loc7 loc13 (94)
+move-carrier drone1 carrier1 loc13 loc4 (126)
+move-carrier drone1 carrier1 loc4 loc3 (46)
+unload-and-deliver drone1 carrier1 crate17 person1 loc3 medicine n2 n1 (1)
+move-carrier drone1 carrier1 loc3 depot (231)
+load-crate drone1 carrier1 crate14 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc7 (85)
+unload-and-deliver drone1 carrier1 crate14 person18 loc7 medicine n2 n1 (1)
+move-carrier drone1 carrier1 loc7 depot (85)
+load-crate drone1 carrier1 crate13 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc7 (85)
+move-carrier drone1 carrier1 loc7 loc13 (94)
+move-carrier drone1 carrier1 loc13 loc4 (126)
+move-carrier drone1 carrier1 loc4 loc15 (178)
+unload-and-deliver drone1 carrier1 crate13 person12 loc15 medicine n2 n1 (1)
+move-carrier drone1 carrier1 loc15 loc3 (144)
+move-carrier drone1 carrier1 loc3 loc4 (46)
+move-carrier drone1 carrier1 loc4 loc13 (126)
+unload-and-deliver drone1 carrier1 crate2 person5 loc13 food n1 n0 (1)
+move-carrier drone1 carrier1 loc13 depot (177)
+load-crate drone1 carrier1 crate12 depot n0 n1 (1)
+move-carrier drone1 carrier1 depot loc3 (231)
+move-carrier drone1 carrier1 loc3 loc4 (46)
+unload-and-deliver drone1 carrier1 crate12 person15 loc4 food n1 n0 (1)
+move-carrier drone1 carrier1 loc4 depot (252)
+load-crate drone1 carrier1 crate11 depot n0 n1 (1)
+move-carrier drone1 carrier1 depot loc3 (231)
+unload-and-deliver drone1 carrier1 crate11 person1 loc3 food n1 n0 (1)
+move-carrier drone1 carrier1 loc3 depot (231)
+load-crate drone1 carrier1 crate10 depot n0 n1 (1)
+move-carrier drone1 carrier1 depot loc7 (85)
+unload-and-deliver drone1 carrier1 crate10 person18 loc7 food n1 n0 (1)
+move-carrier drone1 carrier1 loc7 depot (85)
+load-crate drone1 carrier1 crate1 depot n0 n1 (1)
+move-carrier drone1 carrier1 depot loc4 (252)
+unload-and-deliver drone1 carrier1 crate1 person10 loc4 food n1 n0 (1)
+move-carrier drone1 carrier1 loc4 depot (252)
+[t=0.304516s, 16964 KB] Plan length: 95 step(s).
+[t=0.304516s, 16964 KB] Plan cost: 6361
+[t=0.304516s, 16964 KB] Expanded 5187 state(s).
+[t=0.304516s, 16964 KB] Reopened 0 state(s).
+[t=0.304516s, 16964 KB] Evaluated 5188 state(s).
+[t=0.304516s, 16964 KB] Evaluations: 5188
+[t=0.304516s, 16964 KB] Generated 10516 state(s).
+[t=0.304516s, 16964 KB] Dead ends: 0 state(s).
+[t=0.304516s, 16964 KB] EHC phases: 38
+[t=0.304516s, 16964 KB] Average expansions per EHC phase: 136.500000
+[t=0.304516s, 16964 KB] EHC phases of depth 1: 4 - Avg. Expansions: 1.000000
+[t=0.304516s, 16964 KB] EHC phases of depth 13: 1 - Avg. Expansions: 2.000000
+[t=0.304516s, 16964 KB] EHC phases of depth 17: 2 - Avg. Expansions: 20.500000
+[t=0.304516s, 16964 KB] EHC phases of depth 46: 3 - Avg. Expansions: 2.333333
+[t=0.304516s, 16964 KB] EHC phases of depth 80: 2 - Avg. Expansions: 6.000000
+[t=0.304516s, 16964 KB] EHC phases of depth 85: 2 - Avg. Expansions: 1.000000
+[t=0.304516s, 16964 KB] EHC phases of depth 94: 3 - Avg. Expansions: 14.666667
+[t=0.304516s, 16964 KB] EHC phases of depth 126: 2 - Avg. Expansions: 3.500000
+[t=0.304516s, 16964 KB] EHC phases of depth 172: 2 - Avg. Expansions: 31.500000
+[t=0.304516s, 16964 KB] EHC phases of depth 196: 1 - Avg. Expansions: 48.000000
+[t=0.304516s, 16964 KB] EHC phases of depth 220: 3 - Avg. Expansions: 695.666667
+[t=0.304516s, 16964 KB] EHC phases of depth 232: 2 - Avg. Expansions: 155.000000
+[t=0.304516s, 16964 KB] EHC phases of depth 234: 2 - Avg. Expansions: 592.500000
+[t=0.304516s, 16964 KB] EHC phases of depth 252: 1 - Avg. Expansions: 1.000000
+[t=0.304516s, 16964 KB] EHC phases of depth 264: 1 - Avg. Expansions: 98.000000
+[t=0.304516s, 16964 KB] EHC phases of depth 265: 1 - Avg. Expansions: 198.000000
+[t=0.304516s, 16964 KB] EHC phases of depth 318: 1 - Avg. Expansions: 91.000000
+[t=0.304516s, 16964 KB] EHC phases of depth 323: 1 - Avg. Expansions: 46.000000
+[t=0.304516s, 16964 KB] EHC phases of depth 339: 1 - Avg. Expansions: 7.000000
+[t=0.304516s, 16964 KB] EHC phases of depth 394: 1 - Avg. Expansions: 891.000000
+[t=0.304516s, 16964 KB] EHC phases of depth 485: 1 - Avg. Expansions: 19.000000
+[t=0.305514s, 16964 KB] EHC phases of depth 536: 1 - Avg. Expansions: 24.000000
+[t=0.305514s, 16964 KB] Best solution cost so far: 6361
+[t=0.305514s, 16964 KB] Solution found - keep searching
+[t=0.305514s, 16964 KB] Building successor generator...done!
+[t=0.305514s, 16964 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.305514s, 16964 KB] time for successor generation creation: 0.000000s
+[t=0.305514s, 16964 KB] Variables: 43
+[t=0.305514s, 16964 KB] FactPairs: 147
+[t=0.305514s, 16964 KB] Bytes per state: 12
+[t=0.305514s, 16964 KB] Starting search: lazy
+[t=0.305514s, 16964 KB] Conducting lazy best first search, (real) bound = 6361
+[t=0.305514s, 16964 KB] New best heuristic value for cea: 5962
+[t=0.305514s, 16964 KB] New best heuristic value for ff: 1415
+[t=0.305514s, 16964 KB] New best heuristic value for goalcount: 20
+[t=0.305514s, 16964 KB] New best heuristic value for cg: 100
+[t=0.305514s, 16964 KB] g=0, 1 evaluated, 0 expanded
+[t=0.305514s, 16964 KB] Initial heuristic value for cea: 5962
+[t=0.305514s, 16964 KB] Initial heuristic value for ff: 1415
+[t=0.305514s, 16964 KB] Initial heuristic value for goalcount: 20
+[t=0.305514s, 16964 KB] Initial heuristic value for cg: 100
+[t=0.305514s, 16964 KB] New best heuristic value for ff: 754
+[t=0.305514s, 16964 KB] g=1, 2 evaluated, 1 expanded
+[t=0.307535s, 16964 KB] New best heuristic value for cea: 5906
+[t=0.307535s, 16964 KB] New best heuristic value for cg: 72
+[t=0.307535s, 16964 KB] g=1, 11 evaluated, 10 expanded
+[t=0.307535s, 16964 KB] New best heuristic value for cea: 5690
+[t=0.307535s, 16964 KB] New best heuristic value for ff: 753
+[t=0.307535s, 16964 KB] g=2, 12 evaluated, 11 expanded
+[t=0.308525s, 16964 KB] New best heuristic value for cg: 68
+[t=0.308525s, 16964 KB] g=1, 15 evaluated, 14 expanded
+[t=0.308525s, 16964 KB] New best heuristic value for cea: 4690
+[t=0.308525s, 16964 KB] g=2, 17 evaluated, 16 expanded
+[t=0.310537s, 16964 KB] New best heuristic value for cea: 4492
+[t=0.310537s, 16964 KB] g=2, 28 evaluated, 27 expanded
+[t=0.311537s, 16964 KB] New best heuristic value for cg: 60
+[t=0.311537s, 16964 KB] g=2, 35 evaluated, 34 expanded
+[t=0.311537s, 16964 KB] New best heuristic value for cea: 2690
+[t=0.311537s, 16964 KB] New best heuristic value for ff: 752
+[t=0.311537s, 16964 KB] New best heuristic value for cg: 57
+[t=0.311537s, 16964 KB] g=3, 36 evaluated, 35 expanded
+[t=0.312516s, 16964 KB] New best heuristic value for cg: 53
+[t=0.312516s, 16964 KB] g=4, 41 evaluated, 40 expanded
+[t=0.317536s, 16964 KB] New best heuristic value for goalcount: 19
+[t=0.317536s, 16964 KB] g=5, 70 evaluated, 69 expanded
+[t=0.386491s, 17624 KB] New best heuristic value for goalcount: 18
+[t=0.386491s, 17624 KB] g=8, 523 evaluated, 522 expanded
+[t=0.395454s, 17624 KB] New best heuristic value for ff: 663
+[t=0.395454s, 17624 KB] g=5, 577 evaluated, 576 expanded
+[t=0.469449s, 18276 KB] New best heuristic value for cea: 2652
+[t=0.469449s, 18276 KB] g=7, 1065 evaluated, 1064 expanded
+[t=0.470448s, 18412 KB] New best heuristic value for cg: 52
+[t=0.470448s, 18412 KB] g=8, 1072 evaluated, 1071 expanded
+[t=0.490456s, 18536 KB] New best heuristic value for goalcount: 17
+[t=0.490456s, 18536 KB] g=12, 1205 evaluated, 1204 expanded
+[t=0.492431s, 18536 KB] New best heuristic value for cea: 2616
+[t=0.492431s, 18536 KB] New best heuristic value for cg: 51
+[t=0.492431s, 18536 KB] g=12, 1214 evaluated, 1213 expanded
+[t=0.493024s, 18668 KB] New best heuristic value for cg: 49
+[t=0.493024s, 18668 KB] g=13, 1218 evaluated, 1217 expanded
+[t=0.753347s, 20912 KB] New best heuristic value for ff: 662
+[t=0.753347s, 20912 KB] g=6, 2997 evaluated, 2996 expanded
+[t=31.904646s, 245800 KB] New best heuristic value for ff: 649
+[t=31.904646s, 245800 KB] g=7, 198051 evaluated, 198050 expanded
+[t=31.934613s, 246064 KB] New best heuristic value for ff: 643
+[t=31.934613s, 246064 KB] g=7, 198247 evaluated, 198246 expanded
+[t=39.948344s, 309300 KB] New best heuristic value for cg: 47
+[t=39.948344s, 309300 KB] g=8, 249076 evaluated, 249075 expanded
+Peak memory: 457340 KB
+caught signal 24 -- exiting
+Time limit has been reached.
+Remove intermediate file output.sas
+search exit code: 23
+
+Driver aborting after search
+INFO     Planner time: 59.27s

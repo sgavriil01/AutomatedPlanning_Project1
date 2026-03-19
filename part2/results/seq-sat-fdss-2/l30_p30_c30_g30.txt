@@ -1,0 +1,1298 @@
+INFO     planner time limit: 60s
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: 59s
+INFO     translator memory limit: None
+INFO     translator command line string: /usr/bin/python3 /workspace/downward/builds/release/bin/translate/translate.py domain.pddl problems/drone_problem_d1_r1_l30_p30_c30_g30_ct2.pddl --sas-file output.sas
+Parsing...
+Parsing: [0.000s CPU, 0.008s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.010s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.003s wall-clock]
+Preparing model... [0.000s CPU, 0.002s wall-clock]
+Generated 37 rules.
+Computing model... [0.020s CPU, 0.019s wall-clock]
+6195 relevant atoms
+2617 auxiliary atoms
+8812 final queue length
+18020 total queue pushes
+Completing instantiation... [0.050s CPU, 0.059s wall-clock]
+Instantiating: [0.080s CPU, 0.085s wall-clock]
+Computing fact groups...
+Finding invariants...
+18 initial candidates
+Finding invariants: [0.010s CPU, 0.003s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.004s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+60 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.010s CPU, 0.008s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Processing axioms: [0.010s CPU, 0.006s wall-clock]
+Translating task: [0.090s CPU, 0.083s wall-clock]
+0 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+3 propositions removed
+Detecting unreachable propositions: [0.030s CPU, 0.032s wall-clock]
+Reordering and filtering variables...
+63 of 93 variables necessary.
+0 of 33 mutex groups necessary.
+4650 of 4650 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.010s CPU, 0.012s wall-clock]
+Translator variables: 63
+Translator derived variables: 0
+Translator facts: 217
+Translator goal facts: 31
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 4650
+Translator axioms: 0
+Translator task size: 33769
+Translator peak memory: 53192 KB
+Writing output... [0.020s CPU, 0.018s wall-clock]
+Done! [0.250s CPU, 0.254s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search portfolio: /workspace/downward/driver/portfolios/seq_sat_fdss_2.py
+remaining time: 59.0
+config 0: relative time 330, remaining time 1595, absolute time 12
+g bound: infinity
+next plan number: 1
+args: [PosixPath('/workspace/downward/builds/release/bin/downward'), '--search', 'let(h, ff(transform=adapt_costs(one)),eager_greedy([h],preferred=[h],cost_type=one,bound=infinity))', '--internal-previous-portfolio-plans', '0', '--internal-plan-file', PosixPath('sas_plan')]
+INFO     search stdin: output.sas
+INFO     search time limit: 12s
+INFO     search memory limit: None
+INFO     search command line string: /workspace/downward/builds/release/bin/downward --search 'let(h, ff(transform=adapt_costs(one)),eager_greedy([h],preferred=[h],cost_type=one,bound=infinity))' --internal-previous-portfolio-plans 0 --internal-plan-file sas_plan < output.sas
+[t=0.000795s, 12132 KB] reading input...
+[t=0.012665s, 13756 KB] done reading input!
+[t=0.014780s, 14904 KB] Simplifying 12068 unary operators... done! [9188 unary operators]
+[t=0.017780s, 15444 KB] time to simplify: 0.003000s
+[t=0.017780s, 15444 KB] Initializing additive heuristic...
+[t=0.017780s, 15444 KB] Initializing FF heuristic...
+[t=0.017780s, 15444 KB] Building successor generator...done!
+[t=0.018758s, 15444 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.018758s, 15444 KB] time for successor generation creation: 0.000000s
+[t=0.018758s, 15444 KB] Variables: 63
+[t=0.018758s, 15444 KB] FactPairs: 217
+[t=0.018758s, 15444 KB] Bytes per state: 16
+[t=0.019426s, 15444 KB] Conducting best first search without reopening closed nodes, (real) bound = 2147483647
+[t=0.019426s, 15444 KB] New best heuristic value for ff: 50
+[t=0.019426s, 15444 KB] g=0, 1 evaluated, 0 expanded
+[t=0.019426s, 15444 KB] Initial heuristic value for ff: 50
+[t=0.019426s, 15444 KB] pruning method: none
+[t=0.020010s, 15444 KB] New best heuristic value for ff: 48
+[t=0.020010s, 15444 KB] g=1, 32 evaluated, 1 expanded
+[t=0.023922s, 15444 KB] New best heuristic value for ff: 47
+[t=0.023922s, 15444 KB] g=2, 110 evaluated, 2 expanded
+[t=0.114870s, 15444 KB] New best heuristic value for ff: 46
+[t=0.114870s, 15444 KB] g=5, 2143 evaluated, 111 expanded
+[t=0.115870s, 15444 KB] New best heuristic value for ff: 45
+[t=0.116870s, 15444 KB] g=6, 2174 evaluated, 112 expanded
+[t=0.234765s, 15444 KB] New best heuristic value for ff: 44
+[t=0.234765s, 15444 KB] g=9, 4830 evaluated, 234 expanded
+[t=0.235765s, 15444 KB] New best heuristic value for ff: 43
+[t=0.235765s, 15444 KB] g=10, 4861 evaluated, 235 expanded
+[t=0.348708s, 15576 KB] New best heuristic value for ff: 42
+[t=0.348708s, 15576 KB] g=13, 7395 evaluated, 351 expanded
+[t=0.349708s, 15576 KB] New best heuristic value for ff: 41
+[t=0.349708s, 15576 KB] g=14, 7426 evaluated, 352 expanded
+[t=0.474625s, 15712 KB] New best heuristic value for ff: 40
+[t=0.474625s, 15712 KB] g=17, 10210 evaluated, 484 expanded
+[t=0.476627s, 15712 KB] New best heuristic value for ff: 39
+[t=0.476627s, 15712 KB] g=18, 10241 evaluated, 485 expanded
+[t=0.622481s, 15848 KB] New best heuristic value for ff: 38
+[t=0.622481s, 15848 KB] g=21, 13584 evaluated, 639 expanded
+[t=0.624482s, 15848 KB] New best heuristic value for ff: 37
+[t=0.624482s, 15848 KB] g=22, 13615 evaluated, 640 expanded
+[t=0.764318s, 16108 KB] New best heuristic value for ff: 36
+[t=0.764318s, 16108 KB] g=25, 16751 evaluated, 784 expanded
+[t=0.765319s, 16108 KB] New best heuristic value for ff: 35
+[t=0.765319s, 16108 KB] g=26, 16782 evaluated, 785 expanded
+[t=0.952198s, 16244 KB] New best heuristic value for ff: 34
+[t=0.952198s, 16244 KB] g=29, 21083 evaluated, 987 expanded
+[t=0.953199s, 16244 KB] New best heuristic value for ff: 33
+[t=0.953199s, 16244 KB] g=30, 21114 evaluated, 988 expanded
+[t=1.129138s, 16380 KB] New best heuristic value for ff: 32
+[t=1.129138s, 16380 KB] g=33, 25164 evaluated, 1176 expanded
+[t=1.130139s, 16380 KB] New best heuristic value for ff: 31
+[t=1.130139s, 16380 KB] g=34, 25195 evaluated, 1177 expanded
+[t=1.289974s, 16516 KB] New best heuristic value for ff: 30
+[t=1.289974s, 16516 KB] g=37, 28965 evaluated, 1350 expanded
+[t=1.291973s, 16516 KB] New best heuristic value for ff: 29
+[t=1.291973s, 16516 KB] g=38, 28996 evaluated, 1351 expanded
+[t=1.557694s, 17044 KB] New best heuristic value for ff: 28
+[t=1.557694s, 17044 KB] g=42, 35260 evaluated, 1646 expanded
+[t=1.596685s, 17044 KB] New best heuristic value for ff: 27
+[t=1.596685s, 17044 KB] g=45, 36107 evaluated, 1689 expanded
+[t=1.598683s, 17044 KB] New best heuristic value for ff: 26
+[t=1.598683s, 17044 KB] g=46, 36153 evaluated, 1690 expanded
+[t=1.698569s, 17180 KB] New best heuristic value for ff: 25
+[t=1.698569s, 17180 KB] g=49, 38495 evaluated, 1776 expanded
+[t=1.765555s, 17180 KB] New best heuristic value for ff: 24
+[t=1.765555s, 17180 KB] g=52, 40079 evaluated, 1860 expanded
+[t=1.795555s, 17180 KB] New best heuristic value for ff: 23
+[t=1.795555s, 17180 KB] g=55, 40799 evaluated, 1898 expanded
+[t=1.796555s, 17180 KB] New best heuristic value for ff: 22
+[t=1.796555s, 17180 KB] g=56, 40830 evaluated, 1899 expanded
+[t=1.956555s, 17312 KB] New best heuristic value for ff: 21
+[t=1.956555s, 17312 KB] g=60, 44743 evaluated, 2082 expanded
+[t=2.126543s, 17584 KB] New best heuristic value for ff: 20
+[t=2.126543s, 17584 KB] g=63, 48966 evaluated, 2271 expanded
+[t=2.173541s, 17584 KB] New best heuristic value for ff: 19
+[t=2.173541s, 17584 KB] g=66, 50156 evaluated, 2329 expanded
+[t=2.197555s, 17584 KB] New best heuristic value for ff: 18
+[t=2.197555s, 17584 KB] g=69, 50750 evaluated, 2362 expanded
+[t=2.198554s, 17584 KB] New best heuristic value for ff: 17
+[t=2.198554s, 17584 KB] g=70, 50790 evaluated, 2363 expanded
+[t=2.245554s, 17716 KB] New best heuristic value for ff: 16
+[t=2.245554s, 17716 KB] g=73, 51994 evaluated, 2409 expanded
+[t=2.251554s, 17716 KB] New best heuristic value for ff: 15
+[t=2.251554s, 17716 KB] g=75, 52150 evaluated, 2419 expanded
+[t=2.252555s, 17716 KB] New best heuristic value for ff: 14
+[t=2.252555s, 17716 KB] g=76, 52181 evaluated, 2420 expanded
+[t=2.321521s, 17716 KB] New best heuristic value for ff: 13
+[t=2.321521s, 17716 KB] g=80, 53971 evaluated, 2504 expanded
+[t=2.388510s, 17852 KB] New best heuristic value for ff: 12
+[t=2.388510s, 17852 KB] g=83, 55753 evaluated, 2585 expanded
+[t=2.394142s, 17852 KB] New best heuristic value for ff: 11
+[t=2.395141s, 17852 KB] g=85, 55903 evaluated, 2594 expanded
+[t=2.396141s, 17852 KB] New best heuristic value for ff: 10
+[t=2.396141s, 17852 KB] g=86, 55934 evaluated, 2595 expanded
+[t=2.434139s, 17852 KB] New best heuristic value for ff: 9
+[t=2.434139s, 17852 KB] g=90, 56977 evaluated, 2642 expanded
+[t=2.465143s, 17852 KB] New best heuristic value for ff: 8
+[t=2.465143s, 17852 KB] g=93, 57813 evaluated, 2680 expanded
+[t=2.468142s, 17852 KB] New best heuristic value for ff: 7
+[t=2.468142s, 17852 KB] g=95, 57893 evaluated, 2686 expanded
+[t=2.469143s, 17852 KB] New best heuristic value for ff: 6
+[t=2.469143s, 17852 KB] g=96, 57926 evaluated, 2687 expanded
+[t=2.470129s, 17852 KB] New best heuristic value for ff: 5
+[t=2.470129s, 17852 KB] g=98, 57961 evaluated, 2689 expanded
+[t=2.473142s, 17852 KB] New best heuristic value for ff: 4
+[t=2.473142s, 17852 KB] g=102, 58031 evaluated, 2694 expanded
+[t=2.473142s, 17852 KB] New best heuristic value for ff: 3
+[t=2.473142s, 17852 KB] g=103, 58034 evaluated, 2695 expanded
+[t=2.477141s, 17852 KB] New best heuristic value for ff: 2
+[t=2.477141s, 17852 KB] g=106, 58158 evaluated, 2701 expanded
+[t=2.478142s, 17852 KB] New best heuristic value for ff: 1
+[t=2.478142s, 17852 KB] g=108, 58190 evaluated, 2703 expanded
+[t=2.478142s, 17852 KB] New best heuristic value for ff: 0
+[t=2.478142s, 17852 KB] g=109, 58191 evaluated, 2704 expanded
+[t=2.479145s, 17852 KB] Solution found!
+[t=2.479145s, 17852 KB] Actual search time: 2.459719s
+load-crate drone1 carrier1 crate1 depot n0 n1 (1)
+load-crate drone1 carrier1 crate27 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc12 (227)
+unload-and-deliver drone1 carrier1 crate1 person1 loc12 food n2 n1 (1)
+move-carrier drone1 carrier1 loc12 depot (227)
+load-crate drone1 carrier1 crate9 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc14 (113)
+unload-and-deliver drone1 carrier1 crate9 person12 loc14 food n2 n1 (1)
+move-carrier drone1 carrier1 loc14 depot (113)
+load-crate drone1 carrier1 crate8 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc15 (191)
+unload-and-deliver drone1 carrier1 crate8 person23 loc15 food n2 n1 (1)
+move-carrier drone1 carrier1 loc15 depot (191)
+load-crate drone1 carrier1 crate7 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc2 (145)
+unload-and-deliver drone1 carrier1 crate7 person21 loc2 food n2 n1 (1)
+move-carrier drone1 carrier1 loc2 depot (145)
+load-crate drone1 carrier1 crate6 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc21 (189)
+unload-and-deliver drone1 carrier1 crate6 person9 loc21 food n2 n1 (1)
+move-carrier drone1 carrier1 loc21 depot (189)
+load-crate drone1 carrier1 crate5 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc22 (191)
+unload-and-deliver drone1 carrier1 crate5 person20 loc22 food n2 n1 (1)
+move-carrier drone1 carrier1 loc22 depot (191)
+load-crate drone1 carrier1 crate4 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc3 (143)
+unload-and-deliver drone1 carrier1 crate4 person16 loc3 food n2 n1 (1)
+move-carrier drone1 carrier1 loc3 depot (143)
+load-crate drone1 carrier1 crate3 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc4 (79)
+unload-and-deliver drone1 carrier1 crate3 person14 loc4 food n2 n1 (1)
+move-carrier drone1 carrier1 loc4 depot (79)
+load-crate drone1 carrier1 crate26 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc5 (129)
+unload-and-deliver drone1 carrier1 crate26 person3 loc5 food n2 n1 (1)
+move-carrier drone1 carrier1 loc5 depot (129)
+load-crate drone1 carrier1 crate25 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc1 (251)
+unload-and-deliver drone1 carrier1 crate25 person6 loc1 food n2 n1 (1)
+move-carrier drone1 carrier1 loc1 depot (251)
+load-crate drone1 carrier1 crate10 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc1 (251)
+unload-and-deliver drone1 carrier1 crate27 person6 loc1 medicine n2 n1 (1)
+move-carrier drone1 carrier1 loc1 depot (251)
+load-crate drone1 carrier1 crate30 depot n1 n2 (1)
+load-crate drone1 carrier1 crate11 depot n2 n3 (1)
+move-carrier drone1 carrier1 depot loc13 (280)
+unload-and-deliver drone1 carrier1 crate10 person22 loc13 food n3 n2 (1)
+unload-and-deliver drone1 carrier1 crate11 person25 loc13 food n2 n1 (1)
+move-carrier drone1 carrier1 loc13 depot (280)
+load-crate drone1 carrier1 crate12 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc13 (280)
+unload-and-deliver drone1 carrier1 crate12 person30 loc13 food n2 n1 (1)
+move-carrier drone1 carrier1 loc13 depot (280)
+load-crate drone1 carrier1 crate24 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc19 (214)
+unload-and-deliver drone1 carrier1 crate24 person28 loc19 food n2 n1 (1)
+move-carrier drone1 carrier1 loc19 depot (214)
+load-crate drone1 carrier1 crate13 depot n1 n2 (1)
+load-crate drone1 carrier1 crate14 depot n2 n3 (1)
+move-carrier drone1 carrier1 depot loc19 (214)
+unload-and-deliver drone1 carrier1 crate13 person7 loc19 food n3 n2 (1)
+unload-and-deliver drone1 carrier1 crate14 person8 loc19 food n2 n1 (1)
+move-carrier drone1 carrier1 loc19 depot (214)
+load-crate drone1 carrier1 crate15 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc19 (214)
+unload-and-deliver drone1 carrier1 crate30 person7 loc19 medicine n2 n1 (1)
+move-carrier drone1 carrier1 loc19 depot (214)
+load-crate drone1 carrier1 crate29 depot n1 n2 (1)
+load-crate drone1 carrier1 crate16 depot n2 n3 (1)
+move-carrier drone1 carrier1 depot loc20 (205)
+unload-and-deliver drone1 carrier1 crate15 person18 loc20 food n3 n2 (1)
+unload-and-deliver drone1 carrier1 crate16 person19 loc20 food n2 n1 (1)
+move-carrier drone1 carrier1 loc20 depot (205)
+load-crate drone1 carrier1 crate23 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc24 (168)
+unload-and-deliver drone1 carrier1 crate23 person11 loc24 food n2 n1 (1)
+move-carrier drone1 carrier1 loc24 depot (168)
+load-crate drone1 carrier1 crate17 depot n1 n2 (1)
+load-crate drone1 carrier1 crate18 depot n2 n3 (1)
+move-carrier drone1 carrier1 depot loc24 (168)
+unload-and-deliver drone1 carrier1 crate17 person17 loc24 food n3 n2 (1)
+unload-and-deliver drone1 carrier1 crate18 person27 loc24 food n2 n1 (1)
+move-carrier drone1 carrier1 loc24 depot (168)
+load-crate drone1 carrier1 crate22 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc25 (206)
+unload-and-deliver drone1 carrier1 crate22 person15 loc25 food n2 n1 (1)
+move-carrier drone1 carrier1 loc25 depot (206)
+load-crate drone1 carrier1 crate19 depot n1 n2 (1)
+load-crate drone1 carrier1 crate2 depot n2 n3 (1)
+move-carrier drone1 carrier1 depot loc25 (206)
+unload-and-deliver drone1 carrier1 crate19 person4 loc25 food n3 n2 (1)
+unload-and-deliver drone1 carrier1 crate29 person4 loc25 medicine n2 n1 (1)
+move-carrier drone1 carrier1 loc25 depot (206)
+load-crate drone1 carrier1 crate28 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc29 (16)
+unload-and-deliver drone1 carrier1 crate28 person10 loc29 medicine n2 n1 (1)
+move-carrier drone1 carrier1 loc29 depot (16)
+load-crate drone1 carrier1 crate20 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc29 (16)
+unload-and-deliver drone1 carrier1 crate2 person24 loc29 food n2 n1 (1)
+move-carrier drone1 carrier1 loc29 loc7 (73)
+unload-and-deliver drone1 carrier1 crate20 person13 loc7 food n1 n0 (1)
+move-carrier drone1 carrier1 loc7 depot (83)
+load-crate drone1 carrier1 crate21 depot n0 n1 (1)
+move-carrier drone1 carrier1 depot loc7 (83)
+unload-and-deliver drone1 carrier1 crate21 person5 loc7 food n1 n0 (1)
+move-carrier drone1 carrier1 loc7 depot (83)
+[t=2.479145s, 17852 KB] Plan length: 109 step(s).
+[t=2.479145s, 17852 KB] Plan cost: 8558
+[t=2.479145s, 17852 KB] Expanded 2705 state(s).
+[t=2.479145s, 17852 KB] Reopened 0 state(s).
+[t=2.479145s, 17852 KB] Evaluated 58220 state(s).
+[t=2.479145s, 17852 KB] Evaluations: 60924
+[t=2.479145s, 17852 KB] Generated 106558 state(s).
+[t=2.479145s, 17852 KB] Dead ends: 2 state(s).
+[t=2.479145s, 17852 KB] Number of registered states: 58220
+[t=2.479145s, 17852 KB] Int hash set load factor: 58220/65536 = 0.888367
+[t=2.479145s, 17852 KB] Int hash set resizes: 16
+[t=2.479145s, 17852 KB] Search time: 2.459719s
+[t=2.479145s, 17852 KB] Total time: 2.479145s
+Solution found.
+Peak memory: 17852 KB
+exitcode: 0
+
+plan manager: found new plan with cost 8558
+Switch to real costs and repeat last run.
+remaining time: 56.510000000000005
+config 0: relative time 330, remaining time 1595, absolute time 11
+g bound: 8558
+next plan number: 2
+args: [PosixPath('/workspace/downward/builds/release/bin/downward'), '--search', 'let(h, ff(transform=adapt_costs(plusone)),eager_greedy([h],preferred=[h],cost_type=normal,bound=8558))', '--internal-previous-portfolio-plans', '1', '--internal-plan-file', PosixPath('sas_plan')]
+INFO     search stdin: output.sas
+INFO     search time limit: 11s
+INFO     search memory limit: None
+INFO     search command line string: /workspace/downward/builds/release/bin/downward --search 'let(h, ff(transform=adapt_costs(plusone)),eager_greedy([h],preferred=[h],cost_type=normal,bound=8558))' --internal-previous-portfolio-plans 1 --internal-plan-file sas_plan < output.sas
+[t=0.000968s, 12132 KB] reading input...
+[t=0.012967s, 13756 KB] done reading input!
+[t=0.014969s, 14904 KB] Simplifying 12068 unary operators... done! [9188 unary operators]
+[t=0.018969s, 15444 KB] time to simplify: 0.004000s
+[t=0.018969s, 15444 KB] Initializing additive heuristic...
+[t=0.018969s, 15444 KB] Initializing FF heuristic...
+[t=0.018969s, 15444 KB] Building successor generator...done!
+[t=0.019969s, 15444 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.019969s, 15444 KB] time for successor generation creation: 0.001000s
+[t=0.019969s, 15444 KB] Variables: 63
+[t=0.019969s, 15444 KB] FactPairs: 217
+[t=0.019969s, 15444 KB] Bytes per state: 16
+[t=0.019969s, 15444 KB] Conducting best first search without reopening closed nodes, (real) bound = 8558
+[t=0.019969s, 15444 KB] New best heuristic value for ff: 2911
+[t=0.019969s, 15444 KB] g=0, 1 evaluated, 0 expanded
+[t=0.019969s, 15444 KB] Initial heuristic value for ff: 2911
+[t=0.019969s, 15444 KB] pruning method: none
+[t=0.019969s, 15444 KB] New best heuristic value for ff: 2227
+[t=0.019969s, 15444 KB] g=251, 2 evaluated, 1 expanded
+[t=0.019969s, 15444 KB] New best heuristic value for ff: 1959
+[t=0.019969s, 15444 KB] g=227, 4 evaluated, 1 expanded
+[t=0.019969s, 15444 KB] New best heuristic value for ff: 1919
+[t=0.019969s, 15444 KB] g=227, 5 evaluated, 1 expanded
+[t=0.019969s, 15444 KB] New best heuristic value for ff: 1645
+[t=0.019969s, 15444 KB] g=113, 7 evaluated, 1 expanded
+[t=0.019969s, 15444 KB] New best heuristic value for ff: 1639
+[t=0.019969s, 15444 KB] g=115, 10 evaluated, 1 expanded
+[t=0.020953s, 15444 KB] New best heuristic value for ff: 1561
+[t=0.020953s, 15444 KB] g=168, 18 evaluated, 1 expanded
+[t=0.024970s, 15444 KB] New best heuristic value for ff: 1559
+[t=0.024970s, 15444 KB] g=169, 78 evaluated, 25 expanded
+[t=0.033948s, 15444 KB] New best heuristic value for ff: 1503
+[t=0.033948s, 15444 KB] g=170, 232 evaluated, 39 expanded
+[t=0.042948s, 15444 KB] New best heuristic value for ff: 1492
+[t=0.042948s, 15444 KB] g=211, 356 evaluated, 86 expanded
+[t=0.044917s, 15444 KB] New best heuristic value for ff: 1487
+[t=0.044917s, 15444 KB] g=202, 387 evaluated, 106 expanded
+[t=0.063939s, 15444 KB] New best heuristic value for ff: 1462
+[t=0.063939s, 15444 KB] g=177, 604 evaluated, 258 expanded
+[t=0.109832s, 15444 KB] New best heuristic value for ff: 1437
+[t=0.109832s, 15444 KB] g=626, 1155 evaluated, 651 expanded
+[t=0.114831s, 15444 KB] New best heuristic value for ff: 1426
+[t=0.114831s, 15444 KB] g=667, 1218 evaluated, 684 expanded
+[t=0.116810s, 15444 KB] New best heuristic value for ff: 1421
+[t=0.116810s, 15444 KB] g=658, 1249 evaluated, 699 expanded
+[t=0.126832s, 15444 KB] New best heuristic value for ff: 1396
+[t=0.126832s, 15444 KB] g=633, 1373 evaluated, 780 expanded
+[t=0.164823s, 15444 KB] New best heuristic value for ff: 1380
+[t=0.164823s, 15444 KB] g=1010, 1832 evaluated, 1107 expanded
+[t=0.172821s, 15444 KB] New best heuristic value for ff: 1364
+[t=0.172821s, 15444 KB] g=1042, 1954 evaluated, 1132 expanded
+[t=0.174811s, 15444 KB] New best heuristic value for ff: 1354
+[t=0.174811s, 15444 KB] g=1112, 1975 evaluated, 1152 expanded
+[t=0.174811s, 15444 KB] New best heuristic value for ff: 1353
+[t=0.174811s, 15444 KB] g=1110, 1978 evaluated, 1152 expanded
+[t=0.183821s, 15444 KB] New best heuristic value for ff: 1339
+[t=0.183821s, 15444 KB] g=1017, 2109 evaluated, 1217 expanded
+[t=0.201822s, 15444 KB] New best heuristic value for ff: 1326
+[t=0.201822s, 15444 KB] g=1142, 2315 evaluated, 1384 expanded
+[t=0.201822s, 15444 KB] New best heuristic value for ff: 1325
+[t=0.201822s, 15444 KB] g=1140, 2318 evaluated, 1384 expanded
+[t=0.215823s, 15444 KB] New best heuristic value for ff: 1324
+[t=0.215823s, 15444 KB] g=1338, 2464 evaluated, 1517 expanded
+[t=0.215823s, 15444 KB] New best heuristic value for ff: 1321
+[t=0.215823s, 15444 KB] g=1340, 2467 evaluated, 1517 expanded
+[t=0.218822s, 15444 KB] New best heuristic value for ff: 1319
+[t=0.218822s, 15444 KB] g=1342, 2525 evaluated, 1520 expanded
+[t=0.218822s, 15444 KB] New best heuristic value for ff: 1287
+[t=0.218822s, 15444 KB] g=1394, 2533 evaluated, 1520 expanded
+[t=0.227823s, 15444 KB] New best heuristic value for ff: 1275
+[t=0.227823s, 15444 KB] g=1403, 2677 evaluated, 1545 expanded
+[t=0.227823s, 15444 KB] New best heuristic value for ff: 1274
+[t=0.227823s, 15444 KB] g=1403, 2680 evaluated, 1545 expanded
+[t=0.227823s, 15444 KB] New best heuristic value for ff: 1271
+[t=0.227823s, 15444 KB] g=1426, 2688 evaluated, 1545 expanded
+[t=0.229823s, 15444 KB] New best heuristic value for ff: 1268
+[t=0.229823s, 15444 KB] g=1424, 2708 evaluated, 1562 expanded
+[t=0.229823s, 15444 KB] New best heuristic value for ff: 1267
+[t=0.229823s, 15444 KB] g=1424, 2711 evaluated, 1562 expanded
+[t=0.231823s, 15444 KB] New best heuristic value for ff: 1242
+[t=0.231823s, 15444 KB] g=1496, 2739 evaluated, 1578 expanded
+[t=0.266821s, 15576 KB] New best heuristic value for ff: 1240
+[t=0.266821s, 15576 KB] g=1718, 3166 evaluated, 1883 expanded
+[t=0.266821s, 15576 KB] New best heuristic value for ff: 1239
+[t=0.266821s, 15576 KB] g=1720, 3169 evaluated, 1883 expanded
+[t=0.269822s, 15576 KB] New best heuristic value for ff: 1237
+[t=0.269822s, 15576 KB] g=1722, 3226 evaluated, 1886 expanded
+[t=0.281823s, 15576 KB] New best heuristic value for ff: 1191
+[t=0.281823s, 15576 KB] g=1783, 3440 evaluated, 1926 expanded
+[t=0.284821s, 15576 KB] New best heuristic value for ff: 1184
+[t=0.284821s, 15576 KB] g=1804, 3471 evaluated, 1950 expanded
+[t=0.289811s, 15576 KB] New best heuristic value for ff: 1163
+[t=0.289811s, 15576 KB] g=1827, 3533 evaluated, 1990 expanded
+[t=0.313799s, 15720 KB] New best heuristic value for ff: 1161
+[t=0.314822s, 15720 KB] g=2010, 3835 evaluated, 2212 expanded
+[t=0.316820s, 15720 KB] New best heuristic value for ff: 1159
+[t=0.316820s, 15720 KB] g=2014, 3894 evaluated, 2215 expanded
+[t=0.317800s, 15720 KB] New best heuristic value for ff: 1155
+[t=0.317800s, 15720 KB] g=2066, 3902 evaluated, 2215 expanded
+[t=0.325822s, 15720 KB] New best heuristic value for ff: 1112
+[t=0.325822s, 15720 KB] g=2075, 4046 evaluated, 2238 expanded
+[t=0.327822s, 15720 KB] New best heuristic value for ff: 1105
+[t=0.327822s, 15720 KB] g=2096, 4077 evaluated, 2255 expanded
+[t=0.358788s, 15720 KB] New best heuristic value for ff: 1103
+[t=0.358788s, 15720 KB] g=2298, 4471 evaluated, 2490 expanded
+[t=0.361787s, 15720 KB] New best heuristic value for ff: 1101
+[t=0.361787s, 15720 KB] g=2302, 4529 evaluated, 2493 expanded
+[t=0.361787s, 15720 KB] New best heuristic value for ff: 1086
+[t=0.361787s, 15720 KB] g=2354, 4537 evaluated, 2493 expanded
+[t=0.372808s, 15720 KB] New best heuristic value for ff: 1054
+[t=0.372808s, 15720 KB] g=2363, 4743 evaluated, 2538 expanded
+[t=0.375808s, 15720 KB] New best heuristic value for ff: 1045
+[t=0.375808s, 15720 KB] g=2361, 4785 evaluated, 2557 expanded
+[t=0.400809s, 15852 KB] New best heuristic value for ff: 1012
+[t=0.400809s, 15852 KB] g=2614, 5139 evaluated, 2737 expanded
+[t=0.411815s, 15852 KB] New best heuristic value for ff: 1008
+[t=0.411815s, 15852 KB] g=2568, 5345 evaluated, 2777 expanded
+[t=0.412802s, 15852 KB] New best heuristic value for ff: 971
+[t=0.412802s, 15852 KB] g=2621, 5356 evaluated, 2777 expanded
+[t=0.445792s, 15852 KB] New best heuristic value for ff: 963
+[t=0.445792s, 15852 KB] g=2875, 5893 evaluated, 2982 expanded
+[t=0.445792s, 15852 KB] New best heuristic value for ff: 913
+[t=0.445792s, 15852 KB] g=2849, 5894 evaluated, 2982 expanded
+[t=0.469790s, 15852 KB] New best heuristic value for ff: 911
+[t=0.469790s, 15852 KB] g=3001, 6223 evaluated, 3191 expanded
+[t=0.508785s, 15976 KB] New best heuristic value for ff: 909
+[t=0.508785s, 15976 KB] g=3002, 6831 evaluated, 3478 expanded
+[t=0.594764s, 16108 KB] New best heuristic value for ff: 861
+[t=0.594764s, 16108 KB] g=3227, 8420 evaluated, 3860 expanded
+[t=0.594764s, 16108 KB] New best heuristic value for ff: 859
+[t=0.595762s, 16108 KB] g=3225, 8423 evaluated, 3860 expanded
+[t=0.595762s, 16108 KB] New best heuristic value for ff: 819
+[t=0.595762s, 16108 KB] g=3176, 8431 evaluated, 3860 expanded
+[t=0.647772s, 16108 KB] New best heuristic value for ff: 817
+[t=0.647772s, 16108 KB] g=3507, 9193 evaluated, 4248 expanded
+[t=0.674773s, 16108 KB] New best heuristic value for ff: 815
+[t=0.674773s, 16108 KB] g=3508, 9675 evaluated, 4402 expanded
+[t=0.800762s, 16240 KB] New best heuristic value for ff: 781
+[t=0.800762s, 16240 KB] g=3572, 11973 evaluated, 5057 expanded
+[t=0.800762s, 16240 KB] New best heuristic value for ff: 756
+[t=0.800762s, 16240 KB] g=3458, 11976 evaluated, 5057 expanded
+[t=0.801749s, 16240 KB] New best heuristic value for ff: 752
+[t=0.801749s, 16240 KB] g=3460, 11979 evaluated, 5057 expanded
+[t=0.801749s, 16240 KB] New best heuristic value for ff: 741
+[t=0.801749s, 16240 KB] g=3554, 11983 evaluated, 5057 expanded
+[t=0.801749s, 16240 KB] New best heuristic value for ff: 680
+[t=0.801749s, 16240 KB] g=3532, 11986 evaluated, 5057 expanded
+[t=0.801749s, 16240 KB] New best heuristic value for ff: 659
+[t=0.801749s, 16240 KB] g=3513, 11987 evaluated, 5057 expanded
+[t=0.806764s, 16240 KB] New best heuristic value for ff: 657
+[t=0.806764s, 16240 KB] g=3543, 12033 evaluated, 5120 expanded
+[t=0.835763s, 16240 KB] New best heuristic value for ff: 655
+[t=0.835763s, 16240 KB] g=3544, 12575 evaluated, 5291 expanded
+[t=0.951574s, 16636 KB] New best heuristic value for ff: 653
+[t=0.951574s, 16636 KB] g=3882, 14712 evaluated, 5913 expanded
+[t=1.058559s, 16636 KB] New best heuristic value for ff: 651
+[t=1.058559s, 16636 KB] g=4220, 16723 evaluated, 6484 expanded
+[t=1.060558s, 16636 KB] New best heuristic value for ff: 632
+[t=1.060558s, 16636 KB] g=4260, 16769 evaluated, 6486 expanded
+[t=1.156553s, 16772 KB] New best heuristic value for ff: 630
+[t=1.156553s, 16772 KB] g=4575, 18607 evaluated, 7026 expanded
+[t=1.242543s, 16772 KB] New best heuristic value for ff: 628
+[t=1.242543s, 16772 KB] g=4987, 20366 evaluated, 7442 expanded
+[t=1.244537s, 16772 KB] New best heuristic value for ff: 624
+[t=1.244537s, 16772 KB] g=5091, 20398 evaluated, 7445 expanded
+[t=1.244537s, 16772 KB] New best heuristic value for ff: 575
+[t=1.244537s, 16772 KB] g=5120, 20401 evaluated, 7445 expanded
+[t=1.244537s, 16772 KB] New best heuristic value for ff: 573
+[t=1.244537s, 16772 KB] g=5118, 20404 evaluated, 7445 expanded
+[t=1.245537s, 16772 KB] New best heuristic value for ff: 565
+[t=1.245537s, 16772 KB] g=5089, 20411 evaluated, 7445 expanded
+[t=1.287526s, 16908 KB] New best heuristic value for ff: 563
+[t=1.287526s, 16908 KB] g=5382, 21296 evaluated, 7637 expanded
+[t=1.358526s, 16908 KB] New best heuristic value for ff: 561
+[t=1.358526s, 16908 KB] g=5550, 22803 evaluated, 7962 expanded
+[t=1.360526s, 16908 KB] New best heuristic value for ff: 509
+[t=1.360526s, 16908 KB] g=5639, 22862 evaluated, 7966 expanded
+[t=1.360526s, 16908 KB] New best heuristic value for ff: 474
+[t=1.360526s, 16908 KB] g=5611, 22864 evaluated, 7966 expanded
+[t=1.361503s, 16908 KB] New best heuristic value for ff: 471
+[t=1.361503s, 16908 KB] g=5614, 22865 evaluated, 7966 expanded
+[t=1.361503s, 16908 KB] New best heuristic value for ff: 470
+[t=1.361503s, 16908 KB] g=5606, 22872 evaluated, 7966 expanded
+[t=1.362526s, 16908 KB] New best heuristic value for ff: 462
+[t=1.362526s, 16908 KB] g=5601, 22890 evaluated, 7966 expanded
+[t=1.394510s, 17040 KB] New best heuristic value for ff: 460
+[t=1.394510s, 17040 KB] g=5764, 23630 evaluated, 8090 expanded
+[t=1.434522s, 17040 KB] New best heuristic value for ff: 458
+[t=1.434522s, 17040 KB] g=6194, 24548 evaluated, 8229 expanded
+[t=1.468512s, 17040 KB] New best heuristic value for ff: 456
+[t=1.468512s, 17040 KB] g=6624, 25371 evaluated, 8353 expanded
+[t=1.472513s, 17040 KB] New best heuristic value for ff: 454
+[t=1.472513s, 17040 KB] g=6738, 25477 evaluated, 8361 expanded
+[t=1.493514s, 17176 KB] New best heuristic value for ff: 452
+[t=1.493514s, 17176 KB] g=7199, 25981 evaluated, 8447 expanded
+[t=1.494495s, 17176 KB] New best heuristic value for ff: 406
+[t=1.494495s, 17176 KB] g=7257, 25992 evaluated, 8450 expanded
+[t=1.494495s, 17176 KB] New best heuristic value for ff: 398
+[t=1.494495s, 17176 KB] g=7346, 26000 evaluated, 8450 expanded
+[t=1.494495s, 17176 KB] New best heuristic value for ff: 376
+[t=1.494495s, 17176 KB] g=7329, 26001 evaluated, 8450 expanded
+[t=1.494495s, 17176 KB] New best heuristic value for ff: 374
+[t=1.494495s, 17176 KB] g=7352, 26006 evaluated, 8450 expanded
+[t=1.496512s, 17176 KB] New best heuristic value for ff: 372
+[t=1.496512s, 17176 KB] g=7621, 26041 evaluated, 8457 expanded
+[t=1.503513s, 17176 KB] New best heuristic value for ff: 370
+[t=1.503513s, 17176 KB] g=8035, 26236 evaluated, 8479 expanded
+[t=1.504493s, 17176 KB] New best heuristic value for ff: 289
+[t=1.504493s, 17176 KB] g=8242, 26254 evaluated, 8481 expanded
+[t=1.505532s, 17176 KB] New best heuristic value for ff: 287
+[t=1.505532s, 17176 KB] g=8243, 26284 evaluated, 8482 expanded
+[t=1.512491s, 17176 KB] New best heuristic value for ff: 285
+[t=1.512491s, 17176 KB] g=8525, 26480 evaluated, 8498 expanded
+[t=1.519502s, 17176 KB] New best heuristic value for ff: 283
+[t=1.519502s, 17176 KB] g=8527, 26649 evaluated, 8541 expanded
+[t=1.519502s, 17176 KB] New best heuristic value for ff: 281
+[t=1.519502s, 17176 KB] g=8528, 26655 evaluated, 8542 expanded
+[t=2.209258s, 18104 KB] New best heuristic value for ff: 217
+[t=2.209258s, 18104 KB] g=8526, 43678 evaluated, 11309 expanded
+[t=2.210238s, 18104 KB] New best heuristic value for ff: 215
+[t=2.210238s, 18104 KB] g=8527, 43708 evaluated, 11310 expanded
+[t=2.211237s, 18104 KB] New best heuristic value for ff: 213
+[t=2.211237s, 18104 KB] g=8528, 43712 evaluated, 11311 expanded
+[t=6.396471s, 23668 KB] New best heuristic value for ff: 0
+[t=6.396471s, 23668 KB] g=8500, 144925 evaluated, 28388 expanded
+[t=6.397482s, 23668 KB] Solution found!
+[t=6.397482s, 23668 KB] Actual search time: 6.377513s
+load-crate drone1 carrier1 crate1 depot n0 n1 (1)
+move-carrier drone1 carrier1 depot loc12 (227)
+unload-and-deliver drone1 carrier1 crate1 person1 loc12 food n1 n0 (1)
+move-carrier drone1 carrier1 loc12 depot (227)
+load-crate drone1 carrier1 crate10 depot n0 n1 (1)
+move-carrier drone1 carrier1 depot loc15 (191)
+unload-and-deliver drone1 carrier1 crate10 person23 loc15 food n1 n0 (1)
+move-carrier drone1 carrier1 loc15 depot (191)
+load-crate drone1 carrier1 crate11 depot n0 n1 (1)
+move-carrier drone1 carrier1 depot loc22 (191)
+unload-and-deliver drone1 carrier1 crate11 person20 loc22 food n1 n0 (1)
+move-carrier drone1 carrier1 loc22 depot (191)
+load-crate drone1 carrier1 crate12 depot n0 n1 (1)
+move-carrier drone1 carrier1 depot loc21 (189)
+unload-and-deliver drone1 carrier1 crate12 person9 loc21 food n1 n0 (1)
+move-carrier drone1 carrier1 loc21 depot (189)
+load-crate drone1 carrier1 crate13 depot n0 n1 (1)
+move-carrier drone1 carrier1 depot loc2 (145)
+unload-and-deliver drone1 carrier1 crate13 person21 loc2 food n1 n0 (1)
+move-carrier drone1 carrier1 loc2 depot (145)
+load-crate drone1 carrier1 crate14 depot n0 n1 (1)
+move-carrier drone1 carrier1 depot loc3 (143)
+unload-and-deliver drone1 carrier1 crate14 person16 loc3 food n1 n0 (1)
+move-carrier drone1 carrier1 loc3 depot (143)
+load-crate drone1 carrier1 crate15 depot n0 n1 (1)
+move-carrier drone1 carrier1 depot loc5 (129)
+unload-and-deliver drone1 carrier1 crate15 person3 loc5 food n1 n0 (1)
+move-carrier drone1 carrier1 loc5 depot (129)
+load-crate drone1 carrier1 crate16 depot n0 n1 (1)
+move-carrier drone1 carrier1 depot loc14 (113)
+unload-and-deliver drone1 carrier1 crate16 person12 loc14 food n1 n0 (1)
+move-carrier drone1 carrier1 loc14 depot (113)
+load-crate drone1 carrier1 crate17 depot n0 n1 (1)
+move-carrier drone1 carrier1 depot loc4 (79)
+unload-and-deliver drone1 carrier1 crate17 person14 loc4 food n1 n0 (1)
+move-carrier drone1 carrier1 loc4 depot (79)
+load-crate drone1 carrier1 crate18 depot n0 n1 (1)
+load-crate drone1 carrier1 crate27 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc1 (251)
+unload-and-deliver drone1 carrier1 crate18 person6 loc1 food n2 n1 (1)
+unload-and-deliver drone1 carrier1 crate27 person6 loc1 medicine n1 n0 (1)
+move-carrier drone1 carrier1 loc1 depot (251)
+load-crate drone1 carrier1 crate19 depot n0 n1 (1)
+load-crate drone1 carrier1 crate28 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc29 (16)
+unload-and-deliver drone1 carrier1 crate19 person24 loc29 food n2 n1 (1)
+unload-and-deliver drone1 carrier1 crate28 person10 loc29 medicine n1 n0 (1)
+move-carrier drone1 carrier1 loc29 depot (16)
+load-crate drone1 carrier1 crate2 depot n0 n1 (1)
+load-crate drone1 carrier1 crate29 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc24 (168)
+unload-and-deliver drone1 carrier1 crate2 person11 loc24 food n2 n1 (1)
+move-carrier drone1 carrier1 loc24 depot (168)
+load-crate drone1 carrier1 crate20 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc24 (168)
+unload-and-deliver drone1 carrier1 crate20 person17 loc24 food n2 n1 (1)
+move-carrier drone1 carrier1 loc24 depot (168)
+load-crate drone1 carrier1 crate21 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc24 (168)
+unload-and-deliver drone1 carrier1 crate21 person27 loc24 food n2 n1 (1)
+move-carrier drone1 carrier1 loc24 depot (168)
+load-crate drone1 carrier1 crate22 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc20 (205)
+unload-and-deliver drone1 carrier1 crate22 person18 loc20 food n2 n1 (1)
+move-carrier drone1 carrier1 loc20 depot (205)
+load-crate drone1 carrier1 crate23 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc20 (205)
+unload-and-deliver drone1 carrier1 crate23 person19 loc20 food n2 n1 (1)
+move-carrier drone1 carrier1 loc20 depot (205)
+load-crate drone1 carrier1 crate24 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc7 (83)
+unload-and-deliver drone1 carrier1 crate24 person13 loc7 food n2 n1 (1)
+move-carrier drone1 carrier1 loc7 depot (83)
+load-crate drone1 carrier1 crate25 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc7 (83)
+unload-and-deliver drone1 carrier1 crate25 person5 loc7 food n2 n1 (1)
+move-carrier drone1 carrier1 loc7 depot (83)
+load-crate drone1 carrier1 crate26 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc25 (206)
+unload-and-deliver drone1 carrier1 crate26 person15 loc25 food n2 n1 (1)
+move-carrier drone1 carrier1 loc25 depot (206)
+load-crate drone1 carrier1 crate3 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc25 (206)
+unload-and-deliver drone1 carrier1 crate29 person4 loc25 medicine n2 n1 (1)
+unload-and-deliver drone1 carrier1 crate3 person4 loc25 food n1 n0 (1)
+move-carrier drone1 carrier1 loc25 depot (206)
+load-crate drone1 carrier1 crate30 depot n0 n1 (1)
+load-crate drone1 carrier1 crate4 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc13 (280)
+unload-and-deliver drone1 carrier1 crate4 person22 loc13 food n2 n1 (1)
+move-carrier drone1 carrier1 loc13 depot (280)
+load-crate drone1 carrier1 crate5 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc13 (280)
+unload-and-deliver drone1 carrier1 crate5 person25 loc13 food n2 n1 (1)
+move-carrier drone1 carrier1 loc13 depot (280)
+load-crate drone1 carrier1 crate6 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc13 (280)
+unload-and-deliver drone1 carrier1 crate6 person30 loc13 food n2 n1 (1)
+move-carrier drone1 carrier1 loc13 depot (280)
+load-crate drone1 carrier1 crate7 depot n1 n2 (1)
+load-crate drone1 carrier1 crate8 depot n2 n3 (1)
+load-crate drone1 carrier1 crate9 depot n3 n4 (1)
+move-carrier drone1 carrier1 depot loc19 (214)
+unload-and-deliver drone1 carrier1 crate30 person7 loc19 medicine n4 n3 (1)
+unload-and-deliver drone1 carrier1 crate7 person28 loc19 food n3 n2 (1)
+unload-and-deliver drone1 carrier1 crate8 person7 loc19 food n2 n1 (1)
+unload-and-deliver drone1 carrier1 crate9 person8 loc19 food n1 n0 (1)
+move-carrier drone1 carrier1 loc19 depot (214)
+[t=6.397482s, 23668 KB] Plan length: 108 step(s).
+[t=6.397482s, 23668 KB] Plan cost: 8500
+[t=6.397482s, 23668 KB] Expanded 28389 state(s).
+[t=6.397482s, 23668 KB] Reopened 0 state(s).
+[t=6.397482s, 23668 KB] Evaluated 144953 state(s).
+[t=6.397482s, 23668 KB] Evaluations: 173341
+[t=6.397482s, 23668 KB] Generated 787508 state(s).
+[t=6.397482s, 23668 KB] Dead ends: 4150 state(s).
+[t=6.397482s, 23668 KB] Number of registered states: 144953
+[t=6.397482s, 23668 KB] Int hash set load factor: 144953/262144 = 0.552952
+[t=6.397482s, 23668 KB] Int hash set resizes: 18
+[t=6.397482s, 23668 KB] Search time: 6.377513s
+[t=6.397482s, 23668 KB] Total time: 6.397482s
+Solution found.
+Peak memory: 23668 KB
+exitcode: 0
+
+plan manager: found new plan with cost 8500
+Build final config.
+Abort portfolio and run final config.
+remaining time: 50.11
+config 0: relative time 1, remaining time 1, absolute time 50
+g bound: 8500
+next plan number: 3
+args: [PosixPath('/workspace/downward/builds/release/bin/downward'), '--search', 'let(h, ff(transform=adapt_costs(plusone)),iterated([eager(single(sum([g(),weight(h,5)])),preferred=[h],cost_type=normal),eager(single(sum([g(),weight(h,3)])),preferred=[h],cost_type=normal),eager(single(sum([g(),weight(h,2)])),preferred=[h],cost_type=normal),eager(single(sum([g(),weight(h,1)])),preferred=[h],cost_type=normal)],bound=8500,repeat_last=true))', '--internal-previous-portfolio-plans', '2', '--internal-plan-file', PosixPath('sas_plan')]
+INFO     search stdin: output.sas
+INFO     search time limit: 50s
+INFO     search memory limit: None
+INFO     search command line string: /workspace/downward/builds/release/bin/downward --search 'let(h, ff(transform=adapt_costs(plusone)),iterated([eager(single(sum([g(),weight(h,5)])),preferred=[h],cost_type=normal),eager(single(sum([g(),weight(h,3)])),preferred=[h],cost_type=normal),eager(single(sum([g(),weight(h,2)])),preferred=[h],cost_type=normal),eager(single(sum([g(),weight(h,1)])),preferred=[h],cost_type=normal)],bound=8500,repeat_last=true))' --internal-previous-portfolio-plans 2 --internal-plan-file sas_plan < output.sas
+[t=0.001001s, 12132 KB] reading input...
+[t=0.012990s, 13756 KB] done reading input!
+[t=0.014988s, 14968 KB] Simplifying 12068 unary operators... done! [9188 unary operators]
+[t=0.018988s, 15496 KB] time to simplify: 0.004000s
+[t=0.018988s, 15496 KB] Initializing additive heuristic...
+[t=0.018988s, 15496 KB] Initializing FF heuristic...
+[t=0.018988s, 15496 KB] Building successor generator...done!
+[t=0.019968s, 15496 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.019968s, 15496 KB] time for successor generation creation: 0.000981s
+[t=0.019968s, 15496 KB] Variables: 63
+[t=0.019968s, 15496 KB] FactPairs: 217
+[t=0.019968s, 15496 KB] Bytes per state: 16
+[t=0.019968s, 15496 KB] Building successor generator...done!
+[t=0.019968s, 15496 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.019968s, 15496 KB] time for successor generation creation: 0.000000s
+[t=0.019968s, 15496 KB] Variables: 63
+[t=0.019968s, 15496 KB] FactPairs: 217
+[t=0.019968s, 15496 KB] Bytes per state: 16
+[t=0.019968s, 15496 KB] Starting search: eager
+[t=0.019968s, 15496 KB] Conducting best first search without reopening closed nodes, (real) bound = 8500
+[t=0.019968s, 15496 KB] New best heuristic value for ff: 2911
+[t=0.019968s, 15496 KB] g=0, 1 evaluated, 0 expanded
+[t=0.019968s, 15496 KB] Initial heuristic value for ff: 2911
+[t=0.019968s, 15496 KB] pruning method: none
+[t=0.019968s, 15496 KB] New best heuristic value for ff: 2227
+[t=0.019968s, 15496 KB] g=251, 2 evaluated, 1 expanded
+[t=0.019968s, 15496 KB] New best heuristic value for ff: 1959
+[t=0.019968s, 15496 KB] g=227, 4 evaluated, 1 expanded
+[t=0.020968s, 15496 KB] New best heuristic value for ff: 1919
+[t=0.020968s, 15496 KB] g=227, 5 evaluated, 1 expanded
+[t=0.020968s, 15496 KB] New best heuristic value for ff: 1645
+[t=0.020968s, 15496 KB] g=113, 7 evaluated, 1 expanded
+[t=0.020968s, 15496 KB] New best heuristic value for ff: 1639
+[t=0.020968s, 15496 KB] g=115, 10 evaluated, 1 expanded
+[t=0.020968s, 15496 KB] New best heuristic value for ff: 1561
+[t=0.020968s, 15496 KB] g=168, 18 evaluated, 1 expanded
+[t=0.026005s, 15496 KB] New best heuristic value for ff: 1559
+[t=0.026005s, 15496 KB] g=169, 78 evaluated, 32 expanded
+[t=0.034903s, 15496 KB] New best heuristic value for ff: 1503
+[t=0.035902s, 15496 KB] g=170, 262 evaluated, 42 expanded
+[t=0.042890s, 15496 KB] New best heuristic value for ff: 1492
+[t=0.042890s, 15496 KB] g=211, 356 evaluated, 97 expanded
+[t=0.044891s, 15496 KB] New best heuristic value for ff: 1487
+[t=0.044891s, 15496 KB] g=202, 387 evaluated, 111 expanded
+[t=0.063880s, 15496 KB] New best heuristic value for ff: 1462
+[t=0.063880s, 15496 KB] g=177, 604 evaluated, 271 expanded
+[t=0.121868s, 15496 KB] New best heuristic value for ff: 1437
+[t=0.121868s, 15496 KB] g=626, 1186 evaluated, 850 expanded
+[t=0.126843s, 15496 KB] New best heuristic value for ff: 1426
+[t=0.126843s, 15496 KB] g=667, 1249 evaluated, 886 expanded
+[t=0.128842s, 15496 KB] New best heuristic value for ff: 1421
+[t=0.128842s, 15496 KB] g=658, 1280 evaluated, 896 expanded
+[t=0.139843s, 15496 KB] New best heuristic value for ff: 1396
+[t=0.139843s, 15496 KB] g=633, 1404 evaluated, 995 expanded
+[t=0.189831s, 15496 KB] New best heuristic value for ff: 1380
+[t=0.189831s, 15496 KB] g=1010, 1891 evaluated, 1518 expanded
+[t=0.196833s, 15496 KB] New best heuristic value for ff: 1364
+[t=0.196833s, 15496 KB] g=1042, 2016 evaluated, 1550 expanded
+[t=0.204830s, 15496 KB] New best heuristic value for ff: 1354
+[t=0.204830s, 15496 KB] g=1112, 2129 evaluated, 1589 expanded
+[t=0.204830s, 15496 KB] New best heuristic value for ff: 1353
+[t=0.204830s, 15496 KB] g=1110, 2132 evaluated, 1589 expanded
+[t=0.208830s, 15496 KB] New best heuristic value for ff: 1339
+[t=0.208830s, 15496 KB] g=1017, 2171 evaluated, 1634 expanded
+[t=0.230788s, 15496 KB] New best heuristic value for ff: 1326
+[t=0.230788s, 15496 KB] g=1142, 2377 evaluated, 1879 expanded
+[t=0.230788s, 15496 KB] New best heuristic value for ff: 1325
+[t=0.230788s, 15496 KB] g=1140, 2380 evaluated, 1879 expanded
+[t=0.252789s, 15496 KB] New best heuristic value for ff: 1324
+[t=0.252789s, 15496 KB] g=1338, 2557 evaluated, 2142 expanded
+[t=0.252789s, 15496 KB] New best heuristic value for ff: 1321
+[t=0.252789s, 15496 KB] g=1340, 2560 evaluated, 2142 expanded
+[t=0.255788s, 15496 KB] New best heuristic value for ff: 1319
+[t=0.255788s, 15496 KB] g=1342, 2618 evaluated, 2145 expanded
+[t=0.255788s, 15496 KB] New best heuristic value for ff: 1287
+[t=0.255788s, 15496 KB] g=1394, 2626 evaluated, 2145 expanded
+[t=0.264780s, 15496 KB] New best heuristic value for ff: 1275
+[t=0.264780s, 15496 KB] g=1403, 2770 evaluated, 2171 expanded
+[t=0.264780s, 15496 KB] New best heuristic value for ff: 1274
+[t=0.264780s, 15496 KB] g=1403, 2773 evaluated, 2171 expanded
+[t=0.264780s, 15496 KB] New best heuristic value for ff: 1271
+[t=0.264780s, 15496 KB] g=1426, 2781 evaluated, 2171 expanded
+[t=0.266779s, 15496 KB] New best heuristic value for ff: 1268
+[t=0.266779s, 15496 KB] g=1424, 2801 evaluated, 2183 expanded
+[t=0.266779s, 15496 KB] New best heuristic value for ff: 1267
+[t=0.266779s, 15496 KB] g=1424, 2804 evaluated, 2183 expanded
+[t=0.268779s, 15496 KB] New best heuristic value for ff: 1242
+[t=0.268779s, 15496 KB] g=1496, 2832 evaluated, 2202 expanded
+[t=0.316779s, 15496 KB] New best heuristic value for ff: 1240
+[t=0.316779s, 15496 KB] g=1718, 3290 evaluated, 2734 expanded
+[t=0.316779s, 15496 KB] New best heuristic value for ff: 1239
+[t=0.316779s, 15496 KB] g=1720, 3293 evaluated, 2734 expanded
+[t=0.319781s, 15496 KB] New best heuristic value for ff: 1237
+[t=0.319781s, 15496 KB] g=1722, 3350 evaluated, 2737 expanded
+[t=0.331747s, 15496 KB] New best heuristic value for ff: 1191
+[t=0.331747s, 15496 KB] g=1783, 3564 evaluated, 2774 expanded
+[t=0.333747s, 15496 KB] New best heuristic value for ff: 1184
+[t=0.333747s, 15496 KB] g=1804, 3595 evaluated, 2790 expanded
+[t=0.342749s, 15644 KB] New best heuristic value for ff: 1163
+[t=0.342749s, 15644 KB] g=1827, 3657 evaluated, 2899 expanded
+[t=0.377748s, 15644 KB] New best heuristic value for ff: 1161
+[t=0.377748s, 15644 KB] g=2010, 3990 evaluated, 3293 expanded
+[t=0.380747s, 15644 KB] New best heuristic value for ff: 1159
+[t=0.380747s, 15644 KB] g=2014, 4048 evaluated, 3295 expanded
+[t=0.380747s, 15644 KB] New best heuristic value for ff: 1155
+[t=0.380747s, 15644 KB] g=2066, 4056 evaluated, 3295 expanded
+[t=0.388748s, 15644 KB] New best heuristic value for ff: 1112
+[t=0.388748s, 15644 KB] g=2075, 4201 evaluated, 3317 expanded
+[t=0.390748s, 15644 KB] New best heuristic value for ff: 1105
+[t=0.390748s, 15644 KB] g=2096, 4232 evaluated, 3331 expanded
+[t=0.434701s, 15644 KB] New best heuristic value for ff: 1103
+[t=0.434701s, 15644 KB] g=2298, 4657 evaluated, 3824 expanded
+[t=0.437703s, 15644 KB] New best heuristic value for ff: 1101
+[t=0.437703s, 15644 KB] g=2302, 4714 evaluated, 3826 expanded
+[t=0.437703s, 15644 KB] New best heuristic value for ff: 1086
+[t=0.437703s, 15644 KB] g=2354, 4722 evaluated, 3826 expanded
+[t=0.449703s, 15644 KB] New best heuristic value for ff: 1054
+[t=0.449703s, 15644 KB] g=2363, 4929 evaluated, 3868 expanded
+[t=0.451702s, 15644 KB] New best heuristic value for ff: 1045
+[t=0.451702s, 15644 KB] g=2361, 4971 evaluated, 3884 expanded
+[t=0.490544s, 15644 KB] New best heuristic value for ff: 1012
+[t=0.490544s, 15644 KB] g=2614, 5355 evaluated, 4331 expanded
+[t=0.502543s, 15644 KB] New best heuristic value for ff: 1008
+[t=0.502543s, 15644 KB] g=2568, 5562 evaluated, 4384 expanded
+[t=0.503544s, 15644 KB] New best heuristic value for ff: 971
+[t=0.503544s, 15644 KB] g=2621, 5573 evaluated, 4384 expanded
+[t=0.550430s, 15644 KB] New best heuristic value for ff: 963
+[t=0.550430s, 15644 KB] g=2875, 6141 evaluated, 4840 expanded
+[t=0.550430s, 15644 KB] New best heuristic value for ff: 913
+[t=0.550430s, 15644 KB] g=2849, 6142 evaluated, 4840 expanded
+[t=0.585417s, 15912 KB] New best heuristic value for ff: 911
+[t=0.585417s, 15912 KB] g=3001, 6471 evaluated, 5228 expanded
+[t=0.640308s, 15912 KB] New best heuristic value for ff: 909
+[t=0.640308s, 15912 KB] g=3002, 7079 evaluated, 5759 expanded
+[t=0.790212s, 16308 KB] New best heuristic value for ff: 861
+[t=0.790212s, 16308 KB] g=3227, 9228 evaluated, 6958 expanded
+[t=0.790212s, 16308 KB] New best heuristic value for ff: 859
+[t=0.790212s, 16308 KB] g=3225, 9231 evaluated, 6958 expanded
+[t=0.790212s, 16308 KB] New best heuristic value for ff: 819
+[t=0.790212s, 16308 KB] g=3176, 9239 evaluated, 6958 expanded
+[t=0.824234s, 16308 KB] New best heuristic value for ff: 817
+[t=0.824234s, 16308 KB] g=3507, 9441 evaluated, 7491 expanded
+[t=0.861169s, 16308 KB] New best heuristic value for ff: 815
+[t=0.861169s, 16308 KB] g=3508, 9923 evaluated, 7849 expanded
+[t=1.032100s, 16572 KB] New best heuristic value for ff: 781
+[t=1.032100s, 16572 KB] g=3572, 12221 evaluated, 9476 expanded
+[t=1.032100s, 16572 KB] New best heuristic value for ff: 756
+[t=1.032100s, 16572 KB] g=3458, 12224 evaluated, 9476 expanded
+[t=1.032100s, 16572 KB] New best heuristic value for ff: 752
+[t=1.032100s, 16572 KB] g=3460, 12227 evaluated, 9476 expanded
+[t=1.033078s, 16572 KB] New best heuristic value for ff: 741
+[t=1.033078s, 16572 KB] g=3554, 12231 evaluated, 9476 expanded
+[t=1.033078s, 16572 KB] New best heuristic value for ff: 680
+[t=1.033078s, 16572 KB] g=3532, 12234 evaluated, 9476 expanded
+[t=1.033078s, 16572 KB] New best heuristic value for ff: 659
+[t=1.033078s, 16572 KB] g=3513, 12235 evaluated, 9476 expanded
+[t=1.038100s, 16572 KB] New best heuristic value for ff: 657
+[t=1.038100s, 16572 KB] g=3543, 12281 evaluated, 9536 expanded
+[t=1.081068s, 16572 KB] New best heuristic value for ff: 655
+[t=1.081068s, 16572 KB] g=3544, 12823 evaluated, 10017 expanded
+[t=1.427852s, 17100 KB] New best heuristic value for ff: 653
+[t=1.427852s, 17100 KB] g=3546, 17094 evaluated, 13826 expanded
+[t=1.499833s, 17236 KB] New best heuristic value for ff: 637
+[t=1.499833s, 17236 KB] g=3696, 18684 evaluated, 13950 expanded
+[t=1.499833s, 17236 KB] New best heuristic value for ff: 633
+[t=1.499833s, 17236 KB] g=3694, 18687 evaluated, 13950 expanded
+[t=1.499833s, 17236 KB] New best heuristic value for ff: 630
+[t=1.499833s, 17236 KB] g=3627, 18693 evaluated, 13950 expanded
+[t=1.499833s, 17236 KB] New best heuristic value for ff: 571
+[t=1.499833s, 17236 KB] g=3665, 18694 evaluated, 13950 expanded
+[t=1.576782s, 17368 KB] New best heuristic value for ff: 566
+[t=1.576782s, 17368 KB] g=3548, 19902 evaluated, 14582 expanded
+[t=1.686710s, 17632 KB] New best heuristic value for ff: 551
+[t=1.686710s, 17632 KB] g=3687, 21608 evaluated, 15511 expanded
+[t=2.838055s, 18560 KB] New best heuristic value for ff: 549
+[t=2.838055s, 18560 KB] g=3961, 36189 evaluated, 28437 expanded
+[t=2.874055s, 18560 KB] New best heuristic value for ff: 547
+[t=2.874055s, 18560 KB] g=3962, 36666 evaluated, 28847 expanded
+[t=2.888078s, 18560 KB] New best heuristic value for ff: 545
+[t=2.888078s, 18560 KB] g=4074, 36938 evaluated, 28909 expanded
+[t=3.001965s, 18560 KB] New best heuristic value for ff: 515
+[t=3.002967s, 18560 KB] g=4025, 38849 evaluated, 29864 expanded
+[t=3.002967s, 18560 KB] New best heuristic value for ff: 506
+[t=3.002967s, 18560 KB] g=3995, 38860 evaluated, 29864 expanded
+[t=3.002967s, 18560 KB] New best heuristic value for ff: 500
+[t=3.002967s, 18560 KB] g=3982, 38862 evaluated, 29864 expanded
+[t=3.002967s, 18560 KB] New best heuristic value for ff: 458
+[t=3.002967s, 18560 KB] g=3966, 38863 evaluated, 29864 expanded
+[t=3.004968s, 18560 KB] New best heuristic value for ff: 456
+[t=3.004968s, 18560 KB] g=4086, 38897 evaluated, 29872 expanded
+[t=4.083384s, 19236 KB] New best heuristic value for ff: 446
+[t=4.083384s, 19236 KB] g=4467, 56108 evaluated, 40338 expanded
+[t=4.083384s, 19236 KB] New best heuristic value for ff: 427
+[t=4.083384s, 19236 KB] g=4439, 56110 evaluated, 40338 expanded
+[t=4.083384s, 19236 KB] New best heuristic value for ff: 405
+[t=4.083384s, 19236 KB] g=4442, 56111 evaluated, 40338 expanded
+[t=4.083384s, 19236 KB] New best heuristic value for ff: 396
+[t=4.083384s, 19236 KB] g=4414, 56114 evaluated, 40338 expanded
+[t=4.084361s, 19236 KB] New best heuristic value for ff: 383
+[t=4.084361s, 19236 KB] g=4434, 56118 evaluated, 40338 expanded
+[t=4.084361s, 19236 KB] New best heuristic value for ff: 372
+[t=4.084361s, 19236 KB] g=4380, 56124 evaluated, 40338 expanded
+[t=4.085385s, 19236 KB] New best heuristic value for ff: 370
+[t=4.085385s, 19236 KB] g=4500, 56158 evaluated, 40342 expanded
+[t=4.292292s, 20396 KB] New best heuristic value for ff: 368
+[t=4.292292s, 20396 KB] g=4658, 59501 evaluated, 42404 expanded
+[t=4.796860s, 20412 KB] New best heuristic value for ff: 366
+[t=4.796860s, 20412 KB] g=4660, 67656 evaluated, 47617 expanded
+[t=16.252567s, 31176 KB] New best heuristic value for ff: 350
+[t=16.252567s, 31176 KB] g=4640, 254663 evaluated, 171585 expanded
+[t=16.252567s, 31176 KB] New best heuristic value for ff: 335
+[t=16.252567s, 31176 KB] g=4614, 254666 evaluated, 171585 expanded
+[t=16.253569s, 31176 KB] New best heuristic value for ff: 311
+[t=16.253569s, 31176 KB] g=4616, 254673 evaluated, 171585 expanded
+[t=16.253569s, 31176 KB] New best heuristic value for ff: 309
+[t=16.253569s, 31176 KB] g=4617, 254694 evaluated, 171586 expanded
+[t=16.306496s, 31176 KB] New best heuristic value for ff: 298
+[t=16.306496s, 31176 KB] g=4663, 256006 evaluated, 171679 expanded
+[t=16.756116s, 31176 KB] New best heuristic value for ff: 296
+[t=16.756116s, 31176 KB] g=4981, 264778 evaluated, 175619 expanded
+[t=16.811042s, 31176 KB] New best heuristic value for ff: 294
+[t=16.812042s, 31176 KB] g=4983, 265735 evaluated, 176208 expanded
+[t=17.233837s, 31176 KB] New best heuristic value for ff: 292
+[t=17.233837s, 31176 KB] g=4985, 273219 evaluated, 180904 expanded
+[t=17.237837s, 31176 KB] New best heuristic value for ff: 289
+[t=17.237837s, 31176 KB] g=5154, 273347 evaluated, 180909 expanded
+[t=17.269837s, 31176 KB] New best heuristic value for ff: 287
+[t=17.269837s, 31176 KB] g=5155, 274233 evaluated, 180955 expanded
+[t=17.333794s, 31272 KB] New best heuristic value for ff: 285
+[t=17.333794s, 31272 KB] g=5437, 275245 evaluated, 181866 expanded
+[t=17.372788s, 31408 KB] New best heuristic value for ff: 283
+[t=17.372788s, 31408 KB] g=5439, 276401 evaluated, 181909 expanded
+[t=17.373766s, 31408 KB] New best heuristic value for ff: 281
+[t=17.373766s, 31408 KB] g=5440, 276437 evaluated, 181910 expanded
+[t=17.374787s, 31408 KB] New best heuristic value for ff: 0
+[t=17.374787s, 31408 KB] g=5720, 276438 evaluated, 181911 expanded
+[t=17.374787s, 31408 KB] Solution found!
+[t=17.374787s, 31408 KB] Actual search time: 17.354819s
+load-crate drone1 carrier1 crate1 depot n0 n1 (1)
+move-carrier drone1 carrier1 depot loc12 (227)
+unload-and-deliver drone1 carrier1 crate1 person1 loc12 food n1 n0 (1)
+move-carrier drone1 carrier1 loc12 depot (227)
+load-crate drone1 carrier1 crate10 depot n0 n1 (1)
+move-carrier drone1 carrier1 depot loc15 (191)
+unload-and-deliver drone1 carrier1 crate10 person23 loc15 food n1 n0 (1)
+move-carrier drone1 carrier1 loc15 depot (191)
+load-crate drone1 carrier1 crate11 depot n0 n1 (1)
+move-carrier drone1 carrier1 depot loc22 (191)
+unload-and-deliver drone1 carrier1 crate11 person20 loc22 food n1 n0 (1)
+move-carrier drone1 carrier1 loc22 depot (191)
+load-crate drone1 carrier1 crate12 depot n0 n1 (1)
+move-carrier drone1 carrier1 depot loc21 (189)
+unload-and-deliver drone1 carrier1 crate12 person9 loc21 food n1 n0 (1)
+move-carrier drone1 carrier1 loc21 depot (189)
+load-crate drone1 carrier1 crate13 depot n0 n1 (1)
+move-carrier drone1 carrier1 depot loc2 (145)
+unload-and-deliver drone1 carrier1 crate13 person21 loc2 food n1 n0 (1)
+move-carrier drone1 carrier1 loc2 depot (145)
+load-crate drone1 carrier1 crate14 depot n0 n1 (1)
+move-carrier drone1 carrier1 depot loc3 (143)
+unload-and-deliver drone1 carrier1 crate14 person16 loc3 food n1 n0 (1)
+move-carrier drone1 carrier1 loc3 depot (143)
+load-crate drone1 carrier1 crate15 depot n0 n1 (1)
+move-carrier drone1 carrier1 depot loc5 (129)
+unload-and-deliver drone1 carrier1 crate15 person3 loc5 food n1 n0 (1)
+move-carrier drone1 carrier1 loc5 depot (129)
+load-crate drone1 carrier1 crate16 depot n0 n1 (1)
+move-carrier drone1 carrier1 depot loc14 (113)
+unload-and-deliver drone1 carrier1 crate16 person12 loc14 food n1 n0 (1)
+move-carrier drone1 carrier1 loc14 depot (113)
+load-crate drone1 carrier1 crate17 depot n0 n1 (1)
+move-carrier drone1 carrier1 depot loc4 (79)
+unload-and-deliver drone1 carrier1 crate17 person14 loc4 food n1 n0 (1)
+move-carrier drone1 carrier1 loc4 depot (79)
+load-crate drone1 carrier1 crate18 depot n0 n1 (1)
+load-crate drone1 carrier1 crate27 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc1 (251)
+unload-and-deliver drone1 carrier1 crate18 person6 loc1 food n2 n1 (1)
+unload-and-deliver drone1 carrier1 crate27 person6 loc1 medicine n1 n0 (1)
+move-carrier drone1 carrier1 loc1 depot (251)
+load-crate drone1 carrier1 crate19 depot n0 n1 (1)
+load-crate drone1 carrier1 crate28 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc29 (16)
+unload-and-deliver drone1 carrier1 crate19 person24 loc29 food n2 n1 (1)
+unload-and-deliver drone1 carrier1 crate28 person10 loc29 medicine n1 n0 (1)
+move-carrier drone1 carrier1 loc29 depot (16)
+load-crate drone1 carrier1 crate2 depot n0 n1 (1)
+load-crate drone1 carrier1 crate29 depot n1 n2 (1)
+load-crate drone1 carrier1 crate20 depot n2 n3 (1)
+move-carrier drone1 carrier1 depot loc25 (206)
+unload-and-deliver drone1 carrier1 crate2 person15 loc25 food n3 n2 (1)
+unload-and-deliver drone1 carrier1 crate20 person4 loc25 food n2 n1 (1)
+unload-and-deliver drone1 carrier1 crate29 person4 loc25 medicine n1 n0 (1)
+move-carrier drone1 carrier1 loc25 depot (206)
+load-crate drone1 carrier1 crate21 depot n0 n1 (1)
+load-crate drone1 carrier1 crate30 depot n1 n2 (1)
+load-crate drone1 carrier1 crate22 depot n2 n3 (1)
+move-carrier drone1 carrier1 depot loc20 (205)
+unload-and-deliver drone1 carrier1 crate21 person18 loc20 food n3 n2 (1)
+unload-and-deliver drone1 carrier1 crate22 person19 loc20 food n2 n1 (1)
+move-carrier drone1 carrier1 loc20 depot (205)
+load-crate drone1 carrier1 crate23 depot n1 n2 (1)
+load-crate drone1 carrier1 crate24 depot n2 n3 (1)
+move-carrier drone1 carrier1 depot loc7 (83)
+unload-and-deliver drone1 carrier1 crate23 person13 loc7 food n3 n2 (1)
+unload-and-deliver drone1 carrier1 crate24 person5 loc7 food n2 n1 (1)
+move-carrier drone1 carrier1 loc7 depot (83)
+load-crate drone1 carrier1 crate25 depot n1 n2 (1)
+load-crate drone1 carrier1 crate26 depot n2 n3 (1)
+load-crate drone1 carrier1 crate3 depot n3 n4 (1)
+move-carrier drone1 carrier1 depot loc19 (214)
+unload-and-deliver drone1 carrier1 crate25 person28 loc19 food n4 n3 (1)
+unload-and-deliver drone1 carrier1 crate26 person7 loc19 food n3 n2 (1)
+unload-and-deliver drone1 carrier1 crate30 person7 loc19 medicine n2 n1 (1)
+unload-and-deliver drone1 carrier1 crate3 person8 loc19 food n1 n0 (1)
+move-carrier drone1 carrier1 loc19 depot (214)
+load-crate drone1 carrier1 crate4 depot n0 n1 (1)
+load-crate drone1 carrier1 crate5 depot n1 n2 (1)
+load-crate drone1 carrier1 crate6 depot n2 n3 (1)
+move-carrier drone1 carrier1 depot loc24 (168)
+unload-and-deliver drone1 carrier1 crate4 person11 loc24 food n3 n2 (1)
+unload-and-deliver drone1 carrier1 crate5 person17 loc24 food n2 n1 (1)
+unload-and-deliver drone1 carrier1 crate6 person27 loc24 food n1 n0 (1)
+move-carrier drone1 carrier1 loc24 depot (168)
+load-crate drone1 carrier1 crate7 depot n0 n1 (1)
+load-crate drone1 carrier1 crate8 depot n1 n2 (1)
+load-crate drone1 carrier1 crate9 depot n2 n3 (1)
+move-carrier drone1 carrier1 depot loc13 (280)
+unload-and-deliver drone1 carrier1 crate7 person22 loc13 food n3 n2 (1)
+unload-and-deliver drone1 carrier1 crate8 person25 loc13 food n2 n1 (1)
+unload-and-deliver drone1 carrier1 crate9 person30 loc13 food n1 n0 (1)
+move-carrier drone1 carrier1 loc13 depot (280)
+[t=17.375766s, 31408 KB] Plan length: 94 step(s).
+[t=17.375766s, 31408 KB] Plan cost: 5720
+[t=17.375766s, 31408 KB] Expanded 181912 state(s).
+[t=17.375766s, 31408 KB] Reopened 0 state(s).
+[t=17.375766s, 31408 KB] Evaluated 276467 state(s).
+[t=17.375766s, 31408 KB] Evaluations: 458378
+[t=17.375766s, 31408 KB] Generated 5593236 state(s).
+[t=17.375766s, 31408 KB] Dead ends: 45206 state(s).
+[t=17.375766s, 31408 KB] Number of registered states: 276467
+[t=17.375766s, 31408 KB] Int hash set load factor: 276467/524288 = 0.527319
+[t=17.375766s, 31408 KB] Int hash set resizes: 19
+[t=17.375766s, 31408 KB] Best solution cost so far: 5720
+[t=17.375766s, 31408 KB] Solution found - keep searching
+[t=17.376789s, 31408 KB] Building successor generator...done!
+[t=17.376789s, 31408 KB] peak memory difference for successor generator creation: 0 KB
+[t=17.376789s, 31408 KB] time for successor generation creation: 0.000000s
+[t=17.376789s, 31408 KB] Variables: 63
+[t=17.376789s, 31408 KB] FactPairs: 217
+[t=17.376789s, 31408 KB] Bytes per state: 16
+[t=17.377767s, 31408 KB] Starting search: eager
+[t=17.377767s, 31408 KB] Conducting best first search without reopening closed nodes, (real) bound = 5720
+[t=17.377767s, 31408 KB] New best heuristic value for ff: 2911
+[t=17.377767s, 31408 KB] g=0, 1 evaluated, 0 expanded
+[t=17.377767s, 31408 KB] Initial heuristic value for ff: 2911
+[t=17.377767s, 31408 KB] pruning method: none
+[t=17.377767s, 31408 KB] New best heuristic value for ff: 2227
+[t=17.377767s, 31408 KB] g=251, 2 evaluated, 1 expanded
+[t=17.377767s, 31408 KB] New best heuristic value for ff: 1959
+[t=17.377767s, 31408 KB] g=227, 4 evaluated, 1 expanded
+[t=17.377767s, 31408 KB] New best heuristic value for ff: 1919
+[t=17.377767s, 31408 KB] g=227, 5 evaluated, 1 expanded
+[t=17.377767s, 31408 KB] New best heuristic value for ff: 1645
+[t=17.377767s, 31408 KB] g=113, 7 evaluated, 1 expanded
+[t=17.377767s, 31408 KB] New best heuristic value for ff: 1639
+[t=17.377767s, 31408 KB] g=115, 10 evaluated, 1 expanded
+[t=17.378789s, 31408 KB] New best heuristic value for ff: 1561
+[t=17.378789s, 31408 KB] g=168, 18 evaluated, 1 expanded
+[t=17.382787s, 31408 KB] New best heuristic value for ff: 1559
+[t=17.382787s, 31408 KB] g=169, 78 evaluated, 32 expanded
+[t=17.392788s, 31408 KB] New best heuristic value for ff: 1503
+[t=17.392788s, 31408 KB] g=170, 262 evaluated, 41 expanded
+[t=17.399787s, 31408 KB] New best heuristic value for ff: 1492
+[t=17.399787s, 31408 KB] g=211, 356 evaluated, 90 expanded
+[t=17.401774s, 31408 KB] New best heuristic value for ff: 1487
+[t=17.401774s, 31408 KB] g=202, 387 evaluated, 109 expanded
+[t=17.420737s, 31408 KB] New best heuristic value for ff: 1462
+[t=17.420737s, 31408 KB] g=177, 604 evaluated, 261 expanded
+[t=17.478730s, 31408 KB] New best heuristic value for ff: 1437
+[t=17.478730s, 31408 KB] g=626, 1186 evaluated, 858 expanded
+[t=17.483730s, 31408 KB] New best heuristic value for ff: 1426
+[t=17.483730s, 31408 KB] g=667, 1250 evaluated, 894 expanded
+[t=17.485708s, 31408 KB] New best heuristic value for ff: 1421
+[t=17.485708s, 31408 KB] g=658, 1280 evaluated, 903 expanded
+[t=17.495730s, 31408 KB] New best heuristic value for ff: 1396
+[t=17.495730s, 31408 KB] g=633, 1404 evaluated, 989 expanded
+[t=17.546670s, 31408 KB] New best heuristic value for ff: 1380
+[t=17.546670s, 31408 KB] g=1010, 1891 evaluated, 1529 expanded
+[t=17.553669s, 31408 KB] New best heuristic value for ff: 1364
+[t=17.553669s, 31408 KB] g=1042, 2018 evaluated, 1557 expanded
+[t=17.561670s, 31408 KB] New best heuristic value for ff: 1354
+[t=17.561670s, 31408 KB] g=1112, 2129 evaluated, 1601 expanded
+[t=17.561670s, 31408 KB] New best heuristic value for ff: 1353
+[t=17.561670s, 31408 KB] g=1110, 2132 evaluated, 1601 expanded
+[t=17.565671s, 31408 KB] New best heuristic value for ff: 1339
+[t=17.565671s, 31408 KB] g=1017, 2171 evaluated, 1640 expanded
+[t=17.586670s, 31408 KB] New best heuristic value for ff: 1326
+[t=17.586670s, 31408 KB] g=1142, 2377 evaluated, 1878 expanded
+[t=17.587648s, 31408 KB] New best heuristic value for ff: 1325
+[t=17.587648s, 31408 KB] g=1140, 2380 evaluated, 1878 expanded
+[t=17.609663s, 31408 KB] New best heuristic value for ff: 1324
+[t=17.609663s, 31408 KB] g=1338, 2557 evaluated, 2156 expanded
+[t=17.609663s, 31408 KB] New best heuristic value for ff: 1321
+[t=17.609663s, 31408 KB] g=1340, 2560 evaluated, 2156 expanded
+[t=17.612665s, 31408 KB] New best heuristic value for ff: 1319
+[t=17.612665s, 31408 KB] g=1342, 2618 evaluated, 2159 expanded
+[t=17.612665s, 31408 KB] New best heuristic value for ff: 1287
+[t=17.612665s, 31408 KB] g=1394, 2626 evaluated, 2159 expanded
+[t=17.620665s, 31408 KB] New best heuristic value for ff: 1275
+[t=17.620665s, 31408 KB] g=1403, 2770 evaluated, 2185 expanded
+[t=17.620665s, 31408 KB] New best heuristic value for ff: 1274
+[t=17.620665s, 31408 KB] g=1403, 2773 evaluated, 2185 expanded
+[t=17.621643s, 31408 KB] New best heuristic value for ff: 1271
+[t=17.621643s, 31408 KB] g=1426, 2781 evaluated, 2185 expanded
+[t=17.622645s, 31408 KB] New best heuristic value for ff: 1268
+[t=17.622645s, 31408 KB] g=1424, 2801 evaluated, 2195 expanded
+[t=17.622645s, 31408 KB] New best heuristic value for ff: 1267
+[t=17.623627s, 31408 KB] g=1424, 2804 evaluated, 2195 expanded
+[t=17.629640s, 31408 KB] New best heuristic value for ff: 1242
+[t=17.629640s, 31408 KB] g=1496, 2894 evaluated, 2231 expanded
+[t=17.673600s, 31408 KB] New best heuristic value for ff: 1240
+[t=17.673600s, 31408 KB] g=1718, 3290 evaluated, 2751 expanded
+[t=17.673600s, 31408 KB] New best heuristic value for ff: 1239
+[t=17.673600s, 31408 KB] g=1720, 3293 evaluated, 2751 expanded
+[t=17.676600s, 31408 KB] New best heuristic value for ff: 1237
+[t=17.676600s, 31408 KB] g=1722, 3350 evaluated, 2754 expanded
+[t=17.688623s, 31408 KB] New best heuristic value for ff: 1191
+[t=17.688623s, 31408 KB] g=1783, 3564 evaluated, 2788 expanded
+[t=17.690622s, 31408 KB] New best heuristic value for ff: 1184
+[t=17.690622s, 31408 KB] g=1804, 3595 evaluated, 2807 expanded
+[t=17.698622s, 31408 KB] New best heuristic value for ff: 1163
+[t=17.698622s, 31408 KB] g=1827, 3657 evaluated, 2904 expanded
+[t=17.733493s, 31408 KB] New best heuristic value for ff: 1161
+[t=17.733493s, 31408 KB] g=2010, 3990 evaluated, 3312 expanded
+[t=17.736483s, 31408 KB] New best heuristic value for ff: 1159
+[t=17.736483s, 31408 KB] g=2014, 4048 evaluated, 3314 expanded
+[t=17.736483s, 31408 KB] New best heuristic value for ff: 1155
+[t=17.736483s, 31408 KB] g=2066, 4056 evaluated, 3314 expanded
+[t=17.744466s, 31408 KB] New best heuristic value for ff: 1112
+[t=17.744466s, 31408 KB] g=2075, 4201 evaluated, 3335 expanded
+[t=17.746467s, 31408 KB] New best heuristic value for ff: 1105
+[t=17.746467s, 31408 KB] g=2096, 4232 evaluated, 3350 expanded
+[t=17.789467s, 31408 KB] New best heuristic value for ff: 1103
+[t=17.789467s, 31408 KB] g=2298, 4657 evaluated, 3844 expanded
+[t=17.792467s, 31408 KB] New best heuristic value for ff: 1101
+[t=17.792467s, 31408 KB] g=2302, 4714 evaluated, 3846 expanded
+[t=17.792467s, 31408 KB] New best heuristic value for ff: 1086
+[t=17.792467s, 31408 KB] g=2354, 4722 evaluated, 3846 expanded
+[t=17.804462s, 31408 KB] New best heuristic value for ff: 1054
+[t=17.804462s, 31408 KB] g=2363, 4929 evaluated, 3888 expanded
+[t=17.806463s, 31408 KB] New best heuristic value for ff: 1045
+[t=17.806463s, 31408 KB] g=2361, 4971 evaluated, 3898 expanded
+[t=17.845435s, 31408 KB] New best heuristic value for ff: 1012
+[t=17.845435s, 31408 KB] g=2614, 5355 evaluated, 4350 expanded
+[t=17.856435s, 31408 KB] New best heuristic value for ff: 1008
+[t=17.856435s, 31408 KB] g=2568, 5562 evaluated, 4398 expanded
+[t=17.857414s, 31408 KB] New best heuristic value for ff: 971
+[t=17.857414s, 31408 KB] g=2621, 5573 evaluated, 4398 expanded
+[t=17.903430s, 31408 KB] New best heuristic value for ff: 963
+[t=17.903430s, 31408 KB] g=2875, 6141 evaluated, 4849 expanded
+[t=17.903430s, 31408 KB] New best heuristic value for ff: 913
+[t=17.903430s, 31408 KB] g=2849, 6142 evaluated, 4849 expanded
+[t=17.935380s, 31408 KB] New best heuristic value for ff: 911
+[t=17.935380s, 31408 KB] g=3001, 6471 evaluated, 5235 expanded
+[t=17.983358s, 31408 KB] New best heuristic value for ff: 909
+[t=17.984378s, 31408 KB] g=3002, 7079 evaluated, 5718 expanded
+[t=18.132321s, 31408 KB] New best heuristic value for ff: 861
+[t=18.132321s, 31408 KB] g=3227, 9288 evaluated, 6861 expanded
+[t=18.132321s, 31408 KB] New best heuristic value for ff: 859
+[t=18.132321s, 31408 KB] g=3225, 9291 evaluated, 6861 expanded
+[t=18.132321s, 31408 KB] New best heuristic value for ff: 819
+[t=18.132321s, 31408 KB] g=3176, 9299 evaluated, 6861 expanded
+[t=18.165278s, 31408 KB] New best heuristic value for ff: 817
+[t=18.165278s, 31408 KB] g=3507, 9441 evaluated, 7452 expanded
+[t=18.201270s, 31408 KB] New best heuristic value for ff: 815
+[t=18.201270s, 31408 KB] g=3508, 9923 evaluated, 7793 expanded
+[t=18.367140s, 31408 KB] New best heuristic value for ff: 781
+[t=18.367140s, 31408 KB] g=3572, 12221 evaluated, 9367 expanded
+[t=18.367140s, 31408 KB] New best heuristic value for ff: 756
+[t=18.367140s, 31408 KB] g=3458, 12224 evaluated, 9367 expanded
+[t=18.367140s, 31408 KB] New best heuristic value for ff: 752
+[t=18.367140s, 31408 KB] g=3460, 12227 evaluated, 9367 expanded
+[t=18.367140s, 31408 KB] New best heuristic value for ff: 741
+[t=18.367140s, 31408 KB] g=3554, 12231 evaluated, 9367 expanded
+[t=18.367140s, 31408 KB] New best heuristic value for ff: 680
+[t=18.367140s, 31408 KB] g=3532, 12234 evaluated, 9367 expanded
+[t=18.368130s, 31408 KB] New best heuristic value for ff: 659
+[t=18.368130s, 31408 KB] g=3513, 12235 evaluated, 9367 expanded
+[t=18.374133s, 31408 KB] New best heuristic value for ff: 657
+[t=18.374133s, 31408 KB] g=3543, 12281 evaluated, 9475 expanded
+[t=18.416134s, 31408 KB] New best heuristic value for ff: 655
+[t=18.416134s, 31408 KB] g=3544, 12823 evaluated, 9924 expanded
+[t=18.740796s, 31408 KB] New best heuristic value for ff: 653
+[t=18.740796s, 31408 KB] g=3546, 17094 evaluated, 13427 expanded
+[t=18.810647s, 31408 KB] New best heuristic value for ff: 637
+[t=18.810647s, 31408 KB] g=3696, 18684 evaluated, 13552 expanded
+[t=18.810647s, 31408 KB] New best heuristic value for ff: 633
+[t=18.810647s, 31408 KB] g=3694, 18687 evaluated, 13552 expanded
+[t=18.811628s, 31408 KB] New best heuristic value for ff: 630
+[t=18.811628s, 31408 KB] g=3627, 18693 evaluated, 13552 expanded
+[t=18.811628s, 31408 KB] New best heuristic value for ff: 571
+[t=18.811628s, 31408 KB] g=3665, 18694 evaluated, 13552 expanded
+[t=18.877556s, 31408 KB] New best heuristic value for ff: 566
+[t=18.877556s, 31408 KB] g=3548, 19902 evaluated, 13938 expanded
+[t=18.983377s, 31408 KB] New best heuristic value for ff: 551
+[t=18.983377s, 31408 KB] g=3687, 21608 evaluated, 14827 expanded
+[t=21.981139s, 31408 KB] New best heuristic value for ff: 541
+[t=21.982137s, 31408 KB] g=4021, 62182 evaluated, 47327 expanded
+[t=21.982137s, 31408 KB] New best heuristic value for ff: 530
+[t=21.982137s, 31408 KB] g=3991, 62193 evaluated, 47327 expanded
+[t=21.982137s, 31408 KB] New best heuristic value for ff: 523
+[t=21.982137s, 31408 KB] g=3978, 62195 evaluated, 47327 expanded
+[t=21.982137s, 31408 KB] New best heuristic value for ff: 480
+[t=21.982137s, 31408 KB] g=3962, 62196 evaluated, 47327 expanded
+[t=22.393966s, 31408 KB] New best heuristic value for ff: 465
+[t=22.393966s, 31408 KB] g=4101, 68521 evaluated, 51217 expanded
+[t=22.583730s, 31408 KB] New best heuristic value for ff: 463
+[t=22.584730s, 31408 KB] g=4375, 70266 evaluated, 54206 expanded
+[t=22.604716s, 31408 KB] New best heuristic value for ff: 461
+[t=22.605716s, 31408 KB] g=4376, 70586 evaluated, 54419 expanded
+[t=22.617659s, 31408 KB] New best heuristic value for ff: 459
+[t=22.617659s, 31408 KB] g=4488, 70856 evaluated, 54467 expanded
+[t=22.691564s, 31408 KB] New best heuristic value for ff: 446
+[t=22.691564s, 31408 KB] g=4467, 72264 evaluated, 54906 expanded
+[t=22.691564s, 31408 KB] New best heuristic value for ff: 427
+[t=22.691564s, 31408 KB] g=4439, 72266 evaluated, 54906 expanded
+[t=22.691564s, 31408 KB] New best heuristic value for ff: 405
+[t=22.691564s, 31408 KB] g=4442, 72267 evaluated, 54906 expanded
+[t=22.692542s, 31408 KB] New best heuristic value for ff: 396
+[t=22.692542s, 31408 KB] g=4414, 72270 evaluated, 54906 expanded
+[t=22.692542s, 31408 KB] New best heuristic value for ff: 383
+[t=22.692542s, 31408 KB] g=4434, 72274 evaluated, 54906 expanded
+[t=22.692542s, 31408 KB] New best heuristic value for ff: 372
+[t=22.692542s, 31408 KB] g=4380, 72280 evaluated, 54906 expanded
+[t=22.694564s, 31408 KB] New best heuristic value for ff: 370
+[t=22.694564s, 31408 KB] g=4500, 72314 evaluated, 54910 expanded
+[t=22.902421s, 31408 KB] New best heuristic value for ff: 368
+[t=22.902421s, 31408 KB] g=4658, 75720 evaluated, 57019 expanded
+[t=23.349207s, 31408 KB] New best heuristic value for ff: 366
+[t=23.349207s, 31408 KB] g=4660, 83641 evaluated, 60981 expanded
+[t=33.181395s, 31408 KB] New best heuristic value for ff: 350
+[t=33.181395s, 31408 KB] g=4640, 263835 evaluated, 151100 expanded
+[t=33.181395s, 31408 KB] New best heuristic value for ff: 335
+[t=33.181395s, 31408 KB] g=4614, 263838 evaluated, 151100 expanded
+[t=33.182395s, 31408 KB] New best heuristic value for ff: 311
+[t=33.182395s, 31408 KB] g=4616, 263845 evaluated, 151100 expanded
+[t=33.182395s, 31408 KB] New best heuristic value for ff: 309
+[t=33.182395s, 31408 KB] g=4617, 263866 evaluated, 151101 expanded
+[t=33.234397s, 31408 KB] New best heuristic value for ff: 298
+[t=33.234397s, 31408 KB] g=4663, 265178 evaluated, 151193 expanded
+[t=33.991286s, 31408 KB] New best heuristic value for ff: 293
+[t=33.991286s, 31408 KB] g=4830, 280712 evaluated, 156993 expanded
+[t=33.991286s, 31408 KB] New best heuristic value for ff: 288
+[t=33.991286s, 31408 KB] g=4764, 280713 evaluated, 156993 expanded
+[t=33.991286s, 31408 KB] New best heuristic value for ff: 278
+[t=33.991286s, 31408 KB] g=4761, 280720 evaluated, 156993 expanded
+[t=33.991286s, 31408 KB] New best heuristic value for ff: 251
+[t=33.991286s, 31408 KB] g=4777, 280723 evaluated, 156993 expanded
+[t=33.993285s, 31408 KB] New best heuristic value for ff: 249
+[t=33.993285s, 31408 KB] g=4808, 280759 evaluated, 156999 expanded
+[t=34.177267s, 31408 KB] New best heuristic value for ff: 247
+[t=34.177267s, 31408 KB] g=5224, 284834 evaluated, 158133 expanded
+[t=34.340268s, 31408 KB] New best heuristic value for ff: 245
+[t=34.340268s, 31408 KB] g=5226, 288629 evaluated, 159039 expanded
+[t=35.914677s, 32536 KB] New best heuristic value for ff: 225
+[t=35.914677s, 32536 KB] g=5285, 326419 evaluated, 167819 expanded
+[t=35.932678s, 32536 KB] New best heuristic value for ff: 223
+[t=35.932678s, 32536 KB] g=5183, 326932 evaluated, 167838 expanded
+[t=36.076594s, 32804 KB] New best heuristic value for ff: 177
+[t=36.076594s, 32804 KB] g=5378, 330772 evaluated, 168318 expanded
+[t=36.077593s, 32804 KB] New best heuristic value for ff: 175
+[t=36.077593s, 32804 KB] g=5379, 330802 evaluated, 168329 expanded
+[t=36.318511s, 32940 KB] New best heuristic value for ff: 173
+[t=36.318511s, 32940 KB] g=5549, 336769 evaluated, 169595 expanded
+[t=36.355478s, 33072 KB] New best heuristic value for ff: 171
+[t=36.355478s, 33072 KB] g=5551, 337925 evaluated, 169636 expanded
+[t=36.356455s, 33072 KB] New best heuristic value for ff: 169
+[t=36.356455s, 33072 KB] g=5552, 337961 evaluated, 169637 expanded
+[t=36.357463s, 33072 KB] New best heuristic value for ff: 114
+[t=36.357463s, 33072 KB] g=5607, 337967 evaluated, 169638 expanded
+[t=36.357463s, 33072 KB] New best heuristic value for ff: 89
+[t=36.357463s, 33072 KB] g=5649, 337969 evaluated, 169638 expanded
+[t=36.357463s, 33072 KB] New best heuristic value for ff: 17
+[t=36.357463s, 33072 KB] g=5707, 337982 evaluated, 169638 expanded
+Peak memory: 49964 KB
+caught signal 24 -- exiting
+Time limit has been reached.
+exitcode: 23
+
+plan manager: found new plan with cost 5720
+Exit codes: [0, 0, 23]
+Remove intermediate file output.sas
+search exit code: 2
+
+INFO     Planner time: 59.27s
