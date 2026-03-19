@@ -1,0 +1,315 @@
+INFO     planner time limit: 60s
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: 59s
+INFO     translator memory limit: None
+INFO     translator command line string: /usr/bin/python3 /workspace/downward/builds/release/bin/translate/translate.py domain.pddl problems/drone_problem_d1_r1_l2_p2_c2_g2_ct2.pddl --sas-file output.sas
+Parsing...
+Parsing: [0.000s CPU, 0.004s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.006s wall-clock]
+Preparing model... [0.000s CPU, 0.000s wall-clock]
+Generated 37 rules.
+Computing model... [0.000s CPU, 0.001s wall-clock]
+119 relevant atoms
+97 auxiliary atoms
+216 final queue length
+268 total queue pushes
+Completing instantiation... [0.000s CPU, 0.001s wall-clock]
+Instantiating: [0.010s CPU, 0.009s wall-clock]
+Computing fact groups...
+Finding invariants...
+18 initial candidates
+Finding invariants: [0.000s CPU, 0.002s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+4 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.000s CPU, 0.002s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Processing axioms: [0.000s CPU, 0.000s wall-clock]
+Translating task: [0.000s CPU, 0.002s wall-clock]
+0 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+3 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.001s wall-clock]
+Reordering and filtering variables...
+7 of 9 variables necessary.
+0 of 5 mutex groups necessary.
+30 of 30 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.000s wall-clock]
+Translator variables: 7
+Translator derived variables: 0
+Translator facts: 21
+Translator goal facts: 3
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 30
+Translator axioms: 0
+Translator task size: 237
+Translator peak memory: 32680 KB
+Writing output... [0.000s CPU, 0.001s wall-clock]
+Done! [0.010s CPU, 0.020s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: 59s
+INFO     search memory limit: None
+INFO     search command line string: /workspace/downward/builds/release/bin/downward --search 'let(hcea,cea(transform=adapt_costs(plusone)),let(hcg,cg(transform=adapt_costs(one)),let(hgc,goalcount(transform=adapt_costs(plusone)),let(hff,ff(),iterated([ehc(hcea,preferred=[hcea],preferred_usage=prune_by_preferred,cost_type=normal),lazy(alt([single(sum([weight(g(),2),weight(hff,3)])),single(sum([weight(g(),2),weight(hff,3)]),pref_only=true),single(sum([weight(g(),2),weight(hcg,3)])),single(sum([weight(g(),2),weight(hcg,3)]),pref_only=true),single(sum([weight(g(),2),weight(hcea,3)])),single(sum([weight(g(),2),weight(hcea,3)]),pref_only=true),single(sum([weight(g(),2),weight(hgc,3)])),single(sum([weight(g(),2),weight(hgc,3)]),pref_only=true)],boost=200),preferred=[hcea,hgc],reopen_closed=false,cost_type=one),lazy(alt([single(sum([g(),weight(hff,5)])),single(sum([g(),weight(hff,5)]),pref_only=true),single(sum([g(),weight(hcg,5)])),single(sum([g(),weight(hcg,5)]),pref_only=true),single(sum([g(),weight(hcea,5)])),single(sum([g(),weight(hcea,5)]),pref_only=true),single(sum([g(),weight(hgc,5)])),single(sum([g(),weight(hgc,5)]),pref_only=true)],boost=5000),preferred=[hcea,hgc],reopen_closed=true,cost_type=normal),lazy(alt([single(sum([g(),weight(hff,2)])),single(sum([g(),weight(hff,2)]),pref_only=true),single(sum([g(),weight(hcg,2)])),single(sum([g(),weight(hcg,2)]),pref_only=true),single(sum([g(),weight(hcea,2)])),single(sum([g(),weight(hcea,2)]),pref_only=true),single(sum([g(),weight(hgc,2)])),single(sum([g(),weight(hgc,2)]),pref_only=true)],boost=1000),preferred=[hcea,hgc],reopen_closed=true,cost_type=one)],repeat_last=true,continue_on_fail=true)))))' --internal-plan-file sas_plan < output.sas
+[t=0.001995s, 12132 KB] reading input...
+[t=0.003150s, 12132 KB] done reading input!
+[t=0.010809s, 12660 KB] Initializing context-enhanced additive heuristic...
+[t=0.010809s, 12660 KB] Initializing causal graph heuristic...
+[t=0.010809s, 12660 KB] Initializing heuristic cache... building causal graph...done! [t=0.000000s]
+[t=0.010809s, 12660 KB] done!
+[t=0.010809s, 12660 KB] Initializing goal count heuristic...
+[t=0.011404s, 12660 KB] Simplifying 68 unary operators... done! [68 unary operators]
+[t=0.011404s, 12660 KB] time to simplify: 0.000000s
+[t=0.011404s, 12660 KB] Initializing additive heuristic...
+[t=0.011404s, 12660 KB] Initializing FF heuristic...
+[t=0.011404s, 12792 KB] Building successor generator...done!
+[t=0.012345s, 12792 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.012345s, 12792 KB] time for successor generation creation: 0.000000s
+[t=0.012345s, 12792 KB] Variables: 7
+[t=0.012345s, 12792 KB] FactPairs: 21
+[t=0.012345s, 12792 KB] Bytes per state: 4
+[t=0.012345s, 12792 KB] Building successor generator...done!
+[t=0.012345s, 12792 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.012345s, 12792 KB] time for successor generation creation: 0.000000s
+[t=0.012345s, 12792 KB] Variables: 7
+[t=0.012345s, 12792 KB] FactPairs: 21
+[t=0.012345s, 12792 KB] Bytes per state: 4
+[t=0.012345s, 12792 KB] Starting search: ehc
+[t=0.012345s, 12792 KB] Conducting enforced hill-climbing search, (real) bound = 2147483647
+[t=0.012345s, 12792 KB] Using preferred operators for pruning
+[t=0.012345s, 12792 KB] Initial heuristic value for cea: 556
+[t=0.012345s, 12792 KB] New best heuristic value for cea: 556
+[t=0.013119s, 12792 KB] New best heuristic value for cea: 550
+[t=0.013119s, 12792 KB] New best heuristic value for cea: 548
+[t=0.013119s, 12792 KB] New best heuristic value for cea: 140
+[t=0.013239s, 12792 KB] New best heuristic value for cea: 138
+[t=0.013239s, 12792 KB] New best heuristic value for cea: 136
+[t=0.013239s, 12792 KB] New best heuristic value for cea: 0
+[t=0.013239s, 12792 KB] Solution found!
+[t=0.013239s, 12792 KB] Actual search time: 0.000894s
+load-crate drone1 carrier1 crate2 depot n0 n1 (1)
+load-crate drone1 carrier1 crate1 depot n1 n2 (1)
+move-carrier drone1 carrier1 depot loc2 (135)
+unload-and-deliver drone1 carrier1 crate2 person1 loc2 medicine n2 n1 (1)
+unload-and-deliver drone1 carrier1 crate1 person1 loc2 food n1 n0 (1)
+move-carrier drone1 carrier1 loc2 depot (135)
+[t=0.013239s, 12792 KB] Plan length: 6 step(s).
+[t=0.013239s, 12792 KB] Plan cost: 274
+[t=0.013239s, 12792 KB] Expanded 6 state(s).
+[t=0.013239s, 12792 KB] Reopened 0 state(s).
+[t=0.013239s, 12792 KB] Evaluated 7 state(s).
+[t=0.013239s, 12792 KB] Evaluations: 7
+[t=0.013239s, 12792 KB] Generated 6 state(s).
+[t=0.013239s, 12792 KB] Dead ends: 0 state(s).
+[t=0.013239s, 12792 KB] EHC phases: 6
+[t=0.013239s, 12792 KB] Average expansions per EHC phase: 1.000000
+[t=0.013239s, 12792 KB] EHC phases of depth 1: 4 - Avg. Expansions: 1.000000
+[t=0.013239s, 12792 KB] EHC phases of depth 135: 2 - Avg. Expansions: 1.000000
+[t=0.013239s, 12792 KB] Best solution cost so far: 274
+[t=0.013239s, 12792 KB] Solution found - keep searching
+[t=0.013239s, 12792 KB] Building successor generator...done!
+[t=0.014241s, 12792 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.014241s, 12792 KB] time for successor generation creation: 0.000000s
+[t=0.014241s, 12792 KB] Variables: 7
+[t=0.014241s, 12792 KB] FactPairs: 21
+[t=0.014241s, 12792 KB] Bytes per state: 4
+[t=0.014241s, 12792 KB] Starting search: lazy
+[t=0.014241s, 12792 KB] Conducting lazy best first search, (real) bound = 274
+[t=0.014241s, 12792 KB] New best heuristic value for goalcount: 2
+[t=0.014241s, 12792 KB] New best heuristic value for ff: 139
+[t=0.014241s, 12792 KB] New best heuristic value for cg: 10
+[t=0.014241s, 12792 KB] New best heuristic value for cea: 556
+[t=0.014241s, 12792 KB] g=0, 1 evaluated, 0 expanded
+[t=0.014241s, 12792 KB] Initial heuristic value for goalcount: 2
+[t=0.014241s, 12792 KB] Initial heuristic value for ff: 139
+[t=0.014241s, 12792 KB] Initial heuristic value for cg: 10
+[t=0.014241s, 12792 KB] Initial heuristic value for cea: 556
+[t=0.014241s, 12792 KB] New best heuristic value for ff: 138
+[t=0.014241s, 12792 KB] New best heuristic value for cg: 7
+[t=0.014241s, 12792 KB] New best heuristic value for cea: 550
+[t=0.014241s, 12792 KB] g=1, 4 evaluated, 3 expanded
+[t=0.014241s, 12792 KB] New best heuristic value for cg: 6
+[t=0.014241s, 12792 KB] New best heuristic value for cea: 414
+[t=0.014241s, 12792 KB] g=2, 5 evaluated, 4 expanded
+[t=0.014241s, 12792 KB] New best heuristic value for ff: 137
+[t=0.014241s, 12792 KB] g=3, 6 evaluated, 5 expanded
+[t=0.014241s, 12792 KB] New best heuristic value for cg: 3
+[t=0.014241s, 12792 KB] New best heuristic value for cea: 140
+[t=0.015249s, 12792 KB] g=3, 9 evaluated, 8 expanded
+[t=0.015249s, 12792 KB] New best heuristic value for ff: 136
+[t=0.015249s, 12792 KB] New best heuristic value for cg: 2
+[t=0.015249s, 12792 KB] New best heuristic value for cea: 138
+[t=0.015249s, 12792 KB] g=4, 11 evaluated, 10 expanded
+[t=0.015249s, 12792 KB] New best heuristic value for goalcount: 1
+[t=0.015249s, 12792 KB] g=5, 12 evaluated, 11 expanded
+[t=0.015249s, 12792 KB] New best heuristic value for ff: 135
+[t=0.015249s, 12792 KB] New best heuristic value for cg: 1
+[t=0.015249s, 12792 KB] New best heuristic value for cea: 136
+[t=0.015249s, 12792 KB] g=5, 13 evaluated, 12 expanded
+[t=0.015249s, 12792 KB] New best heuristic value for ff: 114
+[t=0.015249s, 12792 KB] New best heuristic value for cea: 115
+[t=0.015249s, 12792 KB] g=6, 19 evaluated, 18 expanded
+[t=0.015249s, 12792 KB] Completely explored state space -- no solution!
+[t=0.015249s, 12792 KB] Actual search time: 0.001008s
+[t=0.015249s, 12792 KB] Expanded 26 state(s).
+[t=0.015249s, 12792 KB] Reopened 0 state(s).
+[t=0.016241s, 12792 KB] Evaluated 32 state(s).
+[t=0.016241s, 12792 KB] Evaluations: 110
+[t=0.016241s, 12792 KB] Generated 70 state(s).
+[t=0.016241s, 12792 KB] Dead ends: 6 state(s).
+[t=0.016241s, 12792 KB] Number of registered states: 32
+[t=0.016241s, 12792 KB] Int hash set load factor: 32/32 = 1.000000
+[t=0.016241s, 12792 KB] Int hash set resizes: 5
+[t=0.016241s, 12792 KB] Best solution cost so far: 274
+[t=0.016241s, 12792 KB] No solution found - keep searching
+[t=0.016241s, 12792 KB] Building successor generator...done!
+[t=0.016241s, 12792 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.016241s, 12792 KB] time for successor generation creation: 0.000000s
+[t=0.016241s, 12792 KB] Variables: 7
+[t=0.016241s, 12792 KB] FactPairs: 21
+[t=0.016241s, 12792 KB] Bytes per state: 4
+[t=0.016241s, 12792 KB] Starting search: lazy
+[t=0.016241s, 12792 KB] Conducting lazy best first search, (real) bound = 274
+[t=0.016241s, 12792 KB] New best heuristic value for goalcount: 2
+[t=0.016241s, 12792 KB] New best heuristic value for cea: 556
+[t=0.016241s, 12792 KB] New best heuristic value for ff: 139
+[t=0.016241s, 12792 KB] New best heuristic value for cg: 10
+[t=0.016241s, 12792 KB] g=0, 1 evaluated, 0 expanded
+[t=0.016241s, 12792 KB] Initial heuristic value for goalcount: 2
+[t=0.016241s, 12792 KB] Initial heuristic value for cea: 556
+[t=0.016241s, 12792 KB] Initial heuristic value for ff: 139
+[t=0.016241s, 12792 KB] Initial heuristic value for cg: 10
+[t=0.017238s, 12792 KB] New best heuristic value for cea: 550
+[t=0.017238s, 12792 KB] New best heuristic value for ff: 138
+[t=0.017238s, 12792 KB] New best heuristic value for cg: 7
+[t=0.017238s, 12792 KB] g=1, 4 evaluated, 3 expanded
+[t=0.017238s, 12792 KB] New best heuristic value for cea: 414
+[t=0.017238s, 12792 KB] New best heuristic value for cg: 6
+[t=0.017238s, 12792 KB] g=136, 5 evaluated, 4 expanded
+[t=0.017238s, 12792 KB] New best heuristic value for ff: 137
+[t=0.017238s, 12792 KB] g=2, 6 evaluated, 5 expanded
+[t=0.017238s, 12792 KB] New best heuristic value for cea: 140
+[t=0.017238s, 12792 KB] New best heuristic value for cg: 3
+[t=0.017238s, 12792 KB] g=137, 9 evaluated, 8 expanded
+[t=0.017238s, 12792 KB] New best heuristic value for cea: 138
+[t=0.017238s, 12792 KB] New best heuristic value for ff: 136
+[t=0.017238s, 12792 KB] New best heuristic value for cg: 2
+[t=0.017238s, 12792 KB] g=138, 11 evaluated, 10 expanded
+[t=0.017238s, 12792 KB] New best heuristic value for goalcount: 1
+[t=0.017238s, 12792 KB] g=273, 12 evaluated, 11 expanded
+[t=0.017238s, 12792 KB] New best heuristic value for cea: 136
+[t=0.017238s, 12792 KB] New best heuristic value for ff: 135
+[t=0.017238s, 12792 KB] New best heuristic value for cg: 1
+[t=0.017238s, 12792 KB] g=139, 13 evaluated, 12 expanded
+[t=0.018248s, 12792 KB] New best heuristic value for cea: 115
+[t=0.018248s, 12792 KB] New best heuristic value for ff: 114
+[t=0.018248s, 12792 KB] g=175, 20 evaluated, 19 expanded
+[t=0.018248s, 12792 KB] Completely explored state space -- no solution!
+[t=0.018248s, 12792 KB] Actual search time: 0.002007s
+[t=0.018248s, 12792 KB] Expanded 26 state(s).
+[t=0.018248s, 12792 KB] Reopened 0 state(s).
+[t=0.018248s, 12792 KB] Evaluated 32 state(s).
+[t=0.018248s, 12792 KB] Evaluations: 110
+[t=0.018248s, 12792 KB] Generated 70 state(s).
+[t=0.018248s, 12792 KB] Dead ends: 6 state(s).
+[t=0.018248s, 12792 KB] Number of registered states: 32
+[t=0.018248s, 12792 KB] Int hash set load factor: 32/32 = 1.000000
+[t=0.018248s, 12792 KB] Int hash set resizes: 5
+[t=0.018248s, 12792 KB] Best solution cost so far: 274
+[t=0.018248s, 12792 KB] No solution found - keep searching
+[t=0.018248s, 12792 KB] Building successor generator...done!
+[t=0.018248s, 12792 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.018248s, 12792 KB] time for successor generation creation: 0.000000s
+[t=0.018248s, 12792 KB] Variables: 7
+[t=0.018248s, 12792 KB] FactPairs: 21
+[t=0.018248s, 12792 KB] Bytes per state: 4
+[t=0.019238s, 12792 KB] Starting search: lazy
+[t=0.019238s, 12792 KB] Conducting lazy best first search, (real) bound = 274
+[t=0.019238s, 12792 KB] New best heuristic value for cea: 556
+[t=0.019238s, 12792 KB] New best heuristic value for cg: 10
+[t=0.019238s, 12792 KB] New best heuristic value for ff: 139
+[t=0.019238s, 12792 KB] New best heuristic value for goalcount: 2
+[t=0.019238s, 12792 KB] g=0, 1 evaluated, 0 expanded
+[t=0.019238s, 12792 KB] Initial heuristic value for cea: 556
+[t=0.019238s, 12792 KB] Initial heuristic value for cg: 10
+[t=0.019238s, 12792 KB] Initial heuristic value for ff: 139
+[t=0.019238s, 12792 KB] Initial heuristic value for goalcount: 2
+[t=0.019238s, 12792 KB] New best heuristic value for cea: 550
+[t=0.019238s, 12792 KB] New best heuristic value for cg: 7
+[t=0.019238s, 12792 KB] New best heuristic value for ff: 138
+[t=0.019238s, 12792 KB] g=1, 4 evaluated, 3 expanded
+[t=0.019238s, 12792 KB] New best heuristic value for cea: 414
+[t=0.019238s, 12792 KB] New best heuristic value for cg: 6
+[t=0.019238s, 12792 KB] g=2, 5 evaluated, 4 expanded
+[t=0.019238s, 12792 KB] New best heuristic value for ff: 137
+[t=0.019238s, 12792 KB] g=3, 6 evaluated, 5 expanded
+[t=0.019238s, 12792 KB] New best heuristic value for cea: 140
+[t=0.019238s, 12792 KB] New best heuristic value for cg: 3
+[t=0.019238s, 12792 KB] g=3, 9 evaluated, 8 expanded
+[t=0.019238s, 12792 KB] New best heuristic value for goalcount: 1
+[t=0.019238s, 12792 KB] g=4, 10 evaluated, 9 expanded
+[t=0.019238s, 12792 KB] New best heuristic value for cea: 138
+[t=0.020238s, 12792 KB] New best heuristic value for cg: 2
+[t=0.020238s, 12792 KB] New best heuristic value for ff: 136
+[t=0.020238s, 12792 KB] g=4, 11 evaluated, 10 expanded
+[t=0.020238s, 12792 KB] New best heuristic value for cea: 136
+[t=0.020238s, 12792 KB] New best heuristic value for cg: 1
+[t=0.020238s, 12792 KB] New best heuristic value for ff: 135
+[t=0.020238s, 12792 KB] g=5, 14 evaluated, 13 expanded
+[t=0.020238s, 12792 KB] New best heuristic value for cea: 115
+[t=0.020238s, 12792 KB] New best heuristic value for ff: 114
+[t=0.020238s, 12792 KB] g=6, 19 evaluated, 18 expanded
+[t=0.020238s, 12792 KB] Completely explored state space -- no solution!
+[t=0.020238s, 12792 KB] Actual search time: 0.001000s
+[t=0.020238s, 12792 KB] Expanded 26 state(s).
+[t=0.020238s, 12792 KB] Reopened 0 state(s).
+[t=0.020238s, 12792 KB] Evaluated 32 state(s).
+[t=0.020238s, 12792 KB] Evaluations: 110
+[t=0.020238s, 12792 KB] Generated 70 state(s).
+[t=0.020238s, 12792 KB] Dead ends: 6 state(s).
+[t=0.020238s, 12792 KB] Number of registered states: 32
+[t=0.020238s, 12792 KB] Int hash set load factor: 32/32 = 1.000000
+[t=0.020238s, 12792 KB] Int hash set resizes: 5
+[t=0.020238s, 12792 KB] Best solution cost so far: 274
+[t=0.020238s, 12792 KB] No solution found - keep searching
+[t=0.021239s, 12792 KB] Actual search time: 0.008894s
+[t=0.021239s, 12792 KB] Cumulative statistics:
+[t=0.021239s, 12792 KB] Expanded 84 state(s).
+[t=0.021239s, 12792 KB] Reopened 0 state(s).
+[t=0.021239s, 12792 KB] Evaluated 103 state(s).
+[t=0.021239s, 12792 KB] Evaluations: 337
+[t=0.021239s, 12792 KB] Generated 216 state(s).
+[t=0.021239s, 12792 KB] Dead ends: 0 state(s).
+[t=0.021239s, 12792 KB] Search time: 0.008894s
+[t=0.021239s, 12792 KB] Total time: 0.021239s
+Solution found.
+Peak memory: 12792 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+INFO     Planner time: 0.37s

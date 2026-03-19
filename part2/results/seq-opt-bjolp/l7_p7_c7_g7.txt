@@ -1,0 +1,538 @@
+INFO     planner time limit: 60s
+INFO     planner memory limit: None
+
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: 59s
+INFO     translator memory limit: None
+INFO     translator command line string: /usr/bin/python3 /workspace/downward/builds/release/bin/translate/translate.py domain.pddl problems/drone_problem_d1_r1_l7_p7_c7_g7_ct2.pddl --sas-file output.sas
+Parsing...
+Parsing: [0.000s CPU, 0.002s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.003s wall-clock]
+Preparing model... [0.000s CPU, 0.000s wall-clock]
+Generated 37 rules.
+Computing model... [0.000s CPU, 0.002s wall-clock]
+514 relevant atoms
+317 auxiliary atoms
+831 final queue length
+1368 total queue pushes
+Completing instantiation... [0.000s CPU, 0.003s wall-clock]
+Instantiating: [0.010s CPU, 0.009s wall-clock]
+Computing fact groups...
+Finding invariants...
+18 initial candidates
+Finding invariants: [0.000s CPU, 0.001s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+14 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.000s CPU, 0.001s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Processing axioms: [0.000s CPU, 0.000s wall-clock]
+Translating task: [0.010s CPU, 0.004s wall-clock]
+0 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+3 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.002s wall-clock]
+Reordering and filtering variables...
+17 of 24 variables necessary.
+0 of 10 mutex groups necessary.
+280 of 280 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.001s wall-clock]
+Translator variables: 17
+Translator derived variables: 0
+Translator facts: 56
+Translator goal facts: 8
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 280
+Translator axioms: 0
+Translator task size: 2029
+Translator peak memory: 33704 KB
+Writing output... [0.010s CPU, 0.001s wall-clock]
+Done! [0.030s CPU, 0.021s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: 59s
+INFO     search memory limit: None
+INFO     search command line string: /workspace/downward/builds/release/bin/downward --search 'let(lmc,landmark_cost_partitioning(lm_reasonable_orders_hps(lm_merged([lm_rhw(),lm_hm(m=1)]))),astar(lmc,lazy_evaluator=lmc))' --internal-plan-file sas_plan < output.sas
+[t=0.000912s, 12132 KB] reading input...
+[t=0.002050s, 12132 KB] done reading input!
+[t=0.003456s, 12528 KB] Initializing landmark cost partitioning heuristic...
+[t=0.003456s, 12528 KB] Generating landmark graph...
+[t=0.003456s, 12528 KB] Building a landmark graph with reasonable orders.
+[t=0.003456s, 12528 KB] Merging 2 landmark graphs
+[t=0.003709s, 12528 KB] Initializing Exploration...
+[t=0.003861s, 12528 KB] Generating landmarks using the RPG/SAS+ approach
+[t=0.005186s, 12528 KB] Landmarks generation time: 0.001612s
+[t=0.005186s, 12528 KB] Discovered 28 landmarks, of which 3 are disjunctive and 0 are conjunctive.
+[t=0.005186s, 12528 KB] 50 edges
+[t=0.005186s, 12528 KB] h^m landmarks m=1
+[t=0.005186s, 12528 KB] Using 56 P^m fluents.
+[t=0.005186s, 12528 KB] h^m landmarks computed.
+[t=0.005186s, 12528 KB] Calculating achievers.
+[t=0.005186s, 12528 KB] Landmarks generation time: 0.000000s
+[t=0.005186s, 12528 KB] Discovered 19 landmarks, of which 0 are disjunctive and 0 are conjunctive.
+[t=0.005186s, 12528 KB] 47 edges
+[t=0.005186s, 12528 KB] Adding simple landmarks
+[t=0.005186s, 12528 KB] Adding disjunctive landmarks
+[t=0.005186s, 12528 KB] Adding orderings
+[t=0.005186s, 12528 KB] Discarded to ordering
+[t=0.005186s, 12528 KB] Discarded from ordering
+[t=0.005186s, 12528 KB] Discarded to ordering
+[t=0.005186s, 12528 KB] Discarded to ordering
+[t=0.005186s, 12528 KB] Landmarks generation time: 0.001730s
+[t=0.005186s, 12528 KB] Discovered 28 landmarks, of which 2 are disjunctive and 0 are conjunctive.
+[t=0.005186s, 12528 KB] 65 edges
+[t=0.005186s, 12528 KB] approx. reasonable orders
+[t=0.006173s, 12528 KB] Landmarks generation time: 0.002717s
+[t=0.006173s, 12528 KB] Discovered 28 landmarks, of which 2 are disjunctive and 0 are conjunctive.
+[t=0.006173s, 12528 KB] 73 edges
+[t=0.006173s, 12528 KB] Landmark graph generation time: 0.002717s
+[t=0.006173s, 12528 KB] Landmark graph contains 28 landmarks, of which 2 are disjunctive and 0 are conjunctive.
+[t=0.006173s, 12528 KB] Landmark graph contains 73 orderings.
+[t=0.006173s, 12528 KB] Building successor generator...done!
+[t=0.006173s, 12528 KB] peak memory difference for successor generator creation: 0 KB
+[t=0.006173s, 12528 KB] time for successor generation creation: 0.000000s
+[t=0.006173s, 12528 KB] Variables: 17
+[t=0.006173s, 12528 KB] FactPairs: 56
+[t=0.006173s, 12528 KB] Bytes per state: 4
+[t=0.006173s, 12528 KB] Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[t=0.006173s, 12528 KB] New best heuristic value for landmark_cost_partitioning: 218
+[t=0.006173s, 12528 KB] g=0, 1 evaluated, 0 expanded
+[t=0.006173s, 12528 KB] f = 218, 1 evaluated, 0 expanded
+[t=0.006536s, 12528 KB] Initial heuristic value for landmark_cost_partitioning: 218
+[t=0.006536s, 12528 KB] pruning method: none
+[t=0.006536s, 12528 KB] New best heuristic value for landmark_cost_partitioning: 200
+[t=0.006536s, 12528 KB] g=70, 3 evaluated, 1 expanded
+[t=0.006536s, 12528 KB] New best heuristic value for landmark_cost_partitioning: 159
+[t=0.006536s, 12528 KB] g=206, 4 evaluated, 1 expanded
+[t=0.006536s, 12528 KB] New best heuristic value for landmark_cost_partitioning: 158
+[t=0.006536s, 12528 KB] g=207, 18 evaluated, 2 expanded
+[t=0.006536s, 12528 KB] New best heuristic value for landmark_cost_partitioning: 157
+[t=0.006536s, 12528 KB] g=208, 31 evaluated, 3 expanded
+[t=0.006536s, 12528 KB] f = 219, 199 evaluated, 20 expanded
+[t=0.007120s, 12528 KB] f = 220, 511 evaluated, 59 expanded
+[t=0.007120s, 12528 KB] f = 221, 785 evaluated, 98 expanded
+[t=0.007120s, 12528 KB] f = 270, 792 evaluated, 99 expanded
+[t=0.008120s, 12528 KB] f = 271, 839 evaluated, 119 expanded
+[t=0.008120s, 12528 KB] New best heuristic value for landmark_cost_partitioning: 138
+[t=0.008120s, 12528 KB] g=226, 855 evaluated, 123 expanded
+[t=0.009134s, 12660 KB] f = 272, 1599 evaluated, 286 expanded
+[t=0.010135s, 12660 KB] New best heuristic value for landmark_cost_partitioning: 137
+[t=0.010135s, 12660 KB] g=230, 2149 evaluated, 363 expanded
+[t=0.016141s, 12812 KB] f = 273, 5446 evaluated, 842 expanded
+[t=0.016141s, 12812 KB] New best heuristic value for landmark_cost_partitioning: 119
+[t=0.016141s, 12812 KB] g=231, 5450 evaluated, 843 expanded
+[t=0.024121s, 12944 KB] f = 274, 9934 evaluated, 1708 expanded
+[t=0.032143s, 13216 KB] f = 275, 14630 evaluated, 2408 expanded
+[t=0.037144s, 13476 KB] f = 276, 16699 evaluated, 2898 expanded
+[t=0.040120s, 13480 KB] f = 277, 18414 evaluated, 3138 expanded
+[t=0.040120s, 13480 KB] f = 278, 18659 evaluated, 3208 expanded
+[t=0.041126s, 13480 KB] f = 286, 18904 evaluated, 3243 expanded
+[t=0.041126s, 13480 KB] f = 287, 19007 evaluated, 3327 expanded
+[t=0.046143s, 13612 KB] f = 288, 21961 evaluated, 3787 expanded
+[t=0.046143s, 13612 KB] New best heuristic value for landmark_cost_partitioning: 93
+[t=0.046143s, 13612 KB] g=250, 21965 evaluated, 3788 expanded
+[t=0.054143s, 13748 KB] f = 289, 26172 evaluated, 4809 expanded
+[t=0.063143s, 14396 KB] f = 290, 30590 evaluated, 5648 expanded
+[t=0.070142s, 14396 KB] f = 291, 32332 evaluated, 6683 expanded
+[t=0.079143s, 14408 KB] f = 292, 37730 evaluated, 7640 expanded
+[t=0.083143s, 14540 KB] f = 293, 38956 evaluated, 8429 expanded
+[t=0.088143s, 14672 KB] f = 294, 41852 evaluated, 8915 expanded
+[t=0.089142s, 14672 KB] f = 295, 41868 evaluated, 9155 expanded
+[t=0.089142s, 14672 KB] f = 296, 42344 evaluated, 9223 expanded
+[t=0.089142s, 14672 KB] f = 298, 42344 evaluated, 9258 expanded
+[t=0.090122s, 14672 KB] f = 299, 42344 evaluated, 9278 expanded
+[t=0.090122s, 14672 KB] f = 300, 42344 evaluated, 9317 expanded
+[t=0.091142s, 14672 KB] f = 301, 42344 evaluated, 9465 expanded
+[t=0.093136s, 14672 KB] f = 302, 42344 evaluated, 9631 expanded
+[t=0.095123s, 14672 KB] f = 303, 42344 evaluated, 9897 expanded
+[t=0.095123s, 14672 KB] f = 304, 42375 evaluated, 10007 expanded
+[t=0.099142s, 14672 KB] f = 305, 43441 evaluated, 10330 expanded
+[t=0.105143s, 14804 KB] f = 306, 46451 evaluated, 11005 expanded
+[t=0.121142s, 15068 KB] f = 307, 53570 evaluated, 12600 expanded
+[t=0.135142s, 16232 KB] f = 308, 57966 evaluated, 14334 expanded
+[t=0.148142s, 16232 KB] f = 309, 63756 evaluated, 15760 expanded
+[t=0.153142s, 16232 KB] f = 310, 64358 evaluated, 16671 expanded
+[t=0.155143s, 16232 KB] f = 311, 65688 evaluated, 16926 expanded
+[t=0.156122s, 16232 KB] f = 314, 65688 evaluated, 17099 expanded
+[t=0.156122s, 16232 KB] f = 315, 65688 evaluated, 17189 expanded
+[t=0.156122s, 16232 KB] f = 316, 65688 evaluated, 17219 expanded
+[t=0.156122s, 16232 KB] f = 329, 65688 evaluated, 17249 expanded
+[t=0.157121s, 16232 KB] f = 330, 65688 evaluated, 17403 expanded
+[t=0.157121s, 16232 KB] f = 331, 65688 evaluated, 17499 expanded
+[t=0.159136s, 16232 KB] f = 332, 65688 evaluated, 17915 expanded
+[t=0.160121s, 16232 KB] f = 333, 65688 evaluated, 18185 expanded
+[t=0.161136s, 16232 KB] f = 334, 65688 evaluated, 18523 expanded
+[t=0.161136s, 16232 KB] f = 335, 65688 evaluated, 18575 expanded
+[t=0.161136s, 16232 KB] f = 341, 65688 evaluated, 18644 expanded
+[t=0.162122s, 16232 KB] f = 342, 65688 evaluated, 18708 expanded
+[t=0.162122s, 16232 KB] f = 343, 65748 evaluated, 18804 expanded
+[t=0.164141s, 16232 KB] f = 344, 66360 evaluated, 19178 expanded
+[t=0.167142s, 16232 KB] f = 345, 67812 evaluated, 19586 expanded
+[t=0.171142s, 16232 KB] f = 346, 69732 evaluated, 20080 expanded
+[t=0.176136s, 16252 KB] f = 347, 71210 evaluated, 20794 expanded
+[t=0.179143s, 16252 KB] f = 348, 72955 evaluated, 21284 expanded
+[t=0.182142s, 16252 KB] f = 349, 73485 evaluated, 21953 expanded
+[t=0.182142s, 16252 KB] f = 350, 73520 evaluated, 22018 expanded
+[t=0.183122s, 16252 KB] f = 351, 73550 evaluated, 22259 expanded
+[t=0.183122s, 16252 KB] f = 352, 73760 evaluated, 22289 expanded
+[t=0.184140s, 16252 KB] f = 357, 73760 evaluated, 22319 expanded
+[t=0.184140s, 16252 KB] f = 358, 73760 evaluated, 22535 expanded
+[t=0.186126s, 16252 KB] f = 359, 73760 evaluated, 22867 expanded
+[t=0.188143s, 16384 KB] f = 360, 74444 evaluated, 23319 expanded
+[t=0.190121s, 16384 KB] f = 361, 75320 evaluated, 23775 expanded
+[t=0.196142s, 16516 KB] f = 362, 77940 evaluated, 24510 expanded
+[t=0.201115s, 16516 KB] f = 363, 79499 evaluated, 25425 expanded
+[t=0.207104s, 16516 KB] f = 364, 81612 evaluated, 26208 expanded
+[t=0.213105s, 16652 KB] f = 365, 83781 evaluated, 26923 expanded
+[t=0.220099s, 16784 KB] f = 366, 87323 evaluated, 27937 expanded
+[t=0.230119s, 17052 KB] f = 367, 92517 evaluated, 28923 expanded
+[t=0.241098s, 17184 KB] f = 368, 97950 evaluated, 30132 expanded
+[t=0.248120s, 17316 KB] f = 369, 101831 evaluated, 30892 expanded
+[t=0.252120s, 17448 KB] f = 370, 103938 evaluated, 31473 expanded
+[t=0.254120s, 17580 KB] f = 371, 104863 evaluated, 31737 expanded
+[t=0.259112s, 17580 KB] f = 372, 107471 evaluated, 32289 expanded
+[t=0.262097s, 17580 KB] f = 373, 108324 evaluated, 32652 expanded
+[t=0.266119s, 17712 KB] f = 374, 110548 evaluated, 33072 expanded
+[t=0.268119s, 17712 KB] f = 375, 110672 evaluated, 33650 expanded
+[t=0.274099s, 17844 KB] f = 376, 111976 evaluated, 34479 expanded
+[t=0.281119s, 17844 KB] f = 377, 113686 evaluated, 35939 expanded
+[t=0.293113s, 19896 KB] f = 378, 116230 evaluated, 37005 expanded
+[t=0.302119s, 19896 KB] f = 379, 120496 evaluated, 38338 expanded
+[t=0.307098s, 19896 KB] f = 380, 123256 evaluated, 39008 expanded
+[t=0.313119s, 19896 KB] f = 381, 126415 evaluated, 39825 expanded
+[t=0.315120s, 19896 KB] f = 382, 127365 evaluated, 40050 expanded
+[t=0.317106s, 19896 KB] f = 383, 127523 evaluated, 40339 expanded
+[t=0.323099s, 19896 KB] f = 384, 130877 evaluated, 40984 expanded
+[t=0.327097s, 19896 KB] f = 385, 133129 evaluated, 41429 expanded
+[t=0.331119s, 19896 KB] f = 386, 135529 evaluated, 41826 expanded
+[t=0.333119s, 19896 KB] f = 387, 136183 evaluated, 42407 expanded
+[t=0.340100s, 19896 KB] f = 388, 139753 evaluated, 43054 expanded
+[t=0.343113s, 19896 KB] f = 389, 140139 evaluated, 43799 expanded
+[t=0.345099s, 19940 KB] f = 390, 141504 evaluated, 44103 expanded
+[t=0.349120s, 19940 KB] f = 391, 141634 evaluated, 44934 expanded
+[t=0.354119s, 19940 KB] f = 392, 142264 evaluated, 46005 expanded
+[t=0.359119s, 19940 KB] f = 393, 142366 evaluated, 47145 expanded
+[t=0.365119s, 19940 KB] f = 394, 143155 evaluated, 48448 expanded
+[t=0.368119s, 19940 KB] f = 395, 143740 evaluated, 49036 expanded
+[t=0.373099s, 19940 KB] f = 396, 144505 evaluated, 50093 expanded
+[t=0.378114s, 20072 KB] f = 397, 146404 evaluated, 50773 expanded
+[t=0.386121s, 20072 KB] f = 398, 149612 evaluated, 51801 expanded
+[t=0.391101s, 20208 KB] f = 399, 152245 evaluated, 52434 expanded
+[t=0.398103s, 20340 KB] f = 400, 155576 evaluated, 53314 expanded
+[t=0.401102s, 20340 KB] f = 401, 156592 evaluated, 53824 expanded
+[t=0.402103s, 20340 KB] f = 402, 156648 evaluated, 54017 expanded
+[t=0.403102s, 20340 KB] f = 403, 156648 evaluated, 54311 expanded
+[t=0.403102s, 20340 KB] f = 404, 156771 evaluated, 54450 expanded
+[t=0.410089s, 20476 KB] f = 405, 160125 evaluated, 55070 expanded
+[t=0.417097s, 20608 KB] f = 406, 162821 evaluated, 56163 expanded
+[t=0.429087s, 20872 KB] f = 407, 169942 evaluated, 57418 expanded
+[t=0.433097s, 20872 KB] f = 408, 170826 evaluated, 58322 expanded
+[t=0.437098s, 21004 KB] f = 409, 172856 evaluated, 58676 expanded
+[t=0.438098s, 21004 KB] f = 410, 172856 evaluated, 58962 expanded
+[t=0.439097s, 21004 KB] f = 411, 172856 evaluated, 59186 expanded
+[t=0.441084s, 21004 KB] f = 412, 172916 evaluated, 59714 expanded
+[t=0.445077s, 21004 KB] f = 413, 173621 evaluated, 60418 expanded
+[t=0.445077s, 21004 KB] New best heuristic value for landmark_cost_partitioning: 74
+[t=0.445077s, 21004 KB] g=394, 173625 evaluated, 60419 expanded
+[t=0.450098s, 21004 KB] f = 414, 173873 evaluated, 61378 expanded
+[t=0.456089s, 21004 KB] f = 415, 174686 evaluated, 62515 expanded
+[t=0.462087s, 21004 KB] f = 416, 175319 evaluated, 63620 expanded
+[t=0.469077s, 21136 KB] f = 417, 176677 evaluated, 65027 expanded
+[t=0.474088s, 21136 KB] f = 418, 177659 evaluated, 65911 expanded
+[t=0.479087s, 21272 KB] f = 419, 178729 evaluated, 66979 expanded
+[t=0.487089s, 21404 KB] f = 420, 182697 evaluated, 68227 expanded
+[t=0.491067s, 21536 KB] f = 421, 184405 evaluated, 68802 expanded
+[t=0.494073s, 21536 KB] f = 422, 184567 evaluated, 69568 expanded
+[t=0.494073s, 21536 KB] f = 423, 184666 evaluated, 69582 expanded
+[t=0.496088s, 21536 KB] f = 424, 184673 evaluated, 70089 expanded
+[t=0.497089s, 21536 KB] f = 425, 184680 evaluated, 70252 expanded
+[t=0.498088s, 21536 KB] f = 426, 184680 evaluated, 70665 expanded
+[t=0.499088s, 21536 KB] f = 427, 184680 evaluated, 71031 expanded
+[t=0.502089s, 21536 KB] f = 428, 184680 evaluated, 71504 expanded
+[t=0.508087s, 21536 KB] f = 429, 186270 evaluated, 72485 expanded
+[t=0.517094s, 21668 KB] f = 430, 189726 evaluated, 73753 expanded
+[t=0.533081s, 21800 KB] f = 431, 193588 evaluated, 76076 expanded
+[t=0.551080s, 22072 KB] f = 432, 201044 evaluated, 78459 expanded
+[t=0.566080s, 22204 KB] f = 433, 204859 evaluated, 80742 expanded
+[t=0.578080s, 22340 KB] f = 434, 209102 evaluated, 82398 expanded
+[t=0.584072s, 22472 KB] f = 435, 210058 evaluated, 83605 expanded
+[t=0.591073s, 22472 KB] f = 436, 212769 evaluated, 84545 expanded
+[t=0.598060s, 22608 KB] f = 437, 215532 evaluated, 85706 expanded
+[t=0.605066s, 22740 KB] f = 438, 218390 evaluated, 86760 expanded
+[t=0.616055s, 22876 KB] f = 439, 222470 evaluated, 88486 expanded
+[t=0.620055s, 23008 KB] f = 440, 223752 evaluated, 89291 expanded
+[t=0.624056s, 23008 KB] f = 441, 223808 evaluated, 90273 expanded
+[t=0.625057s, 23008 KB] f = 442, 223808 evaluated, 90505 expanded
+[t=0.627056s, 23008 KB] f = 443, 223808 evaluated, 91074 expanded
+[t=0.630056s, 23008 KB] f = 444, 224342 evaluated, 91686 expanded
+[t=0.630056s, 23008 KB] New best heuristic value for landmark_cost_partitioning: 73
+[t=0.630056s, 23008 KB] g=426, 224346 evaluated, 91687 expanded
+[t=0.633057s, 23008 KB] f = 445, 224720 evaluated, 92411 expanded
+[t=0.637056s, 23008 KB] f = 446, 224958 evaluated, 93188 expanded
+[t=0.637056s, 23008 KB] New best heuristic value for landmark_cost_partitioning: 72
+[t=0.637056s, 23008 KB] g=429, 225023 evaluated, 93198 expanded
+[t=0.644041s, 23008 KB] f = 447, 225376 evaluated, 94583 expanded
+[t=0.662056s, 27108 KB] f = 448, 228082 evaluated, 95686 expanded
+[t=0.679056s, 27108 KB] f = 449, 233314 evaluated, 97738 expanded
+[t=0.696057s, 27108 KB] f = 450, 238419 evaluated, 99847 expanded
+[t=0.714049s, 27108 KB] f = 451, 245735 evaluated, 101853 expanded
+[t=0.725049s, 27108 KB] f = 452, 249365 evaluated, 103399 expanded
+[t=0.733048s, 27108 KB] f = 453, 252746 evaluated, 104226 expanded
+[t=0.735048s, 27108 KB] f = 454, 253415 evaluated, 104666 expanded
+[t=0.738047s, 27108 KB] f = 455, 254009 evaluated, 105237 expanded
+[t=0.740049s, 27108 KB] f = 456, 254030 evaluated, 105671 expanded
+[t=0.743048s, 27108 KB] f = 457, 254072 evaluated, 106481 expanded
+[t=0.744036s, 27108 KB] f = 458, 254072 evaluated, 106955 expanded
+[t=0.748049s, 27108 KB] f = 459, 254072 evaluated, 107918 expanded
+[t=0.750049s, 27108 KB] f = 460, 254072 evaluated, 108448 expanded
+[t=0.756035s, 27108 KB] f = 461, 254990 evaluated, 109617 expanded
+[t=0.765049s, 27108 KB] f = 462, 256640 evaluated, 111349 expanded
+[t=0.776029s, 27108 KB] f = 463, 258248 evaluated, 113404 expanded
+[t=0.789041s, 27108 KB] f = 464, 260966 evaluated, 115716 expanded
+[t=0.799041s, 27108 KB] f = 465, 262328 evaluated, 117472 expanded
+[t=0.805047s, 27108 KB] f = 466, 263323 evaluated, 118468 expanded
+[t=0.805047s, 27108 KB] f = 467, 263416 evaluated, 118603 expanded
+[t=0.806019s, 27108 KB] f = 468, 263416 evaluated, 118663 expanded
+[t=0.806019s, 27108 KB] f = 469, 263416 evaluated, 118675 expanded
+[t=0.806019s, 27108 KB] f = 470, 263416 evaluated, 118705 expanded
+[t=0.806019s, 27108 KB] f = 471, 263416 evaluated, 118742 expanded
+[t=0.807029s, 27108 KB] f = 472, 263416 evaluated, 118941 expanded
+[t=0.808030s, 27108 KB] f = 473, 263416 evaluated, 119341 expanded
+[t=0.812029s, 27108 KB] f = 474, 263416 evaluated, 120421 expanded
+[t=0.816028s, 27108 KB] f = 475, 263416 evaluated, 121336 expanded
+[t=0.822029s, 27108 KB] f = 476, 263416 evaluated, 122642 expanded
+[t=0.824030s, 27108 KB] f = 477, 263416 evaluated, 123087 expanded
+[t=0.829030s, 27108 KB] f = 478, 263416 evaluated, 123946 expanded
+[t=0.836030s, 27108 KB] f = 479, 265852 evaluated, 124830 expanded
+[t=0.844013s, 27108 KB] f = 480, 266875 evaluated, 126247 expanded
+[t=0.852024s, 27108 KB] f = 481, 268188 evaluated, 127423 expanded
+[t=0.866023s, 27108 KB] f = 482, 270830 evaluated, 129390 expanded
+[t=0.877002s, 27108 KB] f = 483, 272690 evaluated, 130789 expanded
+[t=0.887023s, 27108 KB] f = 484, 274158 evaluated, 132481 expanded
+[t=0.894012s, 27108 KB] f = 485, 275745 evaluated, 133612 expanded
+[t=0.897024s, 27108 KB] f = 486, 276123 evaluated, 134514 expanded
+[t=0.901030s, 27108 KB] f = 487, 277022 evaluated, 135461 expanded
+[t=0.904016s, 27108 KB] f = 488, 277155 evaluated, 136404 expanded
+[t=0.908015s, 27108 KB] f = 489, 277519 evaluated, 137153 expanded
+[t=0.913016s, 27108 KB] f = 490, 278225 evaluated, 138522 expanded
+[t=0.920015s, 27108 KB] f = 491, 280485 evaluated, 139706 expanded
+[t=0.928016s, 27192 KB] f = 492, 283223 evaluated, 141173 expanded
+[t=0.937016s, 27328 KB] f = 493, 287082 evaluated, 142518 expanded
+[t=0.944004s, 27328 KB] f = 494, 290010 evaluated, 143680 expanded
+[t=0.950016s, 27460 KB] f = 495, 291683 evaluated, 144812 expanded
+[t=0.956017s, 27460 KB] f = 496, 292884 evaluated, 145848 expanded
+[t=0.963017s, 27460 KB] f = 497, 293125 evaluated, 147064 expanded
+[t=0.969981s, 27592 KB] f = 498, 293323 evaluated, 148640 expanded
+[t=0.976983s, 27592 KB] f = 499, 293330 evaluated, 150148 expanded
+[t=0.976983s, 27592 KB] New best heuristic value for landmark_cost_partitioning: 61
+[t=0.976983s, 27592 KB] g=633, 293332 evaluated, 150150 expanded
+[t=0.983005s, 27592 KB] f = 500, 293400 evaluated, 151856 expanded
+[t=0.988002s, 27592 KB] f = 501, 293400 evaluated, 153013 expanded
+[t=0.988002s, 27592 KB] New best heuristic value for landmark_cost_partitioning: 60
+[t=0.988002s, 27592 KB] g=636, 293403 evaluated, 153015 expanded
+[t=0.988002s, 27592 KB] New best heuristic value for landmark_cost_partitioning: 0
+[t=0.988002s, 27592 KB] g=637, 293411 evaluated, 153016 expanded
+[t=0.993993s, 27592 KB] f = 502, 293480 evaluated, 154775 expanded
+[t=0.998003s, 27592 KB] f = 503, 293570 evaluated, 155828 expanded
+[t=1.004003s, 27592 KB] f = 504, 294767 evaluated, 157239 expanded
+[t=1.008004s, 27592 KB] f = 505, 295052 evaluated, 158392 expanded
+[t=1.013010s, 27592 KB] f = 506, 296282 evaluated, 159490 expanded
+[t=1.017991s, 27724 KB] f = 507, 298179 evaluated, 160388 expanded
+[t=1.024991s, 27724 KB] f = 508, 300815 evaluated, 161442 expanded
+[t=1.034983s, 27996 KB] f = 509, 306528 evaluated, 162874 expanded
+[t=1.047986s, 28132 KB] f = 510, 312046 evaluated, 164697 expanded
+[t=1.058985s, 28400 KB] f = 511, 317754 evaluated, 166012 expanded
+[t=1.069985s, 28536 KB] f = 512, 322869 evaluated, 167533 expanded
+[t=1.078985s, 28668 KB] f = 513, 326624 evaluated, 168678 expanded
+[t=1.088985s, 28800 KB] f = 514, 328465 evaluated, 170511 expanded
+[t=1.093974s, 28932 KB] f = 515, 329818 evaluated, 171414 expanded
+[t=1.097985s, 28932 KB] f = 516, 330071 evaluated, 172338 expanded
+[t=1.101985s, 28932 KB] f = 517, 330455 evaluated, 173316 expanded
+[t=1.108984s, 28932 KB] f = 518, 330757 evaluated, 174880 expanded
+[t=1.116985s, 28932 KB] f = 519, 331018 evaluated, 176733 expanded
+[t=1.123984s, 28932 KB] f = 520, 331537 evaluated, 178430 expanded
+[t=1.129985s, 28932 KB] f = 521, 331610 evaluated, 179970 expanded
+[t=1.133985s, 28932 KB] f = 522, 331736 evaluated, 181059 expanded
+[t=1.138985s, 28932 KB] f = 523, 332708 evaluated, 182269 expanded
+[t=1.144963s, 29068 KB] f = 524, 334862 evaluated, 183370 expanded
+[t=1.151962s, 29068 KB] f = 525, 335846 evaluated, 184826 expanded
+[t=1.165974s, 29336 KB] f = 526, 342233 evaluated, 186267 expanded
+[t=1.174963s, 29468 KB] f = 527, 345808 evaluated, 187489 expanded
+[t=1.189985s, 29732 KB] f = 528, 353335 evaluated, 189184 expanded
+[t=1.198985s, 29864 KB] f = 529, 357374 evaluated, 190473 expanded
+[t=1.212984s, 30132 KB] f = 530, 365467 evaluated, 192115 expanded
+[t=1.223957s, 30264 KB] f = 531, 368133 evaluated, 194317 expanded
+[t=1.234955s, 30396 KB] f = 532, 373217 evaluated, 195714 expanded
+[t=1.247955s, 30528 KB] f = 533, 373941 evaluated, 198785 expanded
+[t=1.259955s, 30528 KB] f = 534, 375330 evaluated, 200983 expanded
+[t=1.273956s, 30528 KB] f = 535, 376513 evaluated, 204098 expanded
+[t=1.282954s, 30528 KB] f = 536, 376706 evaluated, 206293 expanded
+[t=1.289955s, 30664 KB] f = 537, 377027 evaluated, 207862 expanded
+[t=1.294936s, 30664 KB] f = 538, 377184 evaluated, 209027 expanded
+[t=1.297956s, 30664 KB] f = 539, 377684 evaluated, 209962 expanded
+[t=1.300954s, 30664 KB] f = 540, 377755 evaluated, 210596 expanded
+[t=1.307957s, 30796 KB] f = 541, 381167 evaluated, 211635 expanded
+[t=1.310956s, 30796 KB] f = 542, 381984 evaluated, 212287 expanded
+[t=1.317956s, 30796 KB] f = 543, 383343 evaluated, 213528 expanded
+[t=1.324935s, 30796 KB] f = 544, 384072 evaluated, 215174 expanded
+[t=1.337956s, 30932 KB] f = 545, 386601 evaluated, 217730 expanded
+[t=1.344950s, 30932 KB] f = 546, 387520 evaluated, 219050 expanded
+[t=1.355947s, 31064 KB] f = 547, 391617 evaluated, 220902 expanded
+[t=1.367947s, 31196 KB] f = 548, 395135 evaluated, 222784 expanded
+[t=1.385945s, 31464 KB] f = 549, 403748 evaluated, 225105 expanded
+[t=1.401926s, 31600 KB] f = 550, 406445 evaluated, 228041 expanded
+[t=1.412934s, 31732 KB] f = 551, 411617 evaluated, 229808 expanded
+[t=1.419922s, 31732 KB] f = 552, 412321 evaluated, 231484 expanded
+[t=1.424922s, 31864 KB] f = 553, 413448 evaluated, 232662 expanded
+[t=1.429900s, 31864 KB] f = 554, 413491 evaluated, 233941 expanded
+[t=1.433900s, 31864 KB] f = 555, 413568 evaluated, 235103 expanded
+[t=1.437900s, 31864 KB] f = 556, 413568 evaluated, 236398 expanded
+[t=1.441899s, 31864 KB] f = 557, 413568 evaluated, 237313 expanded
+[t=1.443889s, 31864 KB] f = 558, 413568 evaluated, 238041 expanded
+[t=1.446901s, 31864 KB] f = 559, 413568 evaluated, 238636 expanded
+[t=1.448900s, 31864 KB] f = 560, 413748 evaluated, 239272 expanded
+[t=1.460878s, 31864 KB] f = 561, 415924 evaluated, 241193 expanded
+[t=1.471900s, 31864 KB] f = 562, 416669 evaluated, 243366 expanded
+[t=1.486894s, 32000 KB] f = 563, 419654 evaluated, 246179 expanded
+[t=1.497893s, 32000 KB] f = 564, 420896 evaluated, 248483 expanded
+[t=1.505887s, 32000 KB] f = 565, 421793 evaluated, 250242 expanded
+[t=1.510893s, 32136 KB] f = 566, 422630 evaluated, 251262 expanded
+[t=1.518893s, 32136 KB] f = 567, 423360 evaluated, 252686 expanded
+[t=1.523892s, 32136 KB] f = 568, 424048 evaluated, 253895 expanded
+[t=1.529892s, 32136 KB] f = 569, 424916 evaluated, 255132 expanded
+[t=1.531893s, 32136 KB] f = 570, 425168 evaluated, 255838 expanded
+[t=1.534871s, 32136 KB] f = 571, 425168 evaluated, 256537 expanded
+[t=1.537892s, 32136 KB] f = 572, 425168 evaluated, 257474 expanded
+[t=1.542887s, 32136 KB] f = 573, 425240 evaluated, 258684 expanded
+[t=1.546887s, 32136 KB] f = 574, 425888 evaluated, 259766 expanded
+[t=1.551887s, 32272 KB] f = 575, 426998 evaluated, 260768 expanded
+[t=1.556888s, 32272 KB] f = 576, 427850 evaluated, 261886 expanded
+[t=1.559888s, 32272 KB] f = 577, 428858 evaluated, 262494 expanded
+[t=1.567886s, 32408 KB] f = 578, 432296 evaluated, 263791 expanded
+[t=1.573888s, 32544 KB] f = 579, 435204 evaluated, 264570 expanded
+[t=1.576888s, 32544 KB] f = 580, 436279 evaluated, 265268 expanded
+[t=1.580887s, 32544 KB] f = 581, 437224 evaluated, 265964 expanded
+[t=1.587887s, 32680 KB] f = 582, 439186 evaluated, 267159 expanded
+[t=1.594882s, 32680 KB] f = 583, 441430 evaluated, 268292 expanded
+[t=1.600882s, 32816 KB] f = 584, 443598 evaluated, 269580 expanded
+[t=1.607883s, 32816 KB] f = 585, 445860 evaluated, 270849 expanded
+[t=1.614882s, 32952 KB] f = 586, 448182 evaluated, 272506 expanded
+[t=1.622881s, 32952 KB] f = 587, 448879 evaluated, 274414 expanded
+[t=1.626882s, 32952 KB] f = 588, 449864 evaluated, 275436 expanded
+[t=1.628882s, 32952 KB] f = 589, 449864 evaluated, 276044 expanded
+[t=1.629860s, 32952 KB] f = 590, 449864 evaluated, 276385 expanded
+[t=1.632883s, 32952 KB] f = 591, 449972 evaluated, 276931 expanded
+[t=1.650864s, 41148 KB] f = 592, 450770 evaluated, 277199 expanded
+[t=1.655859s, 41148 KB] f = 593, 451112 evaluated, 278258 expanded
+[t=1.658860s, 41148 KB] f = 594, 451452 evaluated, 278981 expanded
+[t=1.664859s, 41148 KB] f = 595, 452020 evaluated, 280544 expanded
+[t=1.667860s, 41148 KB] f = 596, 452440 evaluated, 281228 expanded
+[t=1.670848s, 41148 KB] f = 597, 452440 evaluated, 282290 expanded
+[t=1.673837s, 41148 KB] f = 598, 452440 evaluated, 282975 expanded
+[t=1.677826s, 41148 KB] f = 599, 452440 evaluated, 284145 expanded
+[t=1.680837s, 41148 KB] f = 600, 452440 evaluated, 284589 expanded
+[t=1.682848s, 41148 KB] f = 601, 452440 evaluated, 285262 expanded
+[t=1.683848s, 41148 KB] f = 602, 452440 evaluated, 285491 expanded
+[t=1.685841s, 41148 KB] f = 603, 452440 evaluated, 286098 expanded
+[t=1.688847s, 41148 KB] f = 604, 452440 evaluated, 286809 expanded
+[t=1.691847s, 41148 KB] f = 605, 452440 evaluated, 287639 expanded
+[t=1.695829s, 41148 KB] f = 606, 452440 evaluated, 288684 expanded
+[t=1.699848s, 41148 KB] f = 607, 452440 evaluated, 289795 expanded
+[t=1.702826s, 41148 KB] f = 608, 452440 evaluated, 290554 expanded
+[t=1.704848s, 41148 KB] f = 609, 452440 evaluated, 291208 expanded
+[t=1.710841s, 41148 KB] f = 610, 453992 evaluated, 292392 expanded
+[t=1.714847s, 41148 KB] f = 611, 454104 evaluated, 293402 expanded
+[t=1.724827s, 41148 KB] f = 612, 456898 evaluated, 295151 expanded
+[t=1.729848s, 41148 KB] f = 613, 458310 evaluated, 295898 expanded
+[t=1.735832s, 41148 KB] f = 614, 460432 evaluated, 296952 expanded
+[t=1.740811s, 41148 KB] f = 615, 461892 evaluated, 297798 expanded
+[t=1.743824s, 41148 KB] f = 616, 461920 evaluated, 298750 expanded
+[t=1.748831s, 41148 KB] f = 617, 461920 evaluated, 300108 expanded
+[t=1.754831s, 41148 KB] f = 618, 461920 evaluated, 301567 expanded
+[t=1.758832s, 41148 KB] f = 619, 461920 evaluated, 302623 expanded
+[t=1.764833s, 41148 KB] f = 620, 461920 evaluated, 304056 expanded
+[t=1.768831s, 41148 KB] f = 621, 461920 evaluated, 305040 expanded
+[t=1.776809s, 41148 KB] f = 622, 461920 evaluated, 306685 expanded
+[t=1.779831s, 41148 KB] f = 623, 461920 evaluated, 307432 expanded
+[t=1.783825s, 41148 KB] f = 624, 461920 evaluated, 308157 expanded
+[t=1.785825s, 41148 KB] f = 625, 461920 evaluated, 308603 expanded
+[t=1.788824s, 41148 KB] f = 626, 461920 evaluated, 309497 expanded
+[t=1.798825s, 41148 KB] f = 627, 464254 evaluated, 311292 expanded
+[t=1.806825s, 41148 KB] f = 628, 464590 evaluated, 312852 expanded
+[t=1.827812s, 41148 KB] f = 629, 470268 evaluated, 316221 expanded
+[t=1.835819s, 41148 KB] f = 630, 470880 evaluated, 317861 expanded
+[t=1.845807s, 41148 KB] f = 631, 473600 evaluated, 319732 expanded
+[t=1.851808s, 41148 KB] f = 632, 474090 evaluated, 321035 expanded
+[t=1.859799s, 41148 KB] f = 633, 474852 evaluated, 322519 expanded
+[t=1.869808s, 41148 KB] f = 634, 475831 evaluated, 324584 expanded
+[t=1.877800s, 41148 KB] f = 635, 476310 evaluated, 326369 expanded
+[t=1.885808s, 41148 KB] f = 636, 476971 evaluated, 328068 expanded
+[t=1.894801s, 41148 KB] f = 637, 476996 evaluated, 330187 expanded
+[t=1.894801s, 41148 KB] Solution found!
+[t=1.894801s, 41148 KB] Actual search time: 1.888265s
+load-crate drone1 carrier1 crate1 depot n0 n1 (1)
+load-crate drone1 carrier1 crate4 depot n1 n2 (1)
+load-crate drone1 carrier1 crate2 depot n2 n3 (1)
+load-crate drone1 carrier1 crate5 depot n3 n4 (1)
+move-carrier drone1 carrier1 depot loc2 (70)
+unload-and-deliver drone1 carrier1 crate4 person4 loc2 medicine n4 n3 (1)
+move-carrier drone1 carrier1 loc2 loc4 (18)
+unload-and-deliver drone1 carrier1 crate1 person5 loc4 food n3 n2 (1)
+unload-and-deliver drone1 carrier1 crate5 person5 loc4 medicine n2 n1 (1)
+move-carrier drone1 carrier1 loc4 depot (86)
+load-crate drone1 carrier1 crate6 depot n1 n2 (1)
+load-crate drone1 carrier1 crate3 depot n2 n3 (1)
+load-crate drone1 carrier1 crate7 depot n3 n4 (1)
+move-carrier drone1 carrier1 depot loc6 (129)
+unload-and-deliver drone1 carrier1 crate2 person6 loc6 food n4 n3 (1)
+unload-and-deliver drone1 carrier1 crate6 person6 loc6 medicine n3 n2 (1)
+move-carrier drone1 carrier1 loc6 loc3 (114)
+unload-and-deliver drone1 carrier1 crate3 person3 loc3 food n2 n1 (1)
+unload-and-deliver drone1 carrier1 crate7 person3 loc3 medicine n1 n0 (1)
+move-carrier drone1 carrier1 loc3 depot (206)
+[t=1.894801s, 41148 KB] Plan length: 20 step(s).
+[t=1.894801s, 41148 KB] Plan cost: 637
+[t=1.894801s, 41148 KB] Expanded 330188 state(s).
+[t=1.894801s, 41148 KB] Reopened 0 state(s).
+[t=1.894801s, 41148 KB] Evaluated 476996 state(s).
+[t=1.894801s, 41148 KB] Evaluations: 837971
+[t=1.894801s, 41148 KB] Generated 2863575 state(s).
+[t=1.894801s, 41148 KB] Dead ends: 0 state(s).
+[t=1.894801s, 41148 KB] Expanded until last jump: 330187 state(s).
+[t=1.894801s, 41148 KB] Reopened until last jump: 0 state(s).
+[t=1.894801s, 41148 KB] Evaluated until last jump: 476996 state(s).
+[t=1.894801s, 41148 KB] Generated until last jump: 2863575 state(s).
+[t=1.894801s, 41148 KB] Number of registered states: 476996
+[t=1.894801s, 41148 KB] Int hash set load factor: 476996/1048576 = 0.454899
+[t=1.894801s, 41148 KB] Int hash set resizes: 20
+[t=1.894801s, 41148 KB] Search time: 1.888628s
+[t=1.894801s, 41148 KB] Total time: 1.894801s
+Solution found.
+Peak memory: 41148 KB
+Remove intermediate file output.sas
+search exit code: 0
+
+INFO     Planner time: 2.05s

@@ -23,3 +23,6 @@ part1/generated_problems/
 .DS_Store
 
 downward.sif
+sas_plan*
+*.Zone.Identifier
+part2/problems/drone_problem_d1_r1_l*
