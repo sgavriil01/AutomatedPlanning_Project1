@@ -1,0 +1,111 @@
+((1.00*(TOTAL-COST)) - () + 0.00)
+STARTPLANSTARTPLANSTARTPLAN
+   0: (LOAD-CRATE DRONE1 CARRIER1 CRATE13 DEPOT N0 N1)
+   1: (LOAD-CRATE DRONE1 CARRIER1 CRATE15 DEPOT N1 N2)
+   2: (MOVE-CARRIER DRONE1 CARRIER1 DEPOT LOC10)
+   3: (UNLOAD-AND-DELIVER DRONE1 CARRIER1 CRATE13 PERSON9 LOC10 FOOD N2 N1)
+   4: (MOVE-CARRIER DRONE1 CARRIER1 LOC10 DEPOT)
+   5: (LOAD-CRATE DRONE1 CARRIER1 CRATE12 DEPOT N1 N2)
+   6: (MOVE-CARRIER DRONE1 CARRIER1 DEPOT LOC4)
+   7: (UNLOAD-AND-DELIVER DRONE1 CARRIER1 CRATE12 PERSON10 LOC4 FOOD N2 N1)
+   8: (MOVE-CARRIER DRONE1 CARRIER1 LOC4 DEPOT)
+   9: (LOAD-CRATE DRONE1 CARRIER1 CRATE11 DEPOT N1 N2)
+  10: (MOVE-CARRIER DRONE1 CARRIER1 DEPOT LOC12)
+  11: (UNLOAD-AND-DELIVER DRONE1 CARRIER1 CRATE11 PERSON11 LOC12 FOOD N2 N1)
+  12: (MOVE-CARRIER DRONE1 CARRIER1 LOC12 DEPOT)
+  13: (LOAD-CRATE DRONE1 CARRIER1 CRATE10 DEPOT N1 N2)
+  14: (MOVE-CARRIER DRONE1 CARRIER1 DEPOT LOC1)
+  15: (UNLOAD-AND-DELIVER DRONE1 CARRIER1 CRATE10 PERSON13 LOC1 FOOD N2 N1)
+  16: (MOVE-CARRIER DRONE1 CARRIER1 LOC1 DEPOT)
+  17: (LOAD-CRATE DRONE1 CARRIER1 CRATE9 DEPOT N1 N2)
+  18: (MOVE-CARRIER DRONE1 CARRIER1 DEPOT LOC15)
+  19: (UNLOAD-AND-DELIVER DRONE1 CARRIER1 CRATE9 PERSON5 LOC15 FOOD N2 N1)
+  20: (MOVE-CARRIER DRONE1 CARRIER1 LOC15 DEPOT)
+  21: (LOAD-CRATE DRONE1 CARRIER1 CRATE8 DEPOT N1 N2)
+  22: (MOVE-CARRIER DRONE1 CARRIER1 DEPOT LOC15)
+  23: (UNLOAD-AND-DELIVER DRONE1 CARRIER1 CRATE15 PERSON5 LOC15 MEDICINE N2 N1)
+  24: (MOVE-CARRIER DRONE1 CARRIER1 LOC15 DEPOT)
+  25: (LOAD-CRATE DRONE1 CARRIER1 CRATE14 DEPOT N1 N2)
+  26: (MOVE-CARRIER DRONE1 CARRIER1 DEPOT LOC8)
+  27: (UNLOAD-AND-DELIVER DRONE1 CARRIER1 CRATE14 PERSON15 LOC8 MEDICINE N2 N1)
+  28: (UNLOAD-AND-DELIVER DRONE1 CARRIER1 CRATE8 PERSON15 LOC8 FOOD N1 N0)
+  29: (MOVE-CARRIER DRONE1 CARRIER1 LOC8 DEPOT)
+  30: (LOAD-CRATE DRONE1 CARRIER1 CRATE7 DEPOT N0 N1)
+  31: (MOVE-CARRIER DRONE1 CARRIER1 DEPOT LOC5)
+  32: (UNLOAD-AND-DELIVER DRONE1 CARRIER1 CRATE7 PERSON3 LOC5 FOOD N1 N0)
+  33: (MOVE-CARRIER DRONE1 CARRIER1 LOC5 DEPOT)
+  34: (LOAD-CRATE DRONE1 CARRIER1 CRATE6 DEPOT N0 N1)
+  35: (MOVE-CARRIER DRONE1 CARRIER1 DEPOT LOC5)
+  36: (UNLOAD-AND-DELIVER DRONE1 CARRIER1 CRATE6 PERSON6 LOC5 FOOD N1 N0)
+  37: (MOVE-CARRIER DRONE1 CARRIER1 LOC5 DEPOT)
+  38: (LOAD-CRATE DRONE1 CARRIER1 CRATE5 DEPOT N0 N1)
+  39: (MOVE-CARRIER DRONE1 CARRIER1 DEPOT LOC3)
+  40: (UNLOAD-AND-DELIVER DRONE1 CARRIER1 CRATE5 PERSON8 LOC3 FOOD N1 N0)
+  41: (MOVE-CARRIER DRONE1 CARRIER1 LOC3 DEPOT)
+  42: (LOAD-CRATE DRONE1 CARRIER1 CRATE4 DEPOT N0 N1)
+  43: (MOVE-CARRIER DRONE1 CARRIER1 DEPOT LOC3)
+  44: (UNLOAD-AND-DELIVER DRONE1 CARRIER1 CRATE4 PERSON12 LOC3 FOOD N1 N0)
+  45: (MOVE-CARRIER DRONE1 CARRIER1 LOC3 DEPOT)
+  46: (LOAD-CRATE DRONE1 CARRIER1 CRATE3 DEPOT N0 N1)
+  47: (MOVE-CARRIER DRONE1 CARRIER1 DEPOT LOC2)
+  48: (UNLOAD-AND-DELIVER DRONE1 CARRIER1 CRATE3 PERSON1 LOC2 FOOD N1 N0)
+  49: (MOVE-CARRIER DRONE1 CARRIER1 LOC2 DEPOT)
+  50: (LOAD-CRATE DRONE1 CARRIER1 CRATE2 DEPOT N0 N1)
+  51: (MOVE-CARRIER DRONE1 CARRIER1 DEPOT LOC2)
+  52: (UNLOAD-AND-DELIVER DRONE1 CARRIER1 CRATE2 PERSON4 LOC2 FOOD N1 N0)
+  53: (MOVE-CARRIER DRONE1 CARRIER1 LOC2 DEPOT)
+  54: (LOAD-CRATE DRONE1 CARRIER1 CRATE1 DEPOT N0 N1)
+  55: (MOVE-CARRIER DRONE1 CARRIER1 DEPOT LOC2)
+  56: (UNLOAD-AND-DELIVER DRONE1 CARRIER1 CRATE1 PERSON14 LOC2 FOOD N1 N0)
+  57: (MOVE-CARRIER DRONE1 CARRIER1 LOC2 DEPOT)
+plan cost: 3812.000000
+ENDPLANENDPLANENDPLAN
+
+ff: parsing domain file
+domain 'PROJECT1_DOMAIN_PART2' defined
+ ... done.
+ff: parsing problem file
+problem 'DRONE_PROBLEM_D1_R1_L15_P15_C15_G15_CT2' defined
+ ... done.
+
+
+
+ff: search configuration is Enforced Hill-Climbing, then A*epsilon with weight 5.
+Metric is 
+COST MINIMIZATION DONE (WITH cost-minimizing relaxed plans).
+
+Cueing down from goal distance:   27 into depth [1]
+                                  25            [1]
+                                  24            [1][2][3]
+                                  23            [1]
+                                  22            [1][2][3]
+                                  21            [1]
+                                  20            [1][2][3]
+                                  19            [1]
+                                  18            [1][2][3]
+                                  17            [1]
+                                  16            [1][2][3][4]
+                                  15            [1][2][3]
+                                  14            [1]
+                                  13            [1][2]
+                                  12            [1][2][3]
+                                  10            [1][2][3][4]
+                                   9            [1][2][3][4]
+                                   7            [1][2][3][4]
+                                   6            [1][2][3][4]
+                                   4            [1][2][3][4]
+                                   3            [1][2][3][4]
+                                   2            [1][2]
+                                   1            [1]
+                                   0            
+Valid plan has 58 steps
+
+
+time spent:    0.00 seconds instantiating 2116 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 97 facts and 1216 actions
+               0.00 seconds creating final representation with 97 relevant facts, 1 relevant fluents
+               0.00 seconds computing LNF
+               0.00 seconds building connectivity graph
+               0.11 seconds searching, evaluating 852 states, to a max depth of 4
+               0.11 seconds total time
+

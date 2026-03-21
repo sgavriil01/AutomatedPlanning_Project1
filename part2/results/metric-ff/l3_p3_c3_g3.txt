@@ -1,0 +1,47 @@
+((1.00*(TOTAL-COST)) - () + 0.00)
+STARTPLANSTARTPLANSTARTPLAN
+   0: (LOAD-CRATE DRONE1 CARRIER1 CRATE3 DEPOT N0 N1)
+   1: (LOAD-CRATE DRONE1 CARRIER1 CRATE2 DEPOT N1 N2)
+   2: (MOVE-CARRIER DRONE1 CARRIER1 DEPOT LOC2)
+   3: (UNLOAD-AND-DELIVER DRONE1 CARRIER1 CRATE3 PERSON1 LOC2 MEDICINE N2 N1)
+   4: (UNLOAD-AND-DELIVER DRONE1 CARRIER1 CRATE2 PERSON1 LOC2 FOOD N1 N0)
+   5: (MOVE-CARRIER DRONE1 CARRIER1 LOC2 DEPOT)
+   6: (LOAD-CRATE DRONE1 CARRIER1 CRATE1 DEPOT N0 N1)
+   7: (MOVE-CARRIER DRONE1 CARRIER1 DEPOT LOC1)
+   8: (UNLOAD-AND-DELIVER DRONE1 CARRIER1 CRATE1 PERSON3 LOC1 FOOD N1 N0)
+   9: (MOVE-CARRIER DRONE1 CARRIER1 LOC1 DEPOT)
+plan cost: 784.000000
+ENDPLANENDPLANENDPLAN
+
+ff: parsing domain file
+domain 'PROJECT1_DOMAIN_PART2' defined
+ ... done.
+ff: parsing problem file
+problem 'DRONE_PROBLEM_D1_R1_L3_P3_C3_G3_CT2' defined
+ ... done.
+
+
+
+ff: search configuration is Enforced Hill-Climbing, then A*epsilon with weight 5.
+Metric is 
+COST MINIMIZATION DONE (WITH cost-minimizing relaxed plans).
+
+Cueing down from goal distance:    8 into depth [1]
+                                   6            [1]
+                                   5            [1][2]
+                                   4            [1][2]
+                                   3            [1]
+                                   2            [1][2]
+                                   1            [1]
+                                   0            
+Valid plan has 10 steps
+
+
+time spent:    0.00 seconds instantiating 100 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 25 facts and 64 actions
+               0.00 seconds creating final representation with 25 relevant facts, 1 relevant fluents
+               0.00 seconds computing LNF
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 21 states, to a max depth of 2
+               0.00 seconds total time
+
