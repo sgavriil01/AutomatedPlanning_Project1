@@ -262,12 +262,12 @@ def main():
     # Full path for output file
     output_file = os.path.join(output_dir, problem_name + ".pddl")
 
-    # Open output file
+# Open output file
     with open(output_file, 'w') as f:
         # Write the initial part of the problem
 
         f.write("(define (problem " + problem_name + ")\n")
-        f.write("(:domain project1_domain)\n")
+        f.write("(:domain project1_domain_part2)\n") # ΔΙΟΡΘΩΣΗ 1: Σωστό domain
         f.write("(:objects\n")
 
         ######################################################################
@@ -291,6 +291,8 @@ def main():
         for x in carrier:
             f.write("\t" + x + " - carrier\n")
 
+        f.write("\tN0 N1 N2 N3 N4 - num\n") # ΔΙΟΡΘΩΣΗ 2: Δηλώθηκαν οι αριθμοί (num)
+
         f.write(")\n")
 
         ######################################################################
@@ -301,8 +303,8 @@ def main():
         # --- Initialize drones ---
         for x in drone:
             f.write("\t(at-drone " + x + " depot)\n")
-            f.write("\t(free-arm1 " + x + ")\n")
-            f.write("\t(free-arm2 " + x + ")\n")
+            # ΔΙΟΡΘΩΣΗ 3: Διαγράφηκαν τα free-arm1 και free-arm2 γιατί δεν τα έχουμε πια
+
         # --- Initialize crates at depot ---
         for c in crate:
             f.write("\t(at-crate " + c + " depot)\n")
@@ -317,19 +319,20 @@ def main():
             loc = random.choice(location[1:])  # location[0] is "depot"
             f.write("\t(at-person " + p + " " + loc + ")\n")
 
+        # --- Initialize carriers ---
         for c in carrier:
             f.write("\t(at-carrier " + c + " depot)\n")
             f.write("\t(load " + c + " N0)\n")
         
-        # Σειρά αριθμών
-            f.write("\t(next N0 N1)\n\t(next N1 N2)\n\t(next N2 N3)\n\t(next N3 N4)\n")
+        # ΔΙΟΡΘΩΣΗ 4: Βγάλαμε τη σειρά αριθμών και τα κόστη έξω από τη λούπα των carrier
+        f.write("\t(next N0 N1)\n\t(next N1 N2)\n\t(next N2 N3)\n\t(next N3 N4)\n")
 
-            f.write("\t(= (total-cost) 0)\n")
+        f.write("\t(= (total-cost) 0)\n")
 
-            for i in range(len(location)):
-                for j in range(len(location)):
-                    cost = int(math.ceil(flight_cost(location_coords, i, j)))
-                    f.write("\t(= (fly-cost " + location[i] + " " + location[j] + ") " + str(cost) + ")\n")
+        for i in range(len(location)):
+            for j in range(len(location)):
+                cost = int(math.ceil(flight_cost(location_coords, i, j)))
+                f.write("\t(= (fly-cost " + location[i] + " " + location[j] + ") " + str(cost) + ")\n")
 
         f.write(")\n")
 

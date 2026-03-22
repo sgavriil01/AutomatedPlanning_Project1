@@ -17,18 +17,18 @@
         (load ?k - carrier ?n - num)
         (next ?a - num ?b - num)
         
-        ;; --- ΝΕΑ PREDICATES (LOCKS) ΓΙΑ ΤΟ PART 3 ---
-        (available-drone ?d - drone)    ;; Κανόνας 1: Κάθε drone κάνει 1 δουλειά [cite: 12]
-        (available-carrier ?k - carrier);; Κανόνας 2 & 3: Κλείδωμα του carrier [cite: 14, 16]
-        (available-person ?p - person)  ;; Κανόνας 4: Κλείδωμα του ανθρώπου [cite: 18]
-        (available-crate ?c - crate)    ;; Κανόνας 2: Κλείδωμα του κιβωτίου [cite: 14]
+        ;; --- NEW PREDICATES (LOCKS) FOR PART 3 ---
+        (available-drone ?d - drone)    ;; Rule 1: Each drone does 1 action at a time
+        (available-carrier ?k - carrier);; Rule 2 & 3: Carrier lock
+        (available-person ?p - person)  ;; Rule 4: Person lock
+        (available-crate ?c - crate)    ;; Rule 2: Crate lock
     )
     (:functions
         (fly-cost ?from - location ?to - location) 
     )
 
-    ;; --- ACTION 1: Πτήση / Μεταφορά Carrier ---
-    ;; Διάρκεια: fly-cost [cite: 21]
+    ;; --- ACTION 1: Flight / Carrier Transport ---
+    ;; Duration: fly-cost
     (:durative-action move-carrier
         :parameters (?d - drone ?k - carrier ?from - location ?to - location)
         :duration (= ?duration (fly-cost ?from ?to))
@@ -39,13 +39,13 @@
             (at start (available-carrier ?k))
         )
         :effect (and
-            ;; Κλείδωμα
+            ;; Lock
             (at start (not (available-drone ?d)))
             (at start (not (available-carrier ?k)))
             (at start (not (at-drone ?d ?from)))
             (at start (not (at-carrier ?k ?from)))
             
-            ;; Ξεκλείδωμα & Νέα Τοποθεσία
+            ;; Unlock & New Position
             (at end (at-drone ?d ?to))
             (at end (at-carrier ?k ?to))
             (at end (available-drone ?d))
@@ -53,8 +53,8 @@
         )
     )
 
-    ;; --- ACTION 2: Φόρτωση Κιβωτίου ---
-    ;; Διάρκεια: 5 δευτερόλεπτα [cite: 20]
+    ;; --- ACTION 2: Load Crate ---
+    ;; Duration: 5 seconds
     (:durative-action load-crate
         :parameters (?d - drone ?k - carrier ?c - crate ?l - location ?n - num ?n2 - num)
         :duration (= ?duration 5)
@@ -71,14 +71,14 @@
             (at start (available-crate ?c))
         )
         :effect (and
-            ;; Κλείδωμα
+            ;; Lock
             (at start (not (available-drone ?d)))
             (at start (not (available-carrier ?k)))
             (at start (not (available-crate ?c)))
             (at start (not (at-crate ?c ?l)))
             (at start (not (load ?k ?n)))
             
-            ;; Ξεκλείδωμα & Αποτέλεσμα
+            ;; Unlock & Result
             (at end (in ?c ?k))
             (at end (load ?k ?n2))
             (at end (available-drone ?d))
@@ -87,8 +87,8 @@
         )
     )
 
-    ;; --- ACTION 3: Ξεφόρτωση & Παράδοση ---
-    ;; Διάρκεια: 5 δευτερόλεπτα [cite: 20]
+    ;; --- ACTION 3: Unload & Deliver ---
+    ;; Duration: 5 seconds
     (:durative-action unload-and-deliver
         :parameters (?d - drone ?k - carrier ?c - crate ?p - person ?l - location ?t - contents ?n - num ?n2 - num)
         :duration (= ?duration 5)
@@ -108,7 +108,7 @@
             (at start (available-person ?p))
         )
         :effect (and
-            ;; Κλείδωμα
+            ;; Lock
             (at start (not (available-drone ?d)))
             (at start (not (available-carrier ?k)))
             (at start (not (available-crate ?c)))
@@ -116,14 +116,13 @@
             (at start (not (in ?c ?k)))
             (at start (not (load ?k ?n)))
             
-            ;; Ξεκλείδωμα & Αποτέλεσμα
+            ;; Unlock & Result
             (at end (delivered ?p ?t))
             (at end (load ?k ?n2))
             (at end (available-drone ?d))
             (at end (available-carrier ?k))
             (at end (available-crate ?c))
             (at end (available-person ?p))
-            (at end (at-crate ?c ?l))
         )
     )
 )
