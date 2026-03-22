@@ -164,6 +164,8 @@ def main():
     parser.add_option('-c', '--crates', metavar='NUM', type=int, dest='crates', help='the number of crates available')
     parser.add_option('-g', '--goals', metavar='NUM', type=int, dest='goals',
                       help='the number of crates assigned in the goal')
+    parser.add_option('-t', '--ct', '--capacity', metavar='NUM', type=int, dest='capacity',
+                      help='the carrier capacity (max crates per carrier)')
 
     (options, args) = parser.parse_args()
 
@@ -191,6 +193,14 @@ def main():
         print("You must specify --goals (use --help for help)")
         sys.exit(1)
 
+    if options.capacity is None:
+        print("You must specify --capacity (use --help for help)")
+        sys.exit(1)
+
+    if options.capacity < 1:
+        print("Carrier capacity must be at least 1")
+        sys.exit(1)
+
     if options.goals > options.crates:
         print("Cannot have more goals than crates")
         sys.exit(1)
@@ -209,6 +219,7 @@ def main():
     print("Persons\t\t", options.persons)
     print("Crates\t\t", options.crates)
     print("Goals\t\t", options.goals)
+    print("Capacity\t", options.capacity)
 
     # Setup all lists of objects
 
@@ -231,6 +242,8 @@ def main():
         person.append("person" + str(x + 1))
     for x in range(options.crates):
         crate.append("crate" + str(x + 1))
+
+    numbers = ["N" + str(i) for i in range(options.capacity + 1)]
     
     # Determine the set of crates for each content.
     # If content_types[0] is "food",
@@ -267,7 +280,7 @@ def main():
         # Write the initial part of the problem
 
         f.write("(define (problem " + problem_name + ")\n")
-        f.write("(:domain project1_domain_part2)\n") # ΔΙΟΡΘΩΣΗ 1: Σωστό domain
+        f.write("(:domain project1_domain_part2)\n")
         f.write("(:objects\n")
 
         ######################################################################
@@ -291,7 +304,7 @@ def main():
         for x in carrier:
             f.write("\t" + x + " - carrier\n")
 
-        f.write("\tN0 N1 N2 N3 N4 - num\n") # ΔΙΟΡΘΩΣΗ 2: Δηλώθηκαν οι αριθμοί (num)
+        f.write("\t" + " ".join(numbers) + " - num\n")
 
         f.write(")\n")
 
@@ -303,7 +316,6 @@ def main():
         # --- Initialize drones ---
         for x in drone:
             f.write("\t(at-drone " + x + " depot)\n")
-            # ΔΙΟΡΘΩΣΗ 3: Διαγράφηκαν τα free-arm1 και free-arm2 γιατί δεν τα έχουμε πια
 
         # --- Initialize crates at depot ---
         for c in crate:
@@ -323,15 +335,16 @@ def main():
         for c in carrier:
             f.write("\t(at-carrier " + c + " depot)\n")
             f.write("\t(load " + c + " N0)\n")
-        
-        # ΔΙΟΡΘΩΣΗ 4: Βγάλαμε τη σειρά αριθμών και τα κόστη έξω από τη λούπα των carrier
-        f.write("\t(next N0 N1)\n\t(next N1 N2)\n\t(next N2 N3)\n\t(next N3 N4)\n")
+
+        # Initialize numeric chain for carrier load level transitions.
+        for i in range(options.capacity):
+            f.write("\t(next N" + str(i) + " N" + str(i + 1) + ")\n")
 
         f.write("\t(= (total-cost) 0)\n")
 
         for i in range(len(location)):
             for j in range(len(location)):
-                cost = int(math.ceil(flight_cost(location_coords, i, j)))
+                cost = flight_cost(location_coords, i, j)
                 f.write("\t(= (fly-cost " + location[i] + " " + location[j] + ") " + str(cost) + ")\n")
 
         f.write(")\n")

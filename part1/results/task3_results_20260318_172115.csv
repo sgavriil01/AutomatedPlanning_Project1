@@ -1,0 +1,5 @@
+Algorithm,Time (s),Plan Length,Status
+BFS,0.51,16,success
+IDS,TIMEOUT,N/A,timeout
+A* (hMAX),7.72,16,success
+A* (lmcut),30.52,16,success

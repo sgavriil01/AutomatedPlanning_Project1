@@ -1,0 +1,73 @@
+((1.00*(TOTAL-COST)) - () + 0.00)
+STARTPLANSTARTPLANSTARTPLAN
+   0: (LOAD-CRATE DRONE1 CARRIER1 CRATE8 DEPOT N0 N1)
+   1: (LOAD-CRATE DRONE1 CARRIER1 CRATE5 DEPOT N1 N2)
+   2: (MOVE-CARRIER DRONE1 CARRIER1 DEPOT LOC2)
+   3: (UNLOAD-AND-DELIVER DRONE1 CARRIER1 CRATE5 PERSON1 LOC2 FOOD N2 N1)
+   4: (MOVE-CARRIER DRONE1 CARRIER1 LOC2 DEPOT)
+   5: (LOAD-CRATE DRONE1 CARRIER1 CRATE4 DEPOT N1 N2)
+   6: (MOVE-CARRIER DRONE1 CARRIER1 DEPOT LOC8)
+   7: (UNLOAD-AND-DELIVER DRONE1 CARRIER1 CRATE4 PERSON6 LOC8 FOOD N2 N1)
+   8: (MOVE-CARRIER DRONE1 CARRIER1 LOC8 DEPOT)
+   9: (LOAD-CRATE DRONE1 CARRIER1 CRATE3 DEPOT N1 N2)
+  10: (MOVE-CARRIER DRONE1 CARRIER1 DEPOT LOC8)
+  11: (UNLOAD-AND-DELIVER DRONE1 CARRIER1 CRATE3 PERSON7 LOC8 FOOD N2 N1)
+  12: (MOVE-CARRIER DRONE1 CARRIER1 LOC8 DEPOT)
+  13: (LOAD-CRATE DRONE1 CARRIER1 CRATE2 DEPOT N1 N2)
+  14: (MOVE-CARRIER DRONE1 CARRIER1 DEPOT LOC8)
+  15: (UNLOAD-AND-DELIVER DRONE1 CARRIER1 CRATE8 PERSON6 LOC8 MEDICINE N2 N1)
+  16: (MOVE-CARRIER DRONE1 CARRIER1 LOC8 DEPOT)
+  17: (LOAD-CRATE DRONE1 CARRIER1 CRATE7 DEPOT N1 N2)
+  18: (MOVE-CARRIER DRONE1 CARRIER1 DEPOT LOC8)
+  19: (UNLOAD-AND-DELIVER DRONE1 CARRIER1 CRATE7 PERSON7 LOC8 MEDICINE N2 N1)
+  20: (MOVE-CARRIER DRONE1 CARRIER1 LOC8 DEPOT)
+  21: (LOAD-CRATE DRONE1 CARRIER1 CRATE6 DEPOT N1 N2)
+  22: (MOVE-CARRIER DRONE1 CARRIER1 DEPOT LOC7)
+  23: (UNLOAD-AND-DELIVER DRONE1 CARRIER1 CRATE6 PERSON2 LOC7 MEDICINE N2 N1)
+  24: (UNLOAD-AND-DELIVER DRONE1 CARRIER1 CRATE2 PERSON2 LOC7 FOOD N1 N0)
+  25: (MOVE-CARRIER DRONE1 CARRIER1 LOC7 DEPOT)
+  26: (LOAD-CRATE DRONE1 CARRIER1 CRATE1 DEPOT N0 N1)
+  27: (MOVE-CARRIER DRONE1 CARRIER1 DEPOT LOC7)
+  28: (UNLOAD-AND-DELIVER DRONE1 CARRIER1 CRATE1 PERSON8 LOC7 FOOD N1 N0)
+  29: (MOVE-CARRIER DRONE1 CARRIER1 LOC7 DEPOT)
+plan cost: 2906.000000
+ENDPLANENDPLANENDPLAN
+
+ff: parsing domain file
+domain 'PROJECT1_DOMAIN_PART2' defined
+ ... done.
+ff: parsing problem file
+problem 'DRONE_PROBLEM_D1_R1_L8_P8_C8_G8_CT2' defined
+ ... done.
+
+
+
+ff: search configuration is Enforced Hill-Climbing, then A*epsilon with weight 5.
+Metric is 
+COST MINIMIZATION DONE (WITH cost-minimizing relaxed plans).
+
+Cueing down from goal distance:   14 into depth [1]
+                                  12            [1]
+                                  11            [1][2][3]
+                                  10            [1]
+                                   9            [1][2][3][4]
+                                   8            [1][2][3][4]
+                                   7            [1][2][3][4]
+                                   6            [1][2][3]
+                                   5            [1]
+                                   4            [1][2]
+                                   3            [1][2][3]
+                                   2            [1][2]
+                                   1            [1]
+                                   0            
+Valid plan has 30 steps
+
+
+time spent:    0.00 seconds instantiating 625 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 55 facts and 369 actions
+               0.00 seconds creating final representation with 55 relevant facts, 1 relevant fluents
+               0.00 seconds computing LNF
+               0.00 seconds building connectivity graph
+               0.01 seconds searching, evaluating 252 states, to a max depth of 4
+               0.01 seconds total time
+

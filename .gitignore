@@ -8,6 +8,10 @@ __pycache__/
 
 # Planner outputs
 *.plan
+*.soln
+
+# Local generated planning instances (legacy folder)
+part1/generated_problems/
 
 # Containers
 *.sif
@@ -19,3 +23,6 @@ __pycache__/
 .DS_Store
 
 downward.sif
+sas_plan*
+*.Zone.Identifier
+part2/problems/drone_problem_d1_r1_l*

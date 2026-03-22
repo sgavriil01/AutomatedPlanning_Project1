@@ -16,9 +16,6 @@
 
         (load ?k - carrier ?n - num)
         (next ?a - num ?b - num)
-        
-        (free-arm1 ?d - drone)
-        (free-arm2 ?d - drone)
     )
     (:functions
         (total-cost)

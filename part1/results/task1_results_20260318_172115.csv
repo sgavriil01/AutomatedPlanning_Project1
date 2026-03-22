@@ -1,0 +1,5 @@
+Algorithm,Problem Size (LxPxCxG),Time (s),Plan Length,Optimal
+BFS,7x7x7x7,25.57,23,Yes
+IDS,3x3x3x3,0.54,10,Yes
+A* (hMAX),5x5x5x5,7.83,17,Yes
+GBFS (hMAX),6x6x6x6,1.58,22,No
