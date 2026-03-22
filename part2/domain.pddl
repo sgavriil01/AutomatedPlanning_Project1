@@ -32,7 +32,6 @@
             (at-drone ?d ?to)
             (not (at-carrier ?k ?from))
             (at-carrier ?k ?to)
-            ;; <--- ΒΗΜΑ 4: Αύξηση κόστους βάσει απόστασης --->
             (increase (total-cost) (fly-cost ?from ?to))
         )
     )
@@ -50,7 +49,6 @@
             (in ?c ?k)
             (not (load ?k ?n))
             (load ?k ?n2)
-            ;; <--- ΒΗΜΑ 3: Σταθερό κόστος δράσης (π.χ. 1) --->
             (increase (total-cost) 1)
         )
     )
@@ -70,7 +68,6 @@
             (delivered ?p ?t)
             (not (load ?k ?n))
             (load ?k ?n2)
-            ;; <--- ΒΗΜΑ 3: Σταθερό κόστος δράσης (π.χ. 1) --->
             (increase (total-cost) 1)
         )
     )
