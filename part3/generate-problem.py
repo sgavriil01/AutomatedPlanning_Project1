@@ -279,7 +279,7 @@ def main():
         # Write the initial part of the problem
  
         f.write("(define (problem " + problem_name + ")\n")
-        f.write("(:domain project1_domain_part3)\n") # Σωστό domain για Part 3
+        f.write("(:domain project1_domain_part3)\n")
         f.write("(:objects\n")
  
         ######################################################################
@@ -317,12 +317,12 @@ def main():
         # --- Initialize drones ---
         for x in drone:
             f.write("\t(at-drone " + x + " depot)\n")
-            f.write("\t(available-drone " + x + ")\n") # NΕΟ: Όλα τα drones είναι διαθέσιμα
+            f.write("\t(available-drone " + x + ")\n") 
  
         # --- Initialize crates at depot ---
         for c in crate:
             f.write("\t(at-crate " + c + " depot)\n")
-            f.write("\t(available-crate " + c + ")\n") # ΝΕΟ: Όλα τα κιβώτια είναι διαθέσιμα
+            f.write("\t(available-crate " + c + ")\n") 
  
         # --- Assign contents to crates ---
         for content_index in range(len(content_types)):
@@ -333,13 +333,13 @@ def main():
         for p in person:
             loc = random.choice(location[1:])  # location[0] is "depot"
             f.write("\t(at-person " + p + " " + loc + ")\n")
-            f.write("\t(available-person " + p + ")\n") # ΝΕΟ: Όλοι οι άνθρωποι είναι διαθέσιμοι
+            f.write("\t(available-person " + p + ")\n") 
  
         # --- Initialize carriers ---
         for c in carrier:
             f.write("\t(at-carrier " + c + " depot)\n")
             f.write("\t(load " + c + " N0)\n")
-            f.write("\t(available-carrier " + c + ")\n") # ΝΕΟ: Όλοι οι carriers είναι διαθέσιμοι
+            f.write("\t(available-carrier " + c + ")\n") 
         
         # Generate (next N0 N1) ... (next N<cap-1> N<cap>) chain
         for i in range(options.capacity):

@@ -17,11 +17,11 @@
         (load ?k - carrier ?n - num)
         (next ?a - num ?b - num)
         
-        ;; --- NEW PREDICATES (LOCKS) FOR PART 3 ---
-        (available-drone ?d - drone)    ;; Rule 1: Each drone does 1 action at a time
-        (available-carrier ?k - carrier);; Rule 2 & 3: Carrier lock
-        (available-person ?p - person)  ;; Rule 4: Person lock
-        (available-crate ?c - crate)    ;; Rule 2: Crate lock
+        
+        (available-drone ?d - drone)   
+        (available-carrier ?k - carrier)
+        (available-person ?p - person)  
+        (available-crate ?c - crate)    
     )
     (:functions
         (fly-cost ?from - location ?to - location) 
